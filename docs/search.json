@@ -179,7 +179,7 @@
     "href": "news/index.html",
     "title": "News",
     "section": "",
-    "text": "New Project Launched: We are excited to announce the launch of a new project on “Integrated Coastal Water Monitoring and Modeling.”\n\n\n\n\n\nNew Blog Post: Check out our latest blog post on “How to Make Dynamic Maps with Python.”\n\n\n\n\n\nNew Research Published: Our latest research on ecological modeling has been published in the Journal of Environmental Science.\nUpcoming Workshop: Join us for a workshop on “Dynamic Mapping with Python” on May 15, 2025.\nPhD Milestone: I am thrilled to announce that I have passed my PhD candidacy exam and am now officially a PhD candidate!\n\n\n\n\n\nWebsite Update: The blog has been updated with new posts on PCA and Machine Learning in Oceanography."
+    "text": "New Project Launched: We are excited to announce the launch of a new project on “Integrated Coastal Water Monitoring and Modeling.”\n\n\n\n\n\nNew Blog Post: Check out our latest blog post on “How to Make Dynamic Maps with Python.”\n\n\n\n\n\nNew Research Published: Our latest research on ecological modeling has been published in the Journal of Environmental Science.\nUpcoming Workshop: Join us for a workshop on “Dynamic Mapping with Python” on May 15, 2025.\nPhD Milestone: I am thrilled to announce that I have passed my PhD candidacy exam and am now officially a PhD candidate!\n\n\n\n\n\nWebsite Update: The blog has been updated with new posts on PCA and Machine Learning in Oceanography.\n\n\n\n\n\nAmerican Fisheries Society (AFS) Annual Meeting: A snapshot from the 2023 AFS Annual Meeting held in Grand Rapids, Michigan. \nIGARSS 2023 Poster Presentation: Poster presentation at the IGARSS 2023 conference. \nOcean Science Conference 2024, New Orleans, LA: A moment captured during the Ocean Science Conference 2024. \nOcean Science Conference 2024, New Orleans, LA: Another highlight from the Ocean Science Conference 2024. \nNASA Collaboration: Accelerating Informatics for Earth Science: Collaboration with NASA on Earth Science Informatics in 2024."
   },
   {
     "objectID": "news/index.html#april-30-2025",
@@ -208,6 +208,13 @@
     "title": "News",
     "section": "",
     "text": "Website Update: The blog has been updated with new posts on PCA and Machine Learning in Oceanography."
+  },
+  {
+    "objectID": "news/index.html#some-presentations-photos",
+    "href": "news/index.html#some-presentations-photos",
+    "title": "News",
+    "section": "",
+    "text": "American Fisheries Society (AFS) Annual Meeting: A snapshot from the 2023 AFS Annual Meeting held in Grand Rapids, Michigan. \nIGARSS 2023 Poster Presentation: Poster presentation at the IGARSS 2023 conference. \nOcean Science Conference 2024, New Orleans, LA: A moment captured during the Ocean Science Conference 2024. \nOcean Science Conference 2024, New Orleans, LA: Another highlight from the Ocean Science Conference 2024. \nNASA Collaboration: Accelerating Informatics for Earth Science: Collaboration with NASA on Earth Science Informatics in 2024."
   },
   {
     "objectID": "Notebook/index.html",
@@ -319,6 +326,6 @@
     "href": "research/index.html#some-presentations-photos",
     "title": "Research",
     "section": "Some Presentations photos",
-    "text": "Some Presentations photos"
+    "text": "Some Presentations photos\n\nAmerican Fisheries Society (AFS) Annual Meeting: A snapshot from the 2023 AFS Annual Meeting held in Grand Rapids, Michigan. \nIGARSS 2023 Poster Presentation: Poster presentation at the IGARSS 2023 conference. \nOcean Science Conference 2024, New Orleans, LA: A moment captured during the Ocean Science Conference 2024. \nOcean Science Conference 2024, New Orleans, LA: Another highlight from the Ocean Science Conference 2024. \nNASA Collaboration: Accelerating Informatics for Earth Science: Collaboration with NASA on Earth Science Informatics in 2024. \n** ASLO Conference, 2025 ** \n\n** Leaky Deltas, 2025 ** \n\n** Field Trip mostly across Mississippi Sound**"
   }
 ]

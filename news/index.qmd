@@ -24,3 +24,20 @@ format:
 
 ## April 20, 2025
 - **Website Update**: The blog has been updated with new posts on PCA and Machine Learning in Oceanography.
+
+## Some Presentations photos
+
+- **American Fisheries Society (AFS) Annual Meeting**: A snapshot from the 2023 AFS Annual Meeting held in Grand Rapids, Michigan.
+  ![American Fisheries Society (AFS) Annual Meeting](images/thumbnail_IMG_6667.jpg)
+
+- **IGARSS 2023 Poster Presentation**: Poster presentation at the IGARSS 2023 conference.
+  ![IGARSS 2023 Poster Presentation](images/igars2023_poster.jpg)
+
+- **Ocean Science Conference 2024, New Orleans, LA**: A moment captured during the Ocean Science Conference 2024.
+  ![Ocean Science Conference 2024, New Orleans, LA](images/ocean2.jpg)
+
+- **Ocean Science Conference 2024, New Orleans, LA**: Another highlight from the Ocean Science Conference 2024.
+  ![Ocean Science Conference 2024, New Orleans, LA](images/ocean1.jpg)
+
+- **NASA Collaboration: Accelerating Informatics for Earth Science**: Collaboration with NASA on Earth Science Informatics in 2024.
+  ![NASA Collaboration: Accelerating Informatics for Earth Science](images/NASA.jpg)

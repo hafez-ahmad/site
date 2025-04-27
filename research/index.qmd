@@ -10,10 +10,10 @@ format:
 
 ## Publications
 
-1. Islam, M. S., Dash, P., Liles, J. P., Ahmad, H., Nur, A. M., Panda, R. M., ... & Moorhead, R. J. (2025). Spatiotemporal dynamics of cyanobacterial blooms: Integrating machine learning and feature selection techniques with uncrewed aircraft systems and autonomous surface vessel data. *Journal of Environmental Management*, 381, 124878. https://doi.org/10.1016/j.jenvman.2025.124878
+1. Islam, M. S., Dash, P., Liles, J. P., **Ahmad, H.**, Nur, A. M., Panda, R. M., ... & Moorhead, R. J. (2025). Spatiotemporal dynamics of cyanobacterial blooms: Integrating machine learning and feature selection techniques with uncrewed aircraft systems and autonomous surface vessel data. *Journal of Environmental Management*, 381, 124878. https://doi.org/10.1016/j.jenvman.2025.124878
 2. Ahmad, H., F. Jose, Dash, P., D. J. Shoemaker, and Jhara, S. I. (2025). Machine Learning-Based Estimation of Chlorophyll-a in the Mississippi Sound using Landsat and Ocean Optics Data. *Environmental Earth Sciences*.
 3. Ahmad, H., Miranda, L. E., Corey G. Dunn, Colvin, M., and Dash, P. (2025). Confluence of time and space: An innovation for quantifying dynamics of hydrologic floodplain connectivity with remote sensing and GIS. *River Research and Applications*. doi.org/10.1002/RRA.4426.
-4. Frank Juma Ong'ondo, Shrinidhi Ambinakudige, Philista Adhiambo Malaki, Peter Njoroge, Hafez Ahmad. (2025). Using geographic information systems and remote sensing techniques to classify land cover types and predict grassland bird abundance and distribution in Nairobi National Park, Kenya. doi.org/10.1016/j.ijgeop.2025.02.003.
+4. Frank Juma Ong'ondo, Shrinidhi Ambinakudige, Philista Adhiambo Malaki, Peter Njoroge, **Hafez Ahmad**. (2025). Using geographic information systems and remote sensing techniques to classify land cover types and predict grassland bird abundance and distribution in Nairobi National Park, Kenya. doi.org/10.1016/j.ijgeop.2025.02.003.
 5. Islam, M. S., Dash, P., Nur, A., Ahmad, H., Panda, R. M., Wolfe, J. S., Turnage, G., Hathcock, L., Chesser, G. D., and Moorhead, R. J. (2024). Estimation of Chlorophyll-a in Uncrewed Aircraft Systems Imagery using Autonomous Surface Vessel data by employing Machine Learning Algorithms and Innovative Feature Selection Techniques. *Ecological Informatics*, 85, 102954.
 6. Ahmad, H., Jhara, S. I. (2024). Mapping the Dynamics of Particulate Organic Carbon: Satellite Observations of Coastal to Shelf Variability in the Northeastern Gulf of Mexico. *Ocean Science Journal*. doi.org/10.1007/s12601-024-00203-9.
 7. Ahmad, H., Dash, P., Panda, R. M. (2024). Integrating machine learning and remote sensing for long-term monitoring of chlorophyll-a in Chilika Lagoon, India. *Environmental Monitoring and Assessment*. doi.org/10.1007/s10661-024-13463-8.
@@ -39,11 +39,11 @@ format:
 7. Ahmad, H, Miranda, LE, Dunn, C. G, and Colvin, Mike. (2025). Hydrologic connectivity in floodplain systems: A review. *Freshwater*.
 8. Ahmad, H, Jose, Felix, Dash, P. (2025). Mesoscale Eddies and their Impact on Primary Productivity in the Bay of Bengal. *Journal of Environmental and Earth Sciences*.
 9. Ahmad, H, et al. (2025). Use and Land Cover Dynamics of Irrawaddy Delta: Remote Sensing Analysis and Future Projection. *Remote Sensing Applications: Society and Environment*.
-10. Frank Juma Ong’ondo, Shrinidhi Ambinakudige, Philista Adhiambo Malaki; Hafez Ahmad; Qingmin Meng; Kuria Antony. (2025). Land cover change and future projection analysis for Nairobi National Park and adjacent landscapes, using GIS, remote sensing, and cellular automata-artificial neural network. *Remote Sensing Applications: Society and Environment*.
+10. Frank Juma Ong’ondo, Shrinidhi Ambinakudige, Philista Adhiambo Malaki; **Hafez Ahmad**; Qingmin Meng; Kuria Antony. (2025). Land cover change and future projection analysis for Nairobi National Park and adjacent landscapes, using GIS, remote sensing, and cellular automata-artificial neural network. *Remote Sensing Applications: Society and Environment*.
 
 ## Books / Chapters
 
-1. Elisabeth Fahrni Mansur, G M Masum Billah, Nadim Parves, Robiul Kauser, Mohammad Shamsuddoha, Ashik Jahan Galib, Naim Khandakar, Hafez Ahmad, Rasel Mia, Md. Arafat Rahman Khan and Brian D. Smith (2022). Sharks and Rays of Bangladesh: A guide to identifying protected species and their commonly traded parts. Bangladesh Forest Department and Wildlife Conservation Society, Bangladesh.
+1. Elisabeth Fahrni Mansur, G M Masum Billah, Nadim Parves, Robiul Kauser, Mohammad Shamsuddoha, Ashik Jahan Galib, Naim Khandakar, **Hafez Ahmad**, Rasel Mia, Md. Arafat Rahman Khan and Brian D. Smith (2022). Sharks and Rays of Bangladesh: A guide to identifying protected species and their commonly traded parts. Bangladesh Forest Department and Wildlife Conservation Society, Bangladesh.
 
 ## Proceedings and Conference Articles (* in prep/submitted)
 
@@ -77,9 +77,29 @@ format:
 20. Hafez Ahmad, Shakila Islam Jhara, and Md. Wahidul Alam. Collaborative approach and role of the marine spatial planning to support integrated coastal zone management in Bangladesh. *8th International Conference on Water and Flood Management (ICWFM 2021), 29-31 March 2021, Dhaka, Bangladesh*.
 
 
+
 ## Some Presentations photos
-![American Fisheries Society (AFS) Annual Meeting, 2023 ](images/thumbnail_IMG_6667.jpg)
-![IGARSS 2023 Poster Presentation](images/igars2023_poster.jpg)
-![Ocean Science Conference 2024, New Orleans, LA](images/ocean2.jpg)
-![Ocean Science Conference 2024, New Orleans, LA](images/ocean1.jpg)
-![NASA Collaboration: Accelerating Informatics for Earth Science, 2024](images/NASA.jpg)
+
+- **American Fisheries Society (AFS) Annual Meeting**: A snapshot from the 2023 AFS Annual Meeting held in Grand Rapids, Michigan.
+  ![American Fisheries Society (AFS) Annual Meeting](images/thumbnail_IMG_6667.jpg)
+
+- **IGARSS 2023 Poster Presentation**: Poster presentation at the IGARSS 2023 conference.
+  ![IGARSS 2023 Poster Presentation](images/igars2023_poster.jpg)
+
+- **Ocean Science Conference 2024, New Orleans, LA**: A moment captured during the Ocean Science Conference 2024.
+  ![Ocean Science Conference 2024, New Orleans, LA](images/ocean2.jpg)
+
+- **Ocean Science Conference 2024, New Orleans, LA**: Another highlight from the Ocean Science Conference 2024.
+  ![Ocean Science Conference 2024, New Orleans, LA](images/ocean1.jpg)
+
+- **NASA Collaboration: Accelerating Informatics for Earth Science**: Collaboration with NASA on Earth Science Informatics in 2024.
+  ![NASA Collaboration: Accelerating Informatics for Earth Science](images/NASA.jpg)
+- ** ASLO Conference, 2025 **
+  ![ASLO](images/ASLO 2025.jpg)
+
+  - ** Leaky Deltas, 2025 **
+  ![Leaky Deltas](images/LeakyDelta2025.jpg)
+
+- ** Field Trip mostly across Mississippi Sound**
+![FieldTrips](images/FieldWork.jpg)
+![FieldTrips](images/FieldTripMississippiSound.jpg)
