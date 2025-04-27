@@ -1,0 +1,13 @@
+---
+title: "Ecological modeling"
+author: "Hafez Ahmad"
+date: "2022-10-16"
+categories: [news, code, analysis]
+image: "image.jpg"
+---
+
+You will find basic R codes
+
+```{r}
+1+2
+```

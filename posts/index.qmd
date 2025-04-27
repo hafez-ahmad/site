@@ -1,0 +1,21 @@
+---
+title: "Posts"
+description: "Explore various topics and tutorials"
+---
+
+# Posts
+
+Explore our collection of posts:
+
+-   [Analysis of Argo Float Data in the Bay of Bengal](Analysis%20of%20Argo%20Float%20Data%20in%20the%20Bay%20of%20Bengal/index.qmd)
+-   [Basic R](Basic%20R/index.qmd)
+-   [Ecological modeling](Ecological%20modeling/index.qmd)
+-   [How to Make Dynamic Maps with Python](How%20to%20Make%20Dynamic%20Maps%20with%20python/index.qmd)
+-   [Machine Learning](Machine%20learning/index.qmd)
+-   [Making Temperature-Salinity Diagrams](Making%20temperature-salinity%20diagrams/index.qmd)
+-   [PCA](PCA/index.qmd)
+-   [Popular R Packages Used in Oceanography, Fisheries, and Environmental Science](Popular%20R%20packages%20used%20in%20Oceanography,%20Fisheries%20and%20environmental%20science/index.qmd)
+-   [Post with Code](post-with-code/index.qmd)
+-   [Practical Ecological Data Analysis with R](Practical%20Ecological%20data%20analysis%20with%20R/index.qmd)
+-   [Species Distribution Modeling](Species%20Distribution%20modeling/index.qmd)
+-   [World Bioclimatic Data Downloading, Analysis, and Visualization](World%20bioclimatic%20Data%20downloading,%20analysis%20and%20visualization/index.qmd)

@@ -1,0 +1,14 @@
+{
+  "hash": "261f11dbab1611ec174dc565a3e54a35",
+  "result": {
+    "markdown": "---\ntitle: \"Analysis of Argo Float Data in the Bay of Bengal\"\nauthor: \"Hafez Ahmad\"\ndate: \"2022-10-16\"\ncategories: [code, analysis]\nimage: \"image.jpg\"\nformat: html\n---\n\n\nYou will find basic R codes\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1+2\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 3\n```\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

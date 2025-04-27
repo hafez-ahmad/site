@@ -1,0 +1,14 @@
+---
+title: "Analysis of Argo Float Data in the Bay of Bengal"
+author: "Hafez Ahmad"
+date: "2022-10-16"
+categories: [code, analysis]
+image: "image.jpg"
+format: html
+---
+
+You will find basic R codes
+
+```{r}
+1+2
+```

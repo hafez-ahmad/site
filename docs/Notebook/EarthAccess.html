@@ -1,0 +1,1946 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.29">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>earthaccess – blog</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-dfb324f25d9b1687192fa8be62ac8f9c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+<script src="https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">blog</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../posts/index.html"> 
+<span class="menu-text">Posts</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About Me</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../research/index.html"> 
+<span class="menu-text">Papers</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../news/index.html"> 
+<span class="menu-text">News</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../teaching/index.html"> 
+<span class="menu-text">Teaching</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../Notebook/index.html"> 
+<span class="menu-text">Notebook</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../projects/index.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../cv/index.html"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com"> <i class="bi bi-twitter" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.linkedin.com/in/hafez-ahmad-37a49b102/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text">LinkedIn</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text">Github</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=ToH-NhkAAAAJ&amp;hl=en&amp;oi=sra"> 
+<span class="menu-text">Google Scholar</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<div id="cell-0" class="cell" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> earthaccess</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> xarray <span class="im">as</span> xr</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> xarray.backends.api <span class="im">import</span> open_datatree</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-1" class="cell" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>auth <span class="op">=</span> earthaccess.login(persist<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-2" class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> earthaccess.search_datasets(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    keyword<span class="op">=</span><span class="st">"L2 ocean color"</span>,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    instrument<span class="op">=</span><span class="st">"olci"</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span>((i.summary()[<span class="st">"short-name"</span>] <span class="cf">for</span> i <span class="kw">in</span> results))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="49">
+<pre><code>set()</code></pre>
+</div>
+</div>
+<div id="cell-3" class="cell" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>tspan <span class="op">=</span> (<span class="st">"2020-10-15"</span>, <span class="st">"2020-10-23"</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>bbox <span class="op">=</span> (<span class="op">-</span><span class="fl">89.4474</span>, <span class="fl">30.064</span>, <span class="op">-</span><span class="fl">88.337</span>, <span class="fl">30.064</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>cc <span class="op">=</span> (<span class="dv">0</span>, <span class="dv">50</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> earthaccess.search_data(</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    short_name<span class="op">=</span><span class="st">"OLCIS3A_L2_EFR_OC"</span>,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    temporal<span class="op">=</span>tspan,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    bounding_box<span class="op">=</span>bbox,</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    cloud_cover<span class="op">=</span>cc,</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-4" class="cell" data-execution_count="27">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>paths <span class="op">=</span> earthaccess.download(results, <span class="st">"data"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"c5021110229948b0b46c1708ea628475","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+</script>
+</div>
+<div class="cell-output cell-output-display">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"00668b4ae4144fe299c563cbd89eaedb","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+</script>
+</div>
+<div class="cell-output cell-output-display">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"1776a88eff004ec6af0dd2a2d890fd4d","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+</script>
+</div>
+</div>
+<div id="cell-5" class="cell" data-execution_count="33">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>paths[<span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="33">
+<pre><code>'data\\S3A_OLCI_EFRNT.20201015T155218.L2.OC.nc'</code></pre>
+</div>
+</div>
+<div id="cell-6" class="cell" data-execution_count="62">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> affine <span class="im">import</span> Affine</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>prod <span class="op">=</span> xr.open_dataset(paths[<span class="dv">0</span>])</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>obs <span class="op">=</span> xr.open_dataset(paths[<span class="dv">0</span>], group<span class="op">=</span><span class="st">"geophysical_data"</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>nav <span class="op">=</span> xr.open_dataset(paths[<span class="dv">0</span>], group<span class="op">=</span><span class="st">"navigation_data"</span>)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>nav <span class="op">=</span> (</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    nav</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    .set_coords((<span class="st">"longitude"</span>, <span class="st">"latitude"</span>))</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    .rename({<span class="st">"pixel_control_points"</span>: <span class="st">"pixels_per_line"</span>})</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>dataset <span class="op">=</span> xr.merge((prod, obs, nav.coords))</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="co"># set latitude and longitude as coordinates</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>dataset <span class="op">=</span> dataset.set_coords((<span class="st">"latitude"</span>, <span class="st">"longitude"</span>))</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="co"># slice (-89.4474, 30.064, -88.337, 30.064)</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="co"># dataset = dataset.sel(</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="co">#     latitude=slice(30.064, 30.064),</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="co">#     longitude=slice(-89.4474, -88.337),</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="co"># )</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>dataset</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="62">
+<div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewbox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewbox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme=dark],
+body[data-theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class="xr-text-repr-fallback">&lt;xarray.Dataset&gt; Size: 1GB
+Dimensions:    (number_of_lines: 4091, pixels_per_line: 4865)
+Coordinates:
+    longitude  (number_of_lines, pixels_per_line) float32 80MB ...
+    latitude   (number_of_lines, pixels_per_line) float32 80MB ...
+Dimensions without coordinates: number_of_lines, pixels_per_line
+Data variables: (12/16)
+    aot_865    (number_of_lines, pixels_per_line) float32 80MB ...
+    angstrom   (number_of_lines, pixels_per_line) float32 80MB ...
+    Rrs_400    (number_of_lines, pixels_per_line) float32 80MB ...
+    Rrs_412    (number_of_lines, pixels_per_line) float32 80MB ...
+    Rrs_443    (number_of_lines, pixels_per_line) float32 80MB ...
+    Rrs_490    (number_of_lines, pixels_per_line) float32 80MB ...
+    ...         ...
+    Rrs_674    (number_of_lines, pixels_per_line) float32 80MB ...
+    Rrs_681    (number_of_lines, pixels_per_line) float32 80MB ...
+    Rrs_709    (number_of_lines, pixels_per_line) float32 80MB ...
+    chlor_a    (number_of_lines, pixels_per_line) float32 80MB ...
+    Kd_490     (number_of_lines, pixels_per_line) float32 80MB ...
+    l2_flags   (number_of_lines, pixels_per_line) int32 80MB ...
+Attributes: (12/46)
+    title:                          OLCIS3A Level-2 Data
+    product_name:                   S3A_OLCI_EFRNT.20201015T155218.L2.OC.nc
+    processing_version:             R2022.0
+    orbit_number:                   24282
+    history:                        l2gen par=/data9/sdpsoper/vdc/vpu20/workb...
+    instrument:                     OLCI
+    ...                             ...
+    geospatial_lon_max:             -79.75462
+    geospatial_lon_min:             -94.42871
+    startDirection:                 Descending
+    endDirection:                   Descending
+    day_night_flag:                 Day
+    earth_sun_distance_correction:  1.0060665607452393</pre><div class="xr-wrap" style="display:none"><div class="xr-header"><div class="xr-obj-type">xarray.Dataset</div></div><ul class="xr-sections"><li class="xr-section-item"><input id="section-6372f454-70e9-4bae-a95a-2addefcb92e9" class="xr-section-summary-in" type="checkbox" disabled=""><label for="section-6372f454-70e9-4bae-a95a-2addefcb92e9" class="xr-section-summary" title="Expand/collapse section">Dimensions:</label><div class="xr-section-inline-details"><ul class="xr-dim-list"><li><span>number_of_lines</span>: 4091</li><li><span>pixels_per_line</span>: 4865</li></ul></div><div class="xr-section-details"></div></li><li class="xr-section-item"><input id="section-be206ebc-d3ed-481c-ad91-85cb06d1f17f" class="xr-section-summary-in" type="checkbox" checked=""><label for="section-be206ebc-d3ed-481c-ad91-85cb06d1f17f" class="xr-section-summary">Coordinates: <span>(2)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span>longitude</span></div><div class="xr-var-dims">(number_of_lines, pixels_per_line)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">...</div><input id="attrs-bf21aa85-1dae-420c-b5a2-92461e47f267" class="xr-var-attrs-in" type="checkbox"><label for="attrs-bf21aa85-1dae-420c-b5a2-92461e47f267" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-571cb131-dcbb-4b47-a55c-bc55a8cd2300" class="xr-var-data-in" type="checkbox"><label for="data-571cb131-dcbb-4b47-a55c-bc55a8cd2300" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>Longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>valid_min :</span></dt><dd>-180.0</dd><dt><span>valid_max :</span></dt><dd>180.0</dd></dl></div><div class="xr-var-data"><pre>[19902715 values with dtype=float32]</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>latitude</span></div><div class="xr-var-dims">(number_of_lines, pixels_per_line)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">...</div><input id="attrs-3cfd463f-ca57-4366-a7b9-f2dd79afdf6f" class="xr-var-attrs-in" type="checkbox"><label for="attrs-3cfd463f-ca57-4366-a7b9-f2dd79afdf6f" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-ab59e730-8313-4bb4-8b17-2dc855e67ed4" class="xr-var-data-in" type="checkbox"><label for="data-ab59e730-8313-4bb4-8b17-2dc855e67ed4" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>Latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>valid_min :</span></dt><dd>-90.0</dd><dt><span>valid_max :</span></dt><dd>90.0</dd></dl></div><div class="xr-var-data"><pre>[19902715 values with dtype=float32]</pre></div></li></ul></div></li><li class="xr-section-item"><input id="section-0bb2f740-b0be-4193-af69-0f9e229bbfc7" class="xr-section-summary-in" type="checkbox"><label for="section-0bb2f740-b0be-4193-af69-0f9e229bbfc7" class="xr-section-summary">Data variables: <span>(16)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span>aot_865</span></div><div class="xr-var-dims">(number_of_lines, pixels_per_line)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">...</div><input id="attrs-6cd9affa-cdfb-4eac-aee9-995493154bd5" class="xr-var-attrs-in" type="checkbox"><label for="attrs-6cd9affa-cdfb-4eac-aee9-995493154bd5" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-270ec192-acdf-4384-ab7a-0fdedbda66be" class="xr-var-data-in" type="checkbox"><label for="data-270ec192-acdf-4384-ab7a-0fdedbda66be" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>Aerosol optical thickness at 865 nm</dd><dt><span>standard_name :</span></dt><dd>atmosphere_absorption_optical_thickness_due_to_ambient_aerosol</dd><dt><span>valid_min :</span></dt><dd>0</dd><dt><span>valid_max :</span></dt><dd>30000</dd></dl></div><div class="xr-var-data"><pre>[19902715 values with dtype=float32]</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>angstrom</span></div><div class="xr-var-dims">(number_of_lines, pixels_per_line)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">...</div><input id="attrs-7a46015c-1d78-494f-943c-1407dfbeb97c" class="xr-var-attrs-in" type="checkbox"><label for="attrs-7a46015c-1d78-494f-943c-1407dfbeb97c" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-6aa5922c-6eef-4ae3-9d64-4b7b8dfd2cdc" class="xr-var-data-in" type="checkbox"><label for="data-6aa5922c-6eef-4ae3-9d64-4b7b8dfd2cdc" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>Aerosol Angstrom exponent, 443 to 865 nm</dd><dt><span>standard_name :</span></dt><dd>aerosol_angstrom_exponent</dd><dt><span>valid_min :</span></dt><dd>-30000</dd><dt><span>valid_max :</span></dt><dd>5000</dd></dl></div><div class="xr-var-data"><pre>[19902715 values with dtype=float32]</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>Rrs_400</span></div><div class="xr-var-dims">(number_of_lines, pixels_per_line)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">...</div><input id="attrs-98e8a7c3-aa4c-4ed0-8f91-2cfabfdb26aa" class="xr-var-attrs-in" type="checkbox"><label for="attrs-98e8a7c3-aa4c-4ed0-8f91-2cfabfdb26aa" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-5967c066-e132-4afc-9bc7-72d13a555545" class="xr-var-data-in" type="checkbox"><label for="data-5967c066-e132-4afc-9bc7-72d13a555545" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>Remote sensing reflectance at 400 nm</dd><dt><span>units :</span></dt><dd>sr^-1</dd><dt><span>standard_name :</span></dt><dd>surface_ratio_of_upwelling_radiance_emerging_from_sea_water_to_downwelling_radiative_flux_in_air</dd><dt><span>valid_min :</span></dt><dd>-30000</dd><dt><span>valid_max :</span></dt><dd>25000</dd><dt><span>solar_irradiance :</span></dt><dd>1513.67</dd></dl></div><div class="xr-var-data"><pre>[19902715 values with dtype=float32]</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>Rrs_412</span></div><div class="xr-var-dims">(number_of_lines, pixels_per_line)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">...</div><input id="attrs-598a6096-c847-4312-a73e-f16ffe0f58aa" class="xr-var-attrs-in" type="checkbox"><label for="attrs-598a6096-c847-4312-a73e-f16ffe0f58aa" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-34eb7b9c-5a59-48ad-927a-004949ceb9e4" class="xr-var-data-in" type="checkbox"><label for="data-34eb7b9c-5a59-48ad-927a-004949ceb9e4" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>Remote sensing reflectance at 412 nm</dd><dt><span>units :</span></dt><dd>sr^-1</dd><dt><span>standard_name :</span></dt><dd>surface_ratio_of_upwelling_radiance_emerging_from_sea_water_to_downwelling_radiative_flux_in_air</dd><dt><span>valid_min :</span></dt><dd>-30000</dd><dt><span>valid_max :</span></dt><dd>25000</dd><dt><span>solar_irradiance :</span></dt><dd>1708.0</dd></dl></div><div class="xr-var-data"><pre>[19902715 values with dtype=float32]</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>Rrs_443</span></div><div class="xr-var-dims">(number_of_lines, pixels_per_line)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">...</div><input id="attrs-ad974898-bc63-483b-8d72-108513fa021f" class="xr-var-attrs-in" type="checkbox"><label for="attrs-ad974898-bc63-483b-8d72-108513fa021f" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-9b5dcc45-7f9e-4b00-90af-938271b040e4" class="xr-var-data-in" type="checkbox"><label for="data-9b5dcc45-7f9e-4b00-90af-938271b040e4" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>Remote sensing reflectance at 443 nm</dd><dt><span>units :</span></dt><dd>sr^-1</dd><dt><span>standard_name :</span></dt><dd>surface_ratio_of_upwelling_radiance_emerging_from_sea_water_to_downwelling_radiative_flux_in_air</dd><dt><span>valid_min :</span></dt><dd>-30000</dd><dt><span>valid_max :</span></dt><dd>25000</dd><dt><span>solar_irradiance :</span></dt><dd>1889.97</dd></dl></div><div class="xr-var-data"><pre>[19902715 values with dtype=float32]</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>Rrs_490</span></div><div class="xr-var-dims">(number_of_lines, pixels_per_line)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">...</div><input id="attrs-f8d058b2-79d4-45fa-b693-c0a58eda6e67" class="xr-var-attrs-in" type="checkbox"><label for="attrs-f8d058b2-79d4-45fa-b693-c0a58eda6e67" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-15a3ad22-4fd0-4993-be3a-5aad2825cbdf" class="xr-var-data-in" type="checkbox"><label for="data-15a3ad22-4fd0-4993-be3a-5aad2825cbdf" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>Remote sensing reflectance at 490 nm</dd><dt><span>units :</span></dt><dd>sr^-1</dd><dt><span>standard_name :</span></dt><dd>surface_ratio_of_upwelling_radiance_emerging_from_sea_water_to_downwelling_radiative_flux_in_air</dd><dt><span>valid_min :</span></dt><dd>-30000</dd><dt><span>valid_max :</span></dt><dd>25000</dd><dt><span>solar_irradiance :</span></dt><dd>1936.26</dd></dl></div><div class="xr-var-data"><pre>[19902715 values with dtype=float32]</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>Rrs_510</span></div><div class="xr-var-dims">(number_of_lines, pixels_per_line)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">...</div><input id="attrs-552c1001-2e98-4f09-9a98-0358e52581ff" class="xr-var-attrs-in" type="checkbox"><label for="attrs-552c1001-2e98-4f09-9a98-0358e52581ff" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-7d79f7f0-a529-4d43-952f-5e472a318901" class="xr-var-data-in" type="checkbox"><label for="data-7d79f7f0-a529-4d43-952f-5e472a318901" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>Remote sensing reflectance at 510 nm</dd><dt><span>units :</span></dt><dd>sr^-1</dd><dt><span>standard_name :</span></dt><dd>surface_ratio_of_upwelling_radiance_emerging_from_sea_water_to_downwelling_radiative_flux_in_air</dd><dt><span>valid_min :</span></dt><dd>-30000</dd><dt><span>valid_max :</span></dt><dd>25000</dd><dt><span>solar_irradiance :</span></dt><dd>1919.6499</dd></dl></div><div class="xr-var-data"><pre>[19902715 values with dtype=float32]</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>Rrs_560</span></div><div class="xr-var-dims">(number_of_lines, pixels_per_line)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">...</div><input id="attrs-0fa72140-bdd7-43ae-b537-319ec81acf10" class="xr-var-attrs-in" type="checkbox"><label for="attrs-0fa72140-bdd7-43ae-b537-319ec81acf10" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-b041ec27-f189-4649-a401-31b225affe06" class="xr-var-data-in" type="checkbox"><label for="data-b041ec27-f189-4649-a401-31b225affe06" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>Remote sensing reflectance at 560 nm</dd><dt><span>units :</span></dt><dd>sr^-1</dd><dt><span>standard_name :</span></dt><dd>surface_ratio_of_upwelling_radiance_emerging_from_sea_water_to_downwelling_radiative_flux_in_air</dd><dt><span>valid_min :</span></dt><dd>-30000</dd><dt><span>valid_max :</span></dt><dd>25000</dd><dt><span>solar_irradiance :</span></dt><dd>1796.85</dd></dl></div><div class="xr-var-data"><pre>[19902715 values with dtype=float32]</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>Rrs_620</span></div><div class="xr-var-dims">(number_of_lines, pixels_per_line)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">...</div><input id="attrs-78e5f5cf-b5a1-4d47-b01c-53fa8fb8c4ee" class="xr-var-attrs-in" type="checkbox"><label for="attrs-78e5f5cf-b5a1-4d47-b01c-53fa8fb8c4ee" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-1f795232-8632-4315-aefa-95a8ada29c8f" class="xr-var-data-in" type="checkbox"><label for="data-1f795232-8632-4315-aefa-95a8ada29c8f" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>Remote sensing reflectance at 620 nm</dd><dt><span>units :</span></dt><dd>sr^-1</dd><dt><span>standard_name :</span></dt><dd>surface_ratio_of_upwelling_radiance_emerging_from_sea_water_to_downwelling_radiative_flux_in_air</dd><dt><span>valid_min :</span></dt><dd>-30000</dd><dt><span>valid_max :</span></dt><dd>25000</dd><dt><span>solar_irradiance :</span></dt><dd>1649.14</dd></dl></div><div class="xr-var-data"><pre>[19902715 values with dtype=float32]</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>Rrs_665</span></div><div class="xr-var-dims">(number_of_lines, pixels_per_line)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">...</div><input id="attrs-85a4266c-9011-4a53-9ea8-8a938030ccf4" class="xr-var-attrs-in" type="checkbox"><label for="attrs-85a4266c-9011-4a53-9ea8-8a938030ccf4" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-21b24d8c-2257-4ba1-a162-5c1162d0e543" class="xr-var-data-in" type="checkbox"><label for="data-21b24d8c-2257-4ba1-a162-5c1162d0e543" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>Remote sensing reflectance at 665 nm</dd><dt><span>units :</span></dt><dd>sr^-1</dd><dt><span>standard_name :</span></dt><dd>surface_ratio_of_upwelling_radiance_emerging_from_sea_water_to_downwelling_radiative_flux_in_air</dd><dt><span>valid_min :</span></dt><dd>-30000</dd><dt><span>valid_max :</span></dt><dd>25000</dd><dt><span>solar_irradiance :</span></dt><dd>1530.15</dd></dl></div><div class="xr-var-data"><pre>[19902715 values with dtype=float32]</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>Rrs_674</span></div><div class="xr-var-dims">(number_of_lines, pixels_per_line)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">...</div><input id="attrs-e20d53ea-0088-4a04-8ed9-c174a39606d9" class="xr-var-attrs-in" type="checkbox"><label for="attrs-e20d53ea-0088-4a04-8ed9-c174a39606d9" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-e7677c09-28e9-4baf-b8b0-b7c45ed74206" class="xr-var-data-in" type="checkbox"><label for="data-e7677c09-28e9-4baf-b8b0-b7c45ed74206" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>Remote sensing reflectance at 674 nm</dd><dt><span>units :</span></dt><dd>sr^-1</dd><dt><span>standard_name :</span></dt><dd>surface_ratio_of_upwelling_radiance_emerging_from_sea_water_to_downwelling_radiative_flux_in_air</dd><dt><span>valid_min :</span></dt><dd>-30000</dd><dt><span>valid_max :</span></dt><dd>25000</dd><dt><span>solar_irradiance :</span></dt><dd>1494.72</dd></dl></div><div class="xr-var-data"><pre>[19902715 values with dtype=float32]</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>Rrs_681</span></div><div class="xr-var-dims">(number_of_lines, pixels_per_line)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">...</div><input id="attrs-70b93f9f-e286-4199-8789-394a5fa54b3b" class="xr-var-attrs-in" type="checkbox"><label for="attrs-70b93f9f-e286-4199-8789-394a5fa54b3b" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-6dca2736-410d-4818-bdc1-ef5831a2a7ea" class="xr-var-data-in" type="checkbox"><label for="data-6dca2736-410d-4818-bdc1-ef5831a2a7ea" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>Remote sensing reflectance at 681 nm</dd><dt><span>units :</span></dt><dd>sr^-1</dd><dt><span>standard_name :</span></dt><dd>surface_ratio_of_upwelling_radiance_emerging_from_sea_water_to_downwelling_radiative_flux_in_air</dd><dt><span>valid_min :</span></dt><dd>-30000</dd><dt><span>valid_max :</span></dt><dd>25000</dd><dt><span>solar_irradiance :</span></dt><dd>1468.86</dd></dl></div><div class="xr-var-data"><pre>[19902715 values with dtype=float32]</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>Rrs_709</span></div><div class="xr-var-dims">(number_of_lines, pixels_per_line)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">...</div><input id="attrs-7d8d2df0-5cb6-4a2c-bdb4-f03cb66338ce" class="xr-var-attrs-in" type="checkbox"><label for="attrs-7d8d2df0-5cb6-4a2c-bdb4-f03cb66338ce" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-abacb82b-916c-4a9c-b66f-afb5abd9d64a" class="xr-var-data-in" type="checkbox"><label for="data-abacb82b-916c-4a9c-b66f-afb5abd9d64a" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>Remote sensing reflectance at 709 nm</dd><dt><span>units :</span></dt><dd>sr^-1</dd><dt><span>standard_name :</span></dt><dd>surface_ratio_of_upwelling_radiance_emerging_from_sea_water_to_downwelling_radiative_flux_in_air</dd><dt><span>valid_min :</span></dt><dd>-30000</dd><dt><span>valid_max :</span></dt><dd>25000</dd><dt><span>solar_irradiance :</span></dt><dd>1403.1101</dd></dl></div><div class="xr-var-data"><pre>[19902715 values with dtype=float32]</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>chlor_a</span></div><div class="xr-var-dims">(number_of_lines, pixels_per_line)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">...</div><input id="attrs-5bbb8ebc-959e-45af-a935-590635d19489" class="xr-var-attrs-in" type="checkbox"><label for="attrs-5bbb8ebc-959e-45af-a935-590635d19489" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-b65b776a-2098-47ad-9abf-533a302c367a" class="xr-var-data-in" type="checkbox"><label for="data-b65b776a-2098-47ad-9abf-533a302c367a" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>Chlorophyll Concentration, OCI Algorithm</dd><dt><span>units :</span></dt><dd>mg m^-3</dd><dt><span>standard_name :</span></dt><dd>mass_concentration_of_chlorophyll_in_sea_water</dd><dt><span>valid_min :</span></dt><dd>0.001</dd><dt><span>valid_max :</span></dt><dd>100.0</dd><dt><span>reference :</span></dt><dd>Hu, C., Lee Z., and Franz, B.A. (2012). Chlorophyll-a algorithms for oligotrophic oceans: A novel approach based on three-band reflectance difference, J. Geophys. Res., 117, C01011, doi:10.1029/2011JC007395.</dd></dl></div><div class="xr-var-data"><pre>[19902715 values with dtype=float32]</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>Kd_490</span></div><div class="xr-var-dims">(number_of_lines, pixels_per_line)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">...</div><input id="attrs-5e09bff6-60b9-48fd-9e53-270b2a0bf70b" class="xr-var-attrs-in" type="checkbox"><label for="attrs-5e09bff6-60b9-48fd-9e53-270b2a0bf70b" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-d7bdf876-3a6b-43c9-a9ac-59dee9d51db7" class="xr-var-data-in" type="checkbox"><label for="data-d7bdf876-3a6b-43c9-a9ac-59dee9d51db7" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>Diffuse attenuation coefficient at 490 nm, KD2 algorithm</dd><dt><span>units :</span></dt><dd>m^-1</dd><dt><span>valid_min :</span></dt><dd>50</dd><dt><span>valid_max :</span></dt><dd>30000</dd></dl></div><div class="xr-var-data"><pre>[19902715 values with dtype=float32]</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>l2_flags</span></div><div class="xr-var-dims">(number_of_lines, pixels_per_line)</div><div class="xr-var-dtype">int32</div><div class="xr-var-preview xr-preview">...</div><input id="attrs-ae5ad686-eee2-410a-96e6-257adab621d7" class="xr-var-attrs-in" type="checkbox"><label for="attrs-ae5ad686-eee2-410a-96e6-257adab621d7" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-17bc0e66-3449-42b5-80e1-5adbfa08a521" class="xr-var-data-in" type="checkbox"><label for="data-17bc0e66-3449-42b5-80e1-5adbfa08a521" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>Level-2 Processing Flags</dd><dt><span>valid_min :</span></dt><dd>-2147483648</dd><dt><span>valid_max :</span></dt><dd>2147483647</dd><dt><span>flag_masks :</span></dt><dd>[          1           2           4           8          16          32
+          64         128         256         512        1024        2048
+        4096        8192       16384       32768       65536      131072
+      262144      524288     1048576     2097152     4194304     8388608
+    16777216    33554432    67108864   134217728   268435456   536870912
+  1073741824 -2147483648]</dd><dt><span>flag_meanings :</span></dt><dd>ATMFAIL LAND PRODWARN HIGLINT HILT HISATZEN COASTZ SPARE STRAYLIGHT CLDICE COCCOLITH TURBIDW HISOLZEN SPARE LOWLW CHLFAIL NAVWARN ABSAER SPARE MAXAERITER MODGLINT CHLWARN ATMWARN SPARE SEAICE NAVFAIL FILTER SPARE BOWTIEDEL HIPOL PRODFAIL SPARE</dd></dl></div><div class="xr-var-data"><pre>[19902715 values with dtype=int32]</pre></div></li></ul></div></li><li class="xr-section-item"><input id="section-a539f1e1-9d94-433a-9fae-fc120b7616d4" class="xr-section-summary-in" type="checkbox" disabled=""><label for="section-a539f1e1-9d94-433a-9fae-fc120b7616d4" class="xr-section-summary" title="Expand/collapse section">Indexes: <span>(0)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"></ul></div></li><li class="xr-section-item"><input id="section-ac862890-08ef-4264-bee1-3fcdb1eff1c4" class="xr-section-summary-in" type="checkbox"><label for="section-ac862890-08ef-4264-bee1-3fcdb1eff1c4" class="xr-section-summary">Attributes: <span>(46)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>title :</span></dt><dd>OLCIS3A Level-2 Data</dd><dt><span>product_name :</span></dt><dd>S3A_OLCI_EFRNT.20201015T155218.L2.OC.nc</dd><dt><span>processing_version :</span></dt><dd>R2022.0</dd><dt><span>orbit_number :</span></dt><dd>24282</dd><dt><span>history :</span></dt><dd>l2gen par=/data9/sdpsoper/vdc/vpu20/workbuf/Oa01_radiance.nc.param metafile=S3A_OLCI_EFRNT.20201015T155218.L2.OC.nc.meta</dd><dt><span>instrument :</span></dt><dd>OLCI</dd><dt><span>platform :</span></dt><dd>Sentinel-3A</dd><dt><span>Conventions :</span></dt><dd>CF-1.6 ACDD-1.3</dd><dt><span>license :</span></dt><dd>https://science.nasa.gov/earth-science/earth-science-data/data-information-policy/</dd><dt><span>naming_authority :</span></dt><dd>gov.nasa.gsfc.sci.oceandata</dd><dt><span>id :</span></dt><dd>R2022.0/L2/S3A_OLCI_EFRNT.20201015T155218.L2.OC.nc</dd><dt><span>date_created :</span></dt><dd>2022-04-28T07:30:18.000Z</dd><dt><span>keywords_vocabulary :</span></dt><dd>NASA Global Change Master Directory (GCMD) Science Keywords</dd><dt><span>keywords :</span></dt><dd>Earth Science &gt; Oceans &gt; Ocean Optics &gt; Ocean Color</dd><dt><span>standard_name_vocabulary :</span></dt><dd>CF Standard Name Table v36</dd><dt><span>institution :</span></dt><dd>NASA Goddard Space Flight Center, Ocean Ecology Laboratory, Ocean Biology Processing Group</dd><dt><span>creator_name :</span></dt><dd>NASA/GSFC/OBPG</dd><dt><span>creator_email :</span></dt><dd>data@oceancolor.gsfc.nasa.gov</dd><dt><span>creator_url :</span></dt><dd>https://oceandata.sci.gsfc.nasa.gov</dd><dt><span>project :</span></dt><dd>Ocean Biology Processing Group (NASA/GSFC/OBPG)</dd><dt><span>publisher_name :</span></dt><dd>NASA/GSFC/OBPG</dd><dt><span>publisher_url :</span></dt><dd>https://oceandata.sci.gsfc.nasa.gov</dd><dt><span>publisher_email :</span></dt><dd>data@oceancolor.gsfc.nasa.gov</dd><dt><span>processing_level :</span></dt><dd>L2</dd><dt><span>cdm_data_type :</span></dt><dd>swath</dd><dt><span>spatialResolution :</span></dt><dd>300 m</dd><dt><span>time_coverage_start :</span></dt><dd>2020-10-15T15:52:13.792Z</dd><dt><span>time_coverage_end :</span></dt><dd>2020-10-15T15:55:13.757Z</dd><dt><span>start_center_longitude :</span></dt><dd>-86.23588</dd><dt><span>start_center_latitude :</span></dt><dd>30.442305</dd><dt><span>end_center_longitude :</span></dt><dd>-88.6665</dd><dt><span>end_center_latitude :</span></dt><dd>19.835049</dd><dt><span>northernmost_latitude :</span></dt><dd>31.41441</dd><dt><span>southernmost_latitude :</span></dt><dd>18.546497</dd><dt><span>easternmost_longitude :</span></dt><dd>-79.75462</dd><dt><span>westernmost_longitude :</span></dt><dd>-94.42871</dd><dt><span>geospatial_lat_units :</span></dt><dd>degrees_north</dd><dt><span>geospatial_lon_units :</span></dt><dd>degrees_east</dd><dt><span>geospatial_lat_max :</span></dt><dd>31.41441</dd><dt><span>geospatial_lat_min :</span></dt><dd>18.546497</dd><dt><span>geospatial_lon_max :</span></dt><dd>-79.75462</dd><dt><span>geospatial_lon_min :</span></dt><dd>-94.42871</dd><dt><span>startDirection :</span></dt><dd>Descending</dd><dt><span>endDirection :</span></dt><dd>Descending</dd><dt><span>day_night_flag :</span></dt><dd>Day</dd><dt><span>earth_sun_distance_correction :</span></dt><dd>1.0060665607452393</dd></dl></div></li></ul></div></div>
+</div>
+</div>
+<div id="cell-7" class="cell" data-execution_count="69">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> datatree</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+
+            <style>
+                .geemap-dark {
+                    --jp-widgets-color: white;
+                    --jp-widgets-label-color: white;
+                    --jp-ui-font-color1: white;
+                    --jp-layout-color2: #454545;
+                    background-color: #383838;
+                }
+
+                .geemap-dark .jupyter-button {
+                    --jp-layout-color3: #383838;
+                }
+
+                .geemap-colab {
+                    background-color: var(--colab-primary-surface-color, white);
+                }
+
+                .geemap-colab .jupyter-button {
+                    --jp-layout-color3: var(--colab-primary-surface-color, white);
+                }
+            </style>
+            
+</div>
+<div class="cell-output cell-output-error">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg ansi-bold">ModuleNotFoundError</span>                       Traceback (most recent call last)
+Cell <span class="ansi-green-fg ansi-bold">In[69], line 1</span>
+<span class="ansi-green-fg ansi-bold">----&gt; 1</span> <span style="font-weight:bold;color:rgb(0,135,0)">import</span> <span style="font-weight:bold;color:rgb(0,0,255)">datatree</span>
+
+<span class="ansi-red-fg ansi-bold">ModuleNotFoundError</span>: No module named 'datatree'</pre>
+</div>
+</div>
+</div>
+<div id="cell-8" class="cell" data-execution_count="42">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>array <span class="op">=</span> dataset[<span class="st">"Rrs_709"</span>]</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>array.attrs.update(</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    {</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>        <span class="st">"units"</span>: <span class="ss">f'(</span><span class="sc">{</span>dataset[<span class="st">"Rrs_709"</span>]<span class="sc">.</span>attrs[<span class="st">"units"</span>]<span class="sc">}</span><span class="ss">)'</span>,</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>array</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="co"># save to geotiff</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>array</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="co"># array.plot(</span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="co">#     x="longitude", y="latitude", aspect=2, size=4, cmap="jet", robust=True</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="co"># )</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="42">
+<div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewbox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewbox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme=dark],
+body[data-theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class="xr-text-repr-fallback">&lt;xarray.DataArray 'Rrs_709' (number_of_lines: 4091, pixels_per_line: 4865)&gt; Size: 80MB
+array([[nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan],
+       ...,
+       [nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan]], dtype=float32)
+Coordinates:
+    longitude  (number_of_lines, pixels_per_line) float32 80MB ...
+    latitude   (number_of_lines, pixels_per_line) float32 80MB ...
+Dimensions without coordinates: number_of_lines, pixels_per_line
+Attributes:
+    long_name:         Remote sensing reflectance at 709 nm
+    units:             ((((((((((((sr^-1))))))))))))
+    standard_name:     surface_ratio_of_upwelling_radiance_emerging_from_sea_...
+    valid_min:         -30000
+    valid_max:         25000
+    solar_irradiance:  1403.1101</pre><div class="xr-wrap" style="display:none"><div class="xr-header"><div class="xr-obj-type">xarray.DataArray</div><div class="xr-array-name">'Rrs_709'</div><ul class="xr-dim-list"><li><span>number_of_lines</span>: 4091</li><li><span>pixels_per_line</span>: 4865</li></ul></div><ul class="xr-sections"><li class="xr-section-item"><div class="xr-array-wrap"><input id="section-f8bd4119-3916-4e49-b505-8dea75dc7ca6" class="xr-array-in" type="checkbox" checked=""><label for="section-f8bd4119-3916-4e49-b505-8dea75dc7ca6" title="Show/hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-array-preview xr-preview"><span>nan nan nan nan nan nan nan nan ... nan nan nan nan nan nan nan nan</span></div><div class="xr-array-data"><pre>array([[nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan],
+       ...,
+       [nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan]], dtype=float32)</pre></div></div></li><li class="xr-section-item"><input id="section-74c45906-5e2f-4e02-bdb9-f7c2cee614d5" class="xr-section-summary-in" type="checkbox" checked=""><label for="section-74c45906-5e2f-4e02-bdb9-f7c2cee614d5" class="xr-section-summary">Coordinates: <span>(2)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span>longitude</span></div><div class="xr-var-dims">(number_of_lines, pixels_per_line)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">...</div><input id="attrs-1274e0a7-e099-4778-9aac-a3ec06d10de7" class="xr-var-attrs-in" type="checkbox"><label for="attrs-1274e0a7-e099-4778-9aac-a3ec06d10de7" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-9fffba4c-a5de-481d-8fc3-c2e1c7a2f2e1" class="xr-var-data-in" type="checkbox"><label for="data-9fffba4c-a5de-481d-8fc3-c2e1c7a2f2e1" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>Longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>valid_min :</span></dt><dd>-180.0</dd><dt><span>valid_max :</span></dt><dd>180.0</dd></dl></div><div class="xr-var-data"><pre>[19902715 values with dtype=float32]</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>latitude</span></div><div class="xr-var-dims">(number_of_lines, pixels_per_line)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">...</div><input id="attrs-2ef2a858-ba63-41a3-8c97-eb1591de4aaf" class="xr-var-attrs-in" type="checkbox"><label for="attrs-2ef2a858-ba63-41a3-8c97-eb1591de4aaf" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-90cec8f3-fbc0-4130-bf0d-ff28957a45b3" class="xr-var-data-in" type="checkbox"><label for="data-90cec8f3-fbc0-4130-bf0d-ff28957a45b3" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>Latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>valid_min :</span></dt><dd>-90.0</dd><dt><span>valid_max :</span></dt><dd>90.0</dd></dl></div><div class="xr-var-data"><pre>[19902715 values with dtype=float32]</pre></div></li></ul></div></li><li class="xr-section-item"><input id="section-8c6e0fc4-ee3e-4082-9afd-981d550bf6d1" class="xr-section-summary-in" type="checkbox" disabled=""><label for="section-8c6e0fc4-ee3e-4082-9afd-981d550bf6d1" class="xr-section-summary" title="Expand/collapse section">Indexes: <span>(0)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"></ul></div></li><li class="xr-section-item"><input id="section-c8b8297d-aab7-43bc-a921-89fe7d410e54" class="xr-section-summary-in" type="checkbox" checked=""><label for="section-c8b8297d-aab7-43bc-a921-89fe7d410e54" class="xr-section-summary">Attributes: <span>(6)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>Remote sensing reflectance at 709 nm</dd><dt><span>units :</span></dt><dd>((((((((((((sr^-1))))))))))))</dd><dt><span>standard_name :</span></dt><dd>surface_ratio_of_upwelling_radiance_emerging_from_sea_water_to_downwelling_radiative_flux_in_air</dd><dt><span>valid_min :</span></dt><dd>-30000</dd><dt><span>valid_max :</span></dt><dd>25000</dd><dt><span>solar_irradiance :</span></dt><dd>1403.1101</dd></dl></div></li></ul></div></div>
+</div>
+</div>
+<div id="cell-9" class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> earthaccess.search_datasets(instrument<span class="op">=</span><span class="st">"olci"</span>)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> item <span class="kw">in</span> results:</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    summary <span class="op">=</span> item.summary()</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(summary[<span class="st">"short-name"</span>])</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">#OLCIS3A_L2_EFR_OC</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>S3A_OL_1_EFR
+MERGED_S3_OLCI_L3b_CYANTC
+MERGED_S3_OLCI_L3b_ILW
+MERGED_S3_OLCI_L3m_CYAN
+MERGED_S3_OLCI_L3m_CYANTC
+MERGED_S3_OLCI_L3m_ILW
+OLCIS3A_L1_EFR
+OLCIS3A_L1_ERR
+OLCIS3A_L2_EFR_IOP
+OLCIS3A_L2_EFR_IOP_NRT
+OLCIS3A_L2_EFR_OC
+OLCIS3A_L2_EFR_OC_NRT
+OLCIS3A_L2_ERR_IOP
+OLCIS3A_L2_ERR_IOP_NRT
+OLCIS3A_L2_ERR_OC
+OLCIS3A_L2_ERR_OC_NRT
+OLCIS3A_L2_ILW
+OLCIS3A_L3b_ERR_CHL
+OLCIS3A_L3b_ERR_CHL_NRT
+OLCIS3A_L3b_ERR_IOP
+OLCIS3A_L3b_ERR_IOP_NRT
+OLCIS3A_L3b_ERR_KD
+OLCIS3A_L3b_ERR_KD_NRT
+OLCIS3A_L3b_ERR_RRS
+OLCIS3A_L3b_ERR_RRS_NRT
+OLCIS3A_L3b_ILW
+OLCIS3A_L3m_ERR_CHL
+OLCIS3A_L3m_ERR_CHL_NRT
+OLCIS3A_L3m_ERR_IOP
+OLCIS3A_L3m_ERR_IOP_NRT
+OLCIS3A_L3m_ERR_KD
+OLCIS3A_L3m_ERR_KD_NRT
+OLCIS3A_L3m_ERR_RRS
+OLCIS3A_L3m_ERR_RRS_NRT
+OLCIS3A_L3m_ILW
+OLCIS3B_L1_EFR
+OLCIS3B_L1_ERR
+OLCIS3B_L2_EFR_IOP
+OLCIS3B_L2_EFR_IOP_NRT
+OLCIS3B_L2_EFR_OC
+OLCIS3B_L2_EFR_OC_NRT
+OLCIS3B_L2_ERR_IOP
+OLCIS3B_L2_ERR_IOP_NRT
+OLCIS3B_L2_ERR_OC
+OLCIS3B_L2_ERR_OC_NRT
+OLCIS3B_L2_ILW
+OLCIS3B_L3b_ERR_CHL
+OLCIS3B_L3b_ERR_CHL_NRT
+OLCIS3B_L3b_ERR_IOP
+OLCIS3B_L3b_ERR_IOP_NRT
+OLCIS3B_L3b_ERR_KD
+OLCIS3B_L3b_ERR_KD_NRT
+OLCIS3B_L3b_ERR_RRS
+OLCIS3B_L3b_ERR_RRS_NRT
+OLCIS3B_L3b_ILW
+OLCIS3B_L3m_ERR_CHL
+OLCIS3B_L3m_ERR_CHL_NRT
+OLCIS3B_L3m_ERR_IOP
+OLCIS3B_L3m_ERR_IOP_NRT
+OLCIS3B_L3m_ERR_KD
+OLCIS3B_L3m_ERR_KD_NRT
+OLCIS3B_L3m_ERR_RRS
+OLCIS3B_L3m_ERR_RRS_NRT
+OLCIS3B_L3m_ILW
+S3A_OL_1_ERR
+S3A_SY_2_SYN
+S3B_OL_1_EFR
+S3B_OL_1_ERR
+S3B_SY_2_SYN</code></pre>
+</div>
+</div>
+<div id="cell-10" class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> earthaccess.search_data(</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    short_name<span class="op">=</span><span class="st">"OLCIS3A_L2_EFR_OC"</span>,</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    count<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>tspan <span class="op">=</span> (<span class="st">"2024-01-01"</span>, <span class="st">"2024-10-31"</span>)</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>bbox <span class="op">=</span> (<span class="op">-</span><span class="fl">89.4474</span>, <span class="fl">30.064</span>, <span class="op">-</span><span class="fl">88.337</span>, <span class="fl">30.064</span>)</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>clouds <span class="op">=</span> (<span class="dv">0</span>, <span class="dv">50</span>)</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> earthaccess.search_data(</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>    short_name<span class="op">=</span><span class="st">"OLCIS3A_L2_EFR_OC"</span>,</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>    temporal<span class="op">=</span>tspan,</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>    bounding_box<span class="op">=</span>bbox,</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    cloud_cover<span class="op">=</span>clouds,</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>paths <span class="op">=</span> earthaccess.<span class="bu">open</span>(results)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"dd92f3b2276b423f933217a88c6229d8","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+</script>
+</div>
+<div class="cell-output cell-output-display">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"7bf48f30568b44d4a1ae4308cef03858","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+</script>
+</div>
+<div class="cell-output cell-output-display">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"263eb54515da4589921c171ecb471048","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+</script>
+</div>
+</div>
+<div id="cell-11" class="cell" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>dataset <span class="op">=</span> xr.open_dataset(paths[<span class="dv">0</span>], engine<span class="op">=</span><span class="st">'netcdf4'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg ansi-bold">ValueError</span>                                Traceback (most recent call last)
+Cell <span class="ansi-green-fg ansi-bold">In[20], line 1</span>
+<span class="ansi-green-fg ansi-bold">----&gt; 1</span> dataset <span style="color:rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">xr</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">open_dataset</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">paths</span><span class="ansi-yellow-bg">[</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">0</span><span class="ansi-yellow-bg">]</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">engine</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">'</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">netcdf4</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">'</span><span class="ansi-yellow-bg">)</span>
+
+File <span class="ansi-green-fg ansi-bold">c:\Users\hafez\miniconda3\Lib\site-packages\xarray\backends\api.py:571</span>, in <span class="ansi-cyan-fg">open_dataset</span><span class="ansi-blue-fg ansi-bold">(filename_or_obj, engine, chunks, cache, decode_cf, mask_and_scale, decode_times, decode_timedelta, use_cftime, concat_characters, decode_coords, drop_variables, inline_array, chunked_array_type, from_array_kwargs, backend_kwargs, **kwargs)</span>
+<span class="ansi-green-fg">    559</span> decoders <span style="color:rgb(98,98,98)">=</span> _resolve_decoders_kwargs(
+<span class="ansi-green-fg">    560</span>     decode_cf,
+<span class="ansi-green-fg">    561</span>     open_backend_dataset_parameters<span style="color:rgb(98,98,98)">=</span>backend<span style="color:rgb(98,98,98)">.</span>open_dataset_parameters,
+<span class="ansi-green-fg ansi-bold">   (...)</span>
+<span class="ansi-green-fg">    567</span>     decode_coords<span style="color:rgb(98,98,98)">=</span>decode_coords,
+<span class="ansi-green-fg">    568</span> )
+<span class="ansi-green-fg">    570</span> overwrite_encoded_chunks <span style="color:rgb(98,98,98)">=</span> kwargs<span style="color:rgb(98,98,98)">.</span>pop(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">overwrite_encoded_chunks</span><span style="color:rgb(175,0,0)">"</span>, <span style="font-weight:bold;color:rgb(0,135,0)">None</span>)
+<span class="ansi-green-fg ansi-bold">--&gt; 571</span> backend_ds <span style="color:rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">backend</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">open_dataset</span><span class="ansi-yellow-bg">(</span>
+<span class="ansi-green-fg">    572</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">filename_or_obj</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    573</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">drop_variables</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">drop_variables</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    574</span> <span class="ansi-yellow-bg">    </span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">*</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">decoders</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    575</span> <span class="ansi-yellow-bg">    </span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">*</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">kwargs</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    576</span> <span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">    577</span> ds <span style="color:rgb(98,98,98)">=</span> _dataset_from_backend_dataset(
+<span class="ansi-green-fg">    578</span>     backend_ds,
+<span class="ansi-green-fg">    579</span>     filename_or_obj,
+<span class="ansi-green-fg ansi-bold">   (...)</span>
+<span class="ansi-green-fg">    589</span>     <span style="color:rgb(98,98,98)">*</span><span style="color:rgb(98,98,98)">*</span>kwargs,
+<span class="ansi-green-fg">    590</span> )
+<span class="ansi-green-fg">    591</span> <span style="font-weight:bold;color:rgb(0,135,0)">return</span> ds
+
+File <span class="ansi-green-fg ansi-bold">c:\Users\hafez\miniconda3\Lib\site-packages\xarray\backends\netCDF4_.py:645</span>, in <span class="ansi-cyan-fg">NetCDF4BackendEntrypoint.open_dataset</span><span class="ansi-blue-fg ansi-bold">(self, filename_or_obj, mask_and_scale, decode_times, concat_characters, decode_coords, drop_variables, use_cftime, decode_timedelta, group, mode, format, clobber, diskless, persist, lock, autoclose)</span>
+<span class="ansi-green-fg">    624</span> <span style="font-weight:bold;color:rgb(0,135,0)">def</span> <span style="color:rgb(0,0,255)">open_dataset</span>(  <span style="font-style:italic;color:rgb(95,135,135)"># type: ignore[override]  # allow LSP violation, not supporting **kwargs</span>
+<span class="ansi-green-fg">    625</span>     <span style="color:rgb(0,135,0)">self</span>,
+<span class="ansi-green-fg">    626</span>     filename_or_obj: <span style="color:rgb(0,135,0)">str</span> <span style="color:rgb(98,98,98)">|</span> os<span style="color:rgb(98,98,98)">.</span>PathLike[Any] <span style="color:rgb(98,98,98)">|</span> BufferedIOBase <span style="color:rgb(98,98,98)">|</span> AbstractDataStore,
+<span class="ansi-green-fg ansi-bold">   (...)</span>
+<span class="ansi-green-fg">    642</span>     autoclose<span style="color:rgb(98,98,98)">=</span><span style="font-weight:bold;color:rgb(0,135,0)">False</span>,
+<span class="ansi-green-fg">    643</span> ) <span style="color:rgb(98,98,98)">-</span><span style="color:rgb(98,98,98)">&gt;</span> Dataset:
+<span class="ansi-green-fg">    644</span>     filename_or_obj <span style="color:rgb(98,98,98)">=</span> _normalize_path(filename_or_obj)
+<span class="ansi-green-fg ansi-bold">--&gt; 645</span>     store <span style="color:rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">NetCDF4DataStore</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">open</span><span class="ansi-yellow-bg">(</span>
+<span class="ansi-green-fg">    646</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">filename_or_obj</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    647</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">mode</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">mode</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    648</span> <span class="ansi-yellow-bg">        </span><span style="color:rgb(0,135,0)" class="ansi-yellow-bg">format</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span style="color:rgb(0,135,0)" class="ansi-yellow-bg">format</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    649</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">group</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">group</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    650</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">clobber</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">clobber</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    651</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">diskless</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">diskless</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    652</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">persist</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">persist</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    653</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">lock</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">lock</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    654</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">autoclose</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">autoclose</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    655</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">    657</span>     store_entrypoint <span style="color:rgb(98,98,98)">=</span> StoreBackendEntrypoint()
+<span class="ansi-green-fg">    658</span>     <span style="font-weight:bold;color:rgb(0,135,0)">with</span> close_on_error(store):
+
+File <span class="ansi-green-fg ansi-bold">c:\Users\hafez\miniconda3\Lib\site-packages\xarray\backends\netCDF4_.py:381</span>, in <span class="ansi-cyan-fg">NetCDF4DataStore.open</span><span class="ansi-blue-fg ansi-bold">(cls, filename, mode, format, group, clobber, diskless, persist, lock, lock_maker, autoclose)</span>
+<span class="ansi-green-fg">    378</span>     filename <span style="color:rgb(98,98,98)">=</span> os<span style="color:rgb(98,98,98)">.</span>fspath(filename)
+<span class="ansi-green-fg">    380</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> <span style="font-weight:bold;color:rgb(175,0,255)">not</span> <span style="color:rgb(0,135,0)">isinstance</span>(filename, <span style="color:rgb(0,135,0)">str</span>):
+<span class="ansi-green-fg ansi-bold">--&gt; 381</span>     <span style="font-weight:bold;color:rgb(0,135,0)">raise</span> <span style="font-weight:bold;color:rgb(215,95,95)">ValueError</span>(
+<span class="ansi-green-fg">    382</span>         <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">can only read bytes or file-like objects </span><span style="color:rgb(175,0,0)">"</span>
+<span class="ansi-green-fg">    383</span>         <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">with engine=</span><span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)">scipy</span><span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)"> or </span><span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)">h5netcdf</span><span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)">"</span>
+<span class="ansi-green-fg">    384</span>     )
+<span class="ansi-green-fg">    386</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> <span style="color:rgb(0,135,0)">format</span> <span style="font-weight:bold;color:rgb(175,0,255)">is</span> <span style="font-weight:bold;color:rgb(0,135,0)">None</span>:
+<span class="ansi-green-fg">    387</span>     <span style="color:rgb(0,135,0)">format</span> <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">NETCDF4</span><span style="color:rgb(175,0,0)">"</span>
+
+<span class="ansi-red-fg ansi-bold">ValueError</span>: can only read bytes or file-like objects with engine='scipy' or 'h5netcdf'</pre>
+</div>
+</div>
+</div>
+<div id="cell-12" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>dataset <span class="op">=</span> xr.open_dataset(paths[<span class="dv">0</span>])</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>dataset</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg ansi-bold">KeyError</span>                                  Traceback (most recent call last)
+File <span class="ansi-green-fg ansi-bold">c:\Users\hafez\miniconda3\Lib\site-packages\xarray\backends\file_manager.py:211</span>, in <span class="ansi-cyan-fg">CachingFileManager._acquire_with_cache_info</span><span class="ansi-blue-fg ansi-bold">(self, needs_lock)</span>
+<span class="ansi-green-fg">    210</span> <span style="font-weight:bold;color:rgb(0,135,0)">try</span>:
+<span class="ansi-green-fg ansi-bold">--&gt; 211</span>     file <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_cache</span><span class="ansi-yellow-bg">[</span><span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_key</span><span class="ansi-yellow-bg">]</span>
+<span class="ansi-green-fg">    212</span> <span style="font-weight:bold;color:rgb(0,135,0)">except</span> <span style="font-weight:bold;color:rgb(215,95,95)">KeyError</span>:
+
+File <span class="ansi-green-fg ansi-bold">c:\Users\hafez\miniconda3\Lib\site-packages\xarray\backends\lru_cache.py:56</span>, in <span class="ansi-cyan-fg">LRUCache.__getitem__</span><span class="ansi-blue-fg ansi-bold">(self, key)</span>
+<span class="ansi-green-fg">     55</span> <span style="font-weight:bold;color:rgb(0,135,0)">with</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>_lock:
+<span class="ansi-green-fg ansi-bold">---&gt; 56</span>     value <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_cache</span><span class="ansi-yellow-bg">[</span><span class="ansi-yellow-bg">key</span><span class="ansi-yellow-bg">]</span>
+<span class="ansi-green-fg">     57</span>     <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>_cache<span style="color:rgb(98,98,98)">.</span>move_to_end(key)
+
+<span class="ansi-red-fg ansi-bold">KeyError</span>: [&lt;class 'h5netcdf.core.File'&gt;, (&lt;File-like object HTTPFileSystem, https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/S3A_OLCI_EFRNT.20210703T162305.L2.OC.nc&gt;,), 'r', (('decode_vlen_strings', True), ('driver', None), ('invalid_netcdf', None)), 'd5f858e9-e7aa-41a3-a406-35d327c30633']
+
+During handling of the above exception, another exception occurred:
+
+<span class="ansi-red-fg ansi-bold">ValueError</span>                                Traceback (most recent call last)
+Cell <span class="ansi-green-fg ansi-bold">In[13], line 1</span>
+<span class="ansi-green-fg ansi-bold">----&gt; 1</span> dataset <span style="color:rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">xr</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">open_dataset</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">paths</span><span class="ansi-yellow-bg">[</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">0</span><span class="ansi-yellow-bg">]</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">      2</span> dataset
+
+File <span class="ansi-green-fg ansi-bold">c:\Users\hafez\miniconda3\Lib\site-packages\xarray\backends\api.py:571</span>, in <span class="ansi-cyan-fg">open_dataset</span><span class="ansi-blue-fg ansi-bold">(filename_or_obj, engine, chunks, cache, decode_cf, mask_and_scale, decode_times, decode_timedelta, use_cftime, concat_characters, decode_coords, drop_variables, inline_array, chunked_array_type, from_array_kwargs, backend_kwargs, **kwargs)</span>
+<span class="ansi-green-fg">    559</span> decoders <span style="color:rgb(98,98,98)">=</span> _resolve_decoders_kwargs(
+<span class="ansi-green-fg">    560</span>     decode_cf,
+<span class="ansi-green-fg">    561</span>     open_backend_dataset_parameters<span style="color:rgb(98,98,98)">=</span>backend<span style="color:rgb(98,98,98)">.</span>open_dataset_parameters,
+<span class="ansi-green-fg ansi-bold">   (...)</span>
+<span class="ansi-green-fg">    567</span>     decode_coords<span style="color:rgb(98,98,98)">=</span>decode_coords,
+<span class="ansi-green-fg">    568</span> )
+<span class="ansi-green-fg">    570</span> overwrite_encoded_chunks <span style="color:rgb(98,98,98)">=</span> kwargs<span style="color:rgb(98,98,98)">.</span>pop(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">overwrite_encoded_chunks</span><span style="color:rgb(175,0,0)">"</span>, <span style="font-weight:bold;color:rgb(0,135,0)">None</span>)
+<span class="ansi-green-fg ansi-bold">--&gt; 571</span> backend_ds <span style="color:rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">backend</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">open_dataset</span><span class="ansi-yellow-bg">(</span>
+<span class="ansi-green-fg">    572</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">filename_or_obj</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    573</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">drop_variables</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">drop_variables</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    574</span> <span class="ansi-yellow-bg">    </span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">*</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">decoders</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    575</span> <span class="ansi-yellow-bg">    </span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">*</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">kwargs</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    576</span> <span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">    577</span> ds <span style="color:rgb(98,98,98)">=</span> _dataset_from_backend_dataset(
+<span class="ansi-green-fg">    578</span>     backend_ds,
+<span class="ansi-green-fg">    579</span>     filename_or_obj,
+<span class="ansi-green-fg ansi-bold">   (...)</span>
+<span class="ansi-green-fg">    589</span>     <span style="color:rgb(98,98,98)">*</span><span style="color:rgb(98,98,98)">*</span>kwargs,
+<span class="ansi-green-fg">    590</span> )
+<span class="ansi-green-fg">    591</span> <span style="font-weight:bold;color:rgb(0,135,0)">return</span> ds
+
+File <span class="ansi-green-fg ansi-bold">c:\Users\hafez\miniconda3\Lib\site-packages\xarray\backends\h5netcdf_.py:404</span>, in <span class="ansi-cyan-fg">H5netcdfBackendEntrypoint.open_dataset</span><span class="ansi-blue-fg ansi-bold">(self, filename_or_obj, mask_and_scale, decode_times, concat_characters, decode_coords, drop_variables, use_cftime, decode_timedelta, format, group, lock, invalid_netcdf, phony_dims, decode_vlen_strings, driver, driver_kwds)</span>
+<span class="ansi-green-fg">    383</span> <span style="font-weight:bold;color:rgb(0,135,0)">def</span> <span style="color:rgb(0,0,255)">open_dataset</span>(  <span style="font-style:italic;color:rgb(95,135,135)"># type: ignore[override]  # allow LSP violation, not supporting **kwargs</span>
+<span class="ansi-green-fg">    384</span>     <span style="color:rgb(0,135,0)">self</span>,
+<span class="ansi-green-fg">    385</span>     filename_or_obj: <span style="color:rgb(0,135,0)">str</span> <span style="color:rgb(98,98,98)">|</span> os<span style="color:rgb(98,98,98)">.</span>PathLike[Any] <span style="color:rgb(98,98,98)">|</span> BufferedIOBase <span style="color:rgb(98,98,98)">|</span> AbstractDataStore,
+<span class="ansi-green-fg ansi-bold">   (...)</span>
+<span class="ansi-green-fg">    401</span>     driver_kwds<span style="color:rgb(98,98,98)">=</span><span style="font-weight:bold;color:rgb(0,135,0)">None</span>,
+<span class="ansi-green-fg">    402</span> ) <span style="color:rgb(98,98,98)">-</span><span style="color:rgb(98,98,98)">&gt;</span> Dataset:
+<span class="ansi-green-fg">    403</span>     filename_or_obj <span style="color:rgb(98,98,98)">=</span> _normalize_path(filename_or_obj)
+<span class="ansi-green-fg ansi-bold">--&gt; 404</span>     store <span style="color:rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">H5NetCDFStore</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">open</span><span class="ansi-yellow-bg">(</span>
+<span class="ansi-green-fg">    405</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">filename_or_obj</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    406</span> <span class="ansi-yellow-bg">        </span><span style="color:rgb(0,135,0)" class="ansi-yellow-bg">format</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span style="color:rgb(0,135,0)" class="ansi-yellow-bg">format</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    407</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">group</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">group</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    408</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">lock</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">lock</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    409</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">invalid_netcdf</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">invalid_netcdf</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    410</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">phony_dims</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">phony_dims</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    411</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">decode_vlen_strings</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">decode_vlen_strings</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    412</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">driver</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">driver</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    413</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">driver_kwds</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">driver_kwds</span><span class="ansi-yellow-bg">,</span>
+<span class="ansi-green-fg">    414</span> <span class="ansi-yellow-bg">    </span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">    416</span>     store_entrypoint <span style="color:rgb(98,98,98)">=</span> StoreBackendEntrypoint()
+<span class="ansi-green-fg">    418</span>     ds <span style="color:rgb(98,98,98)">=</span> store_entrypoint<span style="color:rgb(98,98,98)">.</span>open_dataset(
+<span class="ansi-green-fg">    419</span>         store,
+<span class="ansi-green-fg">    420</span>         mask_and_scale<span style="color:rgb(98,98,98)">=</span>mask_and_scale,
+<span class="ansi-green-fg ansi-bold">   (...)</span>
+<span class="ansi-green-fg">    426</span>         decode_timedelta<span style="color:rgb(98,98,98)">=</span>decode_timedelta,
+<span class="ansi-green-fg">    427</span>     )
+
+File <span class="ansi-green-fg ansi-bold">c:\Users\hafez\miniconda3\Lib\site-packages\xarray\backends\h5netcdf_.py:184</span>, in <span class="ansi-cyan-fg">H5NetCDFStore.open</span><span class="ansi-blue-fg ansi-bold">(cls, filename, mode, format, group, lock, autoclose, invalid_netcdf, phony_dims, decode_vlen_strings, driver, driver_kwds)</span>
+<span class="ansi-green-fg">    181</span>         lock <span style="color:rgb(98,98,98)">=</span> combine_locks([HDF5_LOCK, get_write_lock(filename)])
+<span class="ansi-green-fg">    183</span> manager <span style="color:rgb(98,98,98)">=</span> CachingFileManager(h5netcdf<span style="color:rgb(98,98,98)">.</span>File, filename, mode<span style="color:rgb(98,98,98)">=</span>mode, kwargs<span style="color:rgb(98,98,98)">=</span>kwargs)
+<span class="ansi-green-fg ansi-bold">--&gt; 184</span> <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span style="color:rgb(0,135,0)" class="ansi-yellow-bg">cls</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">manager</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">group</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">group</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">mode</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">mode</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">lock</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">lock</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">autoclose</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">autoclose</span><span class="ansi-yellow-bg">)</span>
+
+File <span class="ansi-green-fg ansi-bold">c:\Users\hafez\miniconda3\Lib\site-packages\xarray\backends\h5netcdf_.py:130</span>, in <span class="ansi-cyan-fg">H5NetCDFStore.__init__</span><span class="ansi-blue-fg ansi-bold">(self, manager, group, mode, lock, autoclose)</span>
+<span class="ansi-green-fg">    127</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>format <span style="color:rgb(98,98,98)">=</span> <span style="font-weight:bold;color:rgb(0,135,0)">None</span>
+<span class="ansi-green-fg">    128</span> <span style="font-style:italic;color:rgb(95,135,135)"># todo: utilizing find_root_and_group seems a bit clunky</span>
+<span class="ansi-green-fg">    129</span> <span style="font-style:italic;color:rgb(95,135,135)">#  making filename available on h5netcdf.Group seems better</span>
+<span class="ansi-green-fg ansi-bold">--&gt; 130</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>_filename <span style="color:rgb(98,98,98)">=</span> find_root_and_group(<span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">ds</span>)[<span style="color:rgb(98,98,98)">0</span>]<span style="color:rgb(98,98,98)">.</span>filename
+<span class="ansi-green-fg">    131</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>is_remote <span style="color:rgb(98,98,98)">=</span> is_remote_uri(<span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>_filename)
+<span class="ansi-green-fg">    132</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>lock <span style="color:rgb(98,98,98)">=</span> ensure_lock(lock)
+
+File <span class="ansi-green-fg ansi-bold">c:\Users\hafez\miniconda3\Lib\site-packages\xarray\backends\h5netcdf_.py:195</span>, in <span class="ansi-cyan-fg">H5NetCDFStore.ds</span><span class="ansi-blue-fg ansi-bold">(self)</span>
+<span class="ansi-green-fg">    193</span> <span style="color:rgb(175,0,255)">@property</span>
+<span class="ansi-green-fg">    194</span> <span style="font-weight:bold;color:rgb(0,135,0)">def</span> <span style="color:rgb(0,0,255)">ds</span>(<span style="color:rgb(0,135,0)">self</span>):
+<span class="ansi-green-fg ansi-bold">--&gt; 195</span>     <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_acquire</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span>
+
+File <span class="ansi-green-fg ansi-bold">c:\Users\hafez\miniconda3\Lib\site-packages\xarray\backends\h5netcdf_.py:187</span>, in <span class="ansi-cyan-fg">H5NetCDFStore._acquire</span><span class="ansi-blue-fg ansi-bold">(self, needs_lock)</span>
+<span class="ansi-green-fg">    186</span> <span style="font-weight:bold;color:rgb(0,135,0)">def</span> <span style="color:rgb(0,0,255)">_acquire</span>(<span style="color:rgb(0,135,0)">self</span>, needs_lock<span style="color:rgb(98,98,98)">=</span><span style="font-weight:bold;color:rgb(0,135,0)">True</span>):
+<span class="ansi-green-fg ansi-bold">--&gt; 187</span> <span class="ansi-yellow-bg">    </span><span style="font-weight:bold;color:rgb(0,135,0)" class="ansi-yellow-bg">with</span><span class="ansi-yellow-bg"> </span><span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_manager</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">acquire_context</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">needs_lock</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg"> </span><span style="font-weight:bold;color:rgb(0,135,0)" class="ansi-yellow-bg">as</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">root</span><span class="ansi-yellow-bg">:</span>
+<span class="ansi-green-fg">    188</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">ds</span><span class="ansi-yellow-bg"> </span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">_nc4_require_group</span><span class="ansi-yellow-bg">(</span>
+<span class="ansi-green-fg">    189</span> <span class="ansi-yellow-bg">            </span><span class="ansi-yellow-bg">root</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_group</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_mode</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">create_group</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">_h5netcdf_create_group</span>
+<span class="ansi-green-fg">    190</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">    191</span>     <span style="font-weight:bold;color:rgb(0,135,0)">return</span> ds
+
+File <span class="ansi-green-fg ansi-bold">c:\Users\hafez\miniconda3\Lib\contextlib.py:137</span>, in <span class="ansi-cyan-fg">_GeneratorContextManager.__enter__</span><span class="ansi-blue-fg ansi-bold">(self)</span>
+<span class="ansi-green-fg">    135</span> <span style="font-weight:bold;color:rgb(0,135,0)">del</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>args, <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>kwds, <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>func
+<span class="ansi-green-fg">    136</span> <span style="font-weight:bold;color:rgb(0,135,0)">try</span>:
+<span class="ansi-green-fg ansi-bold">--&gt; 137</span>     <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span style="color:rgb(0,135,0)">next</span>(<span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>gen)
+<span class="ansi-green-fg">    138</span> <span style="font-weight:bold;color:rgb(0,135,0)">except</span> <span style="font-weight:bold;color:rgb(215,95,95)">StopIteration</span>:
+<span class="ansi-green-fg">    139</span>     <span style="font-weight:bold;color:rgb(0,135,0)">raise</span> <span style="font-weight:bold;color:rgb(215,95,95)">RuntimeError</span>(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">generator didn</span><span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)">t yield</span><span style="color:rgb(175,0,0)">"</span>) <span style="font-weight:bold;color:rgb(0,135,0)">from</span> <span style="font-weight:bold;color:rgb(0,135,0)">None</span>
+
+File <span class="ansi-green-fg ansi-bold">c:\Users\hafez\miniconda3\Lib\site-packages\xarray\backends\file_manager.py:199</span>, in <span class="ansi-cyan-fg">CachingFileManager.acquire_context</span><span class="ansi-blue-fg ansi-bold">(self, needs_lock)</span>
+<span class="ansi-green-fg">    196</span> <span style="color:rgb(175,0,255)">@contextlib</span><span style="color:rgb(98,98,98)">.</span>contextmanager
+<span class="ansi-green-fg">    197</span> <span style="font-weight:bold;color:rgb(0,135,0)">def</span> <span style="color:rgb(0,0,255)">acquire_context</span>(<span style="color:rgb(0,135,0)">self</span>, needs_lock<span style="color:rgb(98,98,98)">=</span><span style="font-weight:bold;color:rgb(0,135,0)">True</span>):
+<span class="ansi-green-fg">    198</span> <span style="color:rgb(188,188,188)">    </span><span style="font-style:italic;color:rgb(175,0,0)">"""Context manager for acquiring a file."""</span>
+<span class="ansi-green-fg ansi-bold">--&gt; 199</span>     file, cached <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_acquire_with_cache_info</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">needs_lock</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">    200</span>     <span style="font-weight:bold;color:rgb(0,135,0)">try</span>:
+<span class="ansi-green-fg">    201</span>         <span style="font-weight:bold;color:rgb(0,135,0)">yield</span> file
+
+File <span class="ansi-green-fg ansi-bold">c:\Users\hafez\miniconda3\Lib\site-packages\xarray\backends\file_manager.py:217</span>, in <span class="ansi-cyan-fg">CachingFileManager._acquire_with_cache_info</span><span class="ansi-blue-fg ansi-bold">(self, needs_lock)</span>
+<span class="ansi-green-fg">    215</span>     kwargs <span style="color:rgb(98,98,98)">=</span> kwargs<span style="color:rgb(98,98,98)">.</span>copy()
+<span class="ansi-green-fg">    216</span>     kwargs[<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">mode</span><span style="color:rgb(175,0,0)">"</span>] <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>_mode
+<span class="ansi-green-fg ansi-bold">--&gt; 217</span> file <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_opener</span><span class="ansi-yellow-bg">(</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">*</span><span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_args</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">*</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">kwargs</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">    218</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>_mode <span style="color:rgb(98,98,98)">==</span> <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">w</span><span style="color:rgb(175,0,0)">"</span>:
+<span class="ansi-green-fg">    219</span>     <span style="font-style:italic;color:rgb(95,135,135)"># ensure file doesn't get overridden when opened again</span>
+<span class="ansi-green-fg">    220</span>     <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>_mode <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">a</span><span style="color:rgb(175,0,0)">"</span>
+
+File <span class="ansi-green-fg ansi-bold">c:\Users\hafez\miniconda3\Lib\site-packages\h5netcdf\core.py:1102</span>, in <span class="ansi-cyan-fg">File.__init__</span><span class="ansi-blue-fg ansi-bold">(self, path, mode, invalid_netcdf, phony_dims, **kwargs)</span>
+<span class="ansi-green-fg">   1100</span> <span style="font-style:italic;color:rgb(95,135,135)"># This maps keeps track of all HDF5 datasets corresponding to this group.</span>
+<span class="ansi-green-fg">   1101</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>_all_h5groups <span style="color:rgb(98,98,98)">=</span> ChainMap(<span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>_h5group)
+<span class="ansi-green-fg ansi-bold">-&gt; 1102</span> <span style="color:rgb(0,135,0)" class="ansi-yellow-bg">super</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span style="color:rgb(0,0,255)" class="ansi-yellow-bg">__init__</span><span class="ansi-yellow-bg">(</span><span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_h5path</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">   1103</span> <span style="font-style:italic;color:rgb(95,135,135)"># get maximum dimension id and count of labeled dimensions</span>
+<span class="ansi-green-fg">   1104</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>_writable:
+
+File <span class="ansi-green-fg ansi-bold">c:\Users\hafez\miniconda3\Lib\site-packages\h5netcdf\core.py:504</span>, in <span class="ansi-cyan-fg">Group.__init__</span><span class="ansi-blue-fg ansi-bold">(self, parent, name)</span>
+<span class="ansi-green-fg">    501</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>_root<span style="color:rgb(98,98,98)">.</span>_phony_dims_mode <span style="font-weight:bold;color:rgb(175,0,255)">is</span> <span style="font-weight:bold;color:rgb(175,0,255)">not</span> <span style="font-weight:bold;color:rgb(0,135,0)">None</span>:
+<span class="ansi-green-fg">    502</span>     phony_dims <span style="color:rgb(98,98,98)">=</span> Counter()
+<span class="ansi-green-fg ansi-bold">--&gt; 504</span> <span style="font-weight:bold;color:rgb(0,135,0)" class="ansi-yellow-bg">for</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">k</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">v</span><span class="ansi-yellow-bg"> </span><span style="font-weight:bold;color:rgb(175,0,255)" class="ansi-yellow-bg">in</span><span class="ansi-yellow-bg"> </span><span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_h5group</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">items</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg">:</span>
+<span class="ansi-green-fg">    505</span> <span class="ansi-yellow-bg">    </span><span style="font-weight:bold;color:rgb(0,135,0)" class="ansi-yellow-bg">if</span><span class="ansi-yellow-bg"> </span><span style="color:rgb(0,135,0)" class="ansi-yellow-bg">isinstance</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">v</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_root</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_h5py</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">Group</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg">:</span>
+<span class="ansi-green-fg">    506</span> <span class="ansi-yellow-bg">        </span><span style="font-style:italic;color:rgb(95,135,135)" class="ansi-yellow-bg"># add to the groups collection if this is a h5py(d) Group</span>
+<span class="ansi-green-fg">    507</span> <span class="ansi-yellow-bg">        </span><span style="font-style:italic;color:rgb(95,135,135)" class="ansi-yellow-bg"># instance</span>
+<span class="ansi-green-fg">    508</span> <span class="ansi-yellow-bg">        </span><span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_groups</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">add</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">k</span><span class="ansi-yellow-bg">)</span>
+
+File <span class="ansi-green-fg ansi-bold">c:\Users\hafez\miniconda3\Lib\site-packages\h5py\_hl\base.py:438</span>, in <span class="ansi-cyan-fg">ItemsViewHDF5.__iter__</span><span class="ansi-blue-fg ansi-bold">(self)</span>
+<span class="ansi-green-fg">    436</span> <span style="font-weight:bold;color:rgb(0,135,0)">with</span> phil:
+<span class="ansi-green-fg">    437</span>     <span style="font-weight:bold;color:rgb(0,135,0)">for</span> key <span style="font-weight:bold;color:rgb(175,0,255)">in</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>_mapping:
+<span class="ansi-green-fg ansi-bold">--&gt; 438</span>         <span style="font-weight:bold;color:rgb(0,135,0)">yield</span> (key, <span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_mapping</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">get</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">key</span><span class="ansi-yellow-bg">)</span>)
+
+File <span class="ansi-green-fg ansi-bold">c:\Users\hafez\miniconda3\Lib\site-packages\h5py\_hl\group.py:400</span>, in <span class="ansi-cyan-fg">Group.get</span><span class="ansi-blue-fg ansi-bold">(self, name, default, getclass, getlink)</span>
+<span class="ansi-green-fg">    398</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> <span style="font-weight:bold;color:rgb(175,0,255)">not</span> (getclass <span style="font-weight:bold;color:rgb(175,0,255)">or</span> getlink):
+<span class="ansi-green-fg">    399</span>     <span style="font-weight:bold;color:rgb(0,135,0)">try</span>:
+<span class="ansi-green-fg ansi-bold">--&gt; 400</span>         <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span class="ansi-yellow-bg">[</span><span class="ansi-yellow-bg">name</span><span class="ansi-yellow-bg">]</span>
+<span class="ansi-green-fg">    401</span>     <span style="font-weight:bold;color:rgb(0,135,0)">except</span> <span style="font-weight:bold;color:rgb(215,95,95)">KeyError</span>:
+<span class="ansi-green-fg">    402</span>         <span style="font-weight:bold;color:rgb(0,135,0)">return</span> default
+
+File <span class="ansi-green-fg ansi-bold">h5py\_objects.pyx:54</span>, in <span class="ansi-cyan-fg">h5py._objects.with_phil.wrapper</span><span class="ansi-blue-fg ansi-bold">()</span>
+
+File <span class="ansi-green-fg ansi-bold">h5py\_objects.pyx:55</span>, in <span class="ansi-cyan-fg">h5py._objects.with_phil.wrapper</span><span class="ansi-blue-fg ansi-bold">()</span>
+
+File <span class="ansi-green-fg ansi-bold">c:\Users\hafez\miniconda3\Lib\site-packages\h5py\_hl\group.py:357</span>, in <span class="ansi-cyan-fg">Group.__getitem__</span><span class="ansi-blue-fg ansi-bold">(self, name)</span>
+<span class="ansi-green-fg">    355</span>         <span style="font-weight:bold;color:rgb(0,135,0)">raise</span> <span style="font-weight:bold;color:rgb(215,95,95)">ValueError</span>(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">Invalid HDF5 object reference</span><span style="color:rgb(175,0,0)">"</span>)
+<span class="ansi-green-fg">    356</span> <span style="font-weight:bold;color:rgb(0,135,0)">elif</span> <span style="color:rgb(0,135,0)">isinstance</span>(name, (<span style="color:rgb(0,135,0)">bytes</span>, <span style="color:rgb(0,135,0)">str</span>)):
+<span class="ansi-green-fg ansi-bold">--&gt; 357</span>     oid <span style="color:rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">h5o</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">open</span><span class="ansi-yellow-bg">(</span><span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">id</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_e</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">name</span><span class="ansi-yellow-bg">)</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">lapl</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_lapl</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">    358</span> <span style="font-weight:bold;color:rgb(0,135,0)">else</span>:
+<span class="ansi-green-fg">    359</span>     <span style="font-weight:bold;color:rgb(0,135,0)">raise</span> <span style="font-weight:bold;color:rgb(215,95,95)">TypeError</span>(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">Accessing a group is done with bytes or str, </span><span style="color:rgb(175,0,0)">"</span>
+<span class="ansi-green-fg">    360</span>                     <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">not </span><span style="font-weight:bold;color:rgb(175,95,135)">{}</span><span style="color:rgb(175,0,0)">"</span><span style="color:rgb(98,98,98)">.</span>format(<span style="color:rgb(0,135,0)">type</span>(name)))
+
+File <span class="ansi-green-fg ansi-bold">h5py\_objects.pyx:54</span>, in <span class="ansi-cyan-fg">h5py._objects.with_phil.wrapper</span><span class="ansi-blue-fg ansi-bold">()</span>
+
+File <span class="ansi-green-fg ansi-bold">h5py\_objects.pyx:55</span>, in <span class="ansi-cyan-fg">h5py._objects.with_phil.wrapper</span><span class="ansi-blue-fg ansi-bold">()</span>
+
+File <span class="ansi-green-fg ansi-bold">h5py\h5o.pyx:189</span>, in <span class="ansi-cyan-fg">h5py.h5o.open</span><span class="ansi-blue-fg ansi-bold">()</span>
+
+File <span class="ansi-green-fg ansi-bold">h5py\h5fd.pyx:163</span>, in <span class="ansi-cyan-fg">h5py.h5fd.H5FD_fileobj_read</span><span class="ansi-blue-fg ansi-bold">()</span>
+
+File <span class="ansi-green-fg ansi-bold">c:\Users\hafez\miniconda3\Lib\site-packages\fsspec\spec.py:1959</span>, in <span class="ansi-cyan-fg">AbstractBufferedFile.readinto</span><span class="ansi-blue-fg ansi-bold">(self, b)</span>
+<span class="ansi-green-fg">   1954</span> <span style="font-style:italic;color:rgb(175,0,0)">"""mirrors builtin file's readinto method</span>
+<span class="ansi-green-fg">   1955</span> 
+<span class="ansi-green-fg">   1956</span> <span style="font-style:italic;color:rgb(175,0,0)">https://docs.python.org/3/library/io.html#io.RawIOBase.readinto</span>
+<span class="ansi-green-fg">   1957</span> <span style="font-style:italic;color:rgb(175,0,0)">"""</span>
+<span class="ansi-green-fg">   1958</span> out <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(0,135,0)">memoryview</span>(b)<span style="color:rgb(98,98,98)">.</span>cast(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">B</span><span style="color:rgb(175,0,0)">"</span>)
+<span class="ansi-green-fg ansi-bold">-&gt; 1959</span> data <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">read</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">out</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">nbytes</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">   1960</span> out[: <span style="color:rgb(0,135,0)">len</span>(data)] <span style="color:rgb(98,98,98)">=</span> data
+<span class="ansi-green-fg">   1961</span> <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span style="color:rgb(0,135,0)">len</span>(data)
+
+File <span class="ansi-green-fg ansi-bold">c:\Users\hafez\miniconda3\Lib\site-packages\fsspec\spec.py:1941</span>, in <span class="ansi-cyan-fg">AbstractBufferedFile.read</span><span class="ansi-blue-fg ansi-bold">(self, length)</span>
+<span class="ansi-green-fg">   1938</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> length <span style="color:rgb(98,98,98)">==</span> <span style="color:rgb(98,98,98)">0</span>:
+<span class="ansi-green-fg">   1939</span>     <span style="font-style:italic;color:rgb(95,135,135)"># don't even bother calling fetch</span>
+<span class="ansi-green-fg">   1940</span>     <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span style="color:rgb(175,0,0)">b</span><span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">"</span>
+<span class="ansi-green-fg ansi-bold">-&gt; 1941</span> out <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">cache</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_fetch</span><span class="ansi-yellow-bg">(</span><span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">loc</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">loc</span><span class="ansi-yellow-bg"> </span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">+</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">length</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">   1943</span> logger<span style="color:rgb(98,98,98)">.</span>debug(
+<span class="ansi-green-fg">   1944</span>     <span style="color:rgb(175,0,0)">"</span><span style="font-weight:bold;color:rgb(175,95,135)">%s</span><span style="color:rgb(175,0,0)"> read: </span><span style="font-weight:bold;color:rgb(175,95,135)">%i</span><span style="color:rgb(175,0,0)"> - </span><span style="font-weight:bold;color:rgb(175,95,135)">%i</span><span style="color:rgb(175,0,0)"> </span><span style="font-weight:bold;color:rgb(175,95,135)">%s</span><span style="color:rgb(175,0,0)">"</span>,
+<span class="ansi-green-fg">   1945</span>     <span style="color:rgb(0,135,0)">self</span>,
+<span class="ansi-green-fg ansi-bold">   (...)</span>
+<span class="ansi-green-fg">   1948</span>     <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>cache<span style="color:rgb(98,98,98)">.</span>_log_stats(),
+<span class="ansi-green-fg">   1949</span> )
+<span class="ansi-green-fg">   1950</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>loc <span style="color:rgb(98,98,98)">+</span><span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(0,135,0)">len</span>(out)
+
+File <span class="ansi-green-fg ansi-bold">c:\Users\hafez\miniconda3\Lib\site-packages\fsspec\caching.py:503</span>, in <span class="ansi-cyan-fg">BytesCache._fetch</span><span class="ansi-blue-fg ansi-bold">(self, start, end)</span>
+<span class="ansi-green-fg">    501</span> <span style="font-weight:bold;color:rgb(0,135,0)">elif</span> end <span style="color:rgb(98,98,98)">-</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>end <span style="color:rgb(98,98,98)">&gt;</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>blocksize:
+<span class="ansi-green-fg">    502</span>     <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>total_requested_bytes <span style="color:rgb(98,98,98)">+</span><span style="color:rgb(98,98,98)">=</span> bend <span style="color:rgb(98,98,98)">-</span> start
+<span class="ansi-green-fg ansi-bold">--&gt; 503</span>     <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>cache <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">fetcher</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">start</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">bend</span><span class="ansi-yellow-bg">)</span>
+<span class="ansi-green-fg">    504</span>     <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>start <span style="color:rgb(98,98,98)">=</span> start
+<span class="ansi-green-fg">    505</span> <span style="font-weight:bold;color:rgb(0,135,0)">else</span>:
+
+File <span class="ansi-green-fg ansi-bold">c:\Users\hafez\miniconda3\Lib\site-packages\fsspec\asyn.py:118</span>, in <span class="ansi-cyan-fg">sync_wrapper.&lt;locals&gt;.wrapper</span><span class="ansi-blue-fg ansi-bold">(*args, **kwargs)</span>
+<span class="ansi-green-fg">    115</span> <span style="color:rgb(175,0,255)">@functools</span><span style="color:rgb(98,98,98)">.</span>wraps(func)
+<span class="ansi-green-fg">    116</span> <span style="font-weight:bold;color:rgb(0,135,0)">def</span> <span style="color:rgb(0,0,255)">wrapper</span>(<span style="color:rgb(98,98,98)">*</span>args, <span style="color:rgb(98,98,98)">*</span><span style="color:rgb(98,98,98)">*</span>kwargs):
+<span class="ansi-green-fg">    117</span>     <span style="color:rgb(0,135,0)">self</span> <span style="color:rgb(98,98,98)">=</span> obj <span style="font-weight:bold;color:rgb(175,0,255)">or</span> args[<span style="color:rgb(98,98,98)">0</span>]
+<span class="ansi-green-fg ansi-bold">--&gt; 118</span>     <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">sync</span><span class="ansi-yellow-bg">(</span><span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">loop</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">func</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">args</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">*</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">kwargs</span><span class="ansi-yellow-bg">)</span>
+
+File <span class="ansi-green-fg ansi-bold">c:\Users\hafez\miniconda3\Lib\site-packages\fsspec\asyn.py:103</span>, in <span class="ansi-cyan-fg">sync</span><span class="ansi-blue-fg ansi-bold">(loop, func, timeout, *args, **kwargs)</span>
+<span class="ansi-green-fg">    101</span>     <span style="font-weight:bold;color:rgb(0,135,0)">raise</span> FSTimeoutError <span style="font-weight:bold;color:rgb(0,135,0)">from</span> <span style="font-weight:bold;color:rgb(0,0,255)">return_result</span>
+<span class="ansi-green-fg">    102</span> <span style="font-weight:bold;color:rgb(0,135,0)">elif</span> <span style="color:rgb(0,135,0)">isinstance</span>(return_result, <span style="font-weight:bold;color:rgb(215,95,95)">BaseException</span>):
+<span class="ansi-green-fg ansi-bold">--&gt; 103</span>     <span style="font-weight:bold;color:rgb(0,135,0)">raise</span> return_result
+<span class="ansi-green-fg">    104</span> <span style="font-weight:bold;color:rgb(0,135,0)">else</span>:
+<span class="ansi-green-fg">    105</span>     <span style="font-weight:bold;color:rgb(0,135,0)">return</span> return_result
+
+File <span class="ansi-green-fg ansi-bold">c:\Users\hafez\miniconda3\Lib\site-packages\fsspec\asyn.py:56</span>, in <span class="ansi-cyan-fg">_runner</span><span class="ansi-blue-fg ansi-bold">(event, coro, result, timeout)</span>
+<span class="ansi-green-fg">     54</span>     coro <span style="color:rgb(98,98,98)">=</span> asyncio<span style="color:rgb(98,98,98)">.</span>wait_for(coro, timeout<span style="color:rgb(98,98,98)">=</span>timeout)
+<span class="ansi-green-fg">     55</span> <span style="font-weight:bold;color:rgb(0,135,0)">try</span>:
+<span class="ansi-green-fg ansi-bold">---&gt; 56</span>     result[<span style="color:rgb(98,98,98)">0</span>] <span style="color:rgb(98,98,98)">=</span> <span style="font-weight:bold;color:rgb(0,135,0)">await</span> coro
+<span class="ansi-green-fg">     57</span> <span style="font-weight:bold;color:rgb(0,135,0)">except</span> <span style="font-weight:bold;color:rgb(215,95,95)">Exception</span> <span style="font-weight:bold;color:rgb(0,135,0)">as</span> ex:
+<span class="ansi-green-fg">     58</span>     result[<span style="color:rgb(98,98,98)">0</span>] <span style="color:rgb(98,98,98)">=</span> ex
+
+File <span class="ansi-green-fg ansi-bold">c:\Users\hafez\miniconda3\Lib\site-packages\fsspec\implementations\http.py:669</span>, in <span class="ansi-cyan-fg">HTTPFile.async_fetch_range</span><span class="ansi-blue-fg ansi-bold">(self, start, end)</span>
+<span class="ansi-green-fg">    667</span>     out <span style="color:rgb(98,98,98)">=</span> <span style="font-weight:bold;color:rgb(0,135,0)">await</span> r<span style="color:rgb(98,98,98)">.</span>read()
+<span class="ansi-green-fg">    668</span> <span style="font-weight:bold;color:rgb(0,135,0)">elif</span> start <span style="color:rgb(98,98,98)">&gt;</span> <span style="color:rgb(98,98,98)">0</span>:
+<span class="ansi-green-fg ansi-bold">--&gt; 669</span>     <span style="font-weight:bold;color:rgb(0,135,0)">raise</span> <span style="font-weight:bold;color:rgb(215,95,95)">ValueError</span>(
+<span class="ansi-green-fg">    670</span>         <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">The HTTP server doesn</span><span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)">t appear to support range requests. </span><span style="color:rgb(175,0,0)">"</span>
+<span class="ansi-green-fg">    671</span>         <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">Only reading this file from the beginning is supported. </span><span style="color:rgb(175,0,0)">"</span>
+<span class="ansi-green-fg">    672</span>         <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">Open with block_size=0 for a streaming file interface.</span><span style="color:rgb(175,0,0)">"</span>
+<span class="ansi-green-fg">    673</span>     )
+<span class="ansi-green-fg">    674</span> <span style="font-weight:bold;color:rgb(0,135,0)">else</span>:
+<span class="ansi-green-fg">    675</span>     <span style="font-style:italic;color:rgb(95,135,135)"># Response is not a range, but we want the start of the file,</span>
+<span class="ansi-green-fg">    676</span>     <span style="font-style:italic;color:rgb(95,135,135)"># so we can read the required amount anyway.</span>
+<span class="ansi-green-fg">    677</span>     cl <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(98,98,98)">0</span>
+
+<span class="ansi-red-fg ansi-bold">ValueError</span>: The HTTP server doesn't appear to support range requests. Only reading this file from the beginning is supported. Open with block_size=0 for a streaming file interface.</pre>
+</div>
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/hafez-ahmad\.github\.io\/hafez");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

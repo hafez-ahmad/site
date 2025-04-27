@@ -1,0 +1,11 @@
+/* css styles */
+/* CSS styles for a top blue heading */
+.top-blue-heading {
+    color: white;
+    background-color: blue;
+    text-align: center;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 5px;
+}

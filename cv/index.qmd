@@ -1,0 +1,13 @@
+---
+title: "Curriculum Vitae"
+---
+
+# Curriculum Vitae
+
+# Updated CV
+
+You can now view or download my updated CV using the links below:
+
+[View CV Online](Resume_HafezAhmad_1_2_2025.pdf){target="_blank"}
+
+[Download CV (PDF)](Resume_HafezAhmad_1_2_2025.pdf){target="_blank"}

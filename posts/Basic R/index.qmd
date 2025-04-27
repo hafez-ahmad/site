@@ -1,0 +1,102 @@
+---
+title: "Basic R"
+author: "Hafez Ahmad"
+date: "2022-10-16"
+categories: [code, analysis]
+image: "image.jpg"
+format: html
+---
+
+You will find basic R codes
+
+```{r}
+wildtype<- c(103,1125,504,608,794,698,920,535,842,765,945,1005,724,498,727)
+print(wildtype)
+```
+
+#2. Create variable called "resistant"----
+
+```{r}
+resistant<- c(768, 230, 854 ,637,426, 482, 1118, 524, 604 ,730 ,17 ,421, 587, 782 ,171)
+print(resistant)
+```
+
+#3. combine the the vectors into data frame called "miner"----
+
+```{r}
+miner<- data.frame("wild"=wildtype,"resist"=resistant)
+print(miner)
+```
+
+#4. Calculate the mean and variance of the wildtype and resistant from the data frame "miner"----
+
+```{r}
+print(paste0("The mean of wildtype is ",round(x=mean(miner$wild),digits=3)," and the variance is ",round(x=var(miner$wild),digits=3)))
+```
+
+```{r}
+print(paste0("The mean of resistant is ",round(x=mean(miner$resist),digits=3)," and the variance is ",round(x=var(miner$resist),digits=3)))
+```
+
+# 5. write a function for standard error called "stderror"----
+
+formula for standard error is standard deviation/square root (\$ \frac {\\sigma} {\sqrt (n)}\$) of sample size
+
+```{r}
+stderror<- function(x,n=length(x)){
+  return(sd(x)/sqrt(n))
+}
+```
+
+#...apply the function to the data frame "miner"----
+
+```{r}
+print(paste0("The standard error of wildtype is ",round(x=stderror(miner$wild),digits=3)))
+```
+
+```{r}
+print(paste0("The standard error of resistant is ",round(x=stderror(miner$resist),digits=3)))
+```
+
+#6. write a function for growth rate called "rate" ----
+
+where, nt is the vector abunace at t,ntplus the vector of abunance at year t+1 and t for vector of years and return plot for growth rate ... load data from laptop
+
+```{r}
+abundance <- read.csv("E:/1 Master's/MSU/course classes/Fall 2022/WFA 8134 RMethod/code/abundance.csv",header = TRUE)
+head(abundance)
+```
+
+#... write that functions
+
+```{r}
+
+
+rate<- function(dataframe){
+    nt<- dataframe$abundance # abundance at t
+    ntplus<- dataframe$nextabundance # abundance at t+1
+    t<- dataframe$year # vector of years
+    growthrate<- log(ntplus/nt) # growth rate
+    plot(t,growthrate,type="l",xlab="Year",ylab="Growth rate",main="Growth rate of abundance")
+    return(growthrate)
+}
+
+```
+
+#... apply it over the dataframe
+
+```{r}
+#| label: fig-growth_rate_plot
+#| fig-cap:  Calculated Growth rate of abundance dataframe using following formula$r=ln(Nt+1)/Nt$.
+
+rate(abundance)
+```
+
+```{1+2}
+```
+
+git commit -m "comments"
+
+git add .
+
+git push -f origin master

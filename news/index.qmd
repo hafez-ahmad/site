@@ -1,0 +1,13 @@
+---
+title: "News"
+description: "Latest updates and announcements"
+---
+
+# News
+
+## April 26, 2025
+- **New Research Published**: Our latest research on ecological modeling has been published in the Journal of Environmental Science.
+- **Upcoming Workshop**: Join us for a workshop on "Dynamic Mapping with Python" on May 15, 2025.
+
+## April 20, 2025
+- **Website Update**: The blog has been updated with new posts on PCA and Machine Learning in Oceanography.

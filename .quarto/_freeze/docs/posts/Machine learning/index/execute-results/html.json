@@ -1,0 +1,14 @@
+{
+  "hash": "fa2f1c3a6eb62148c260a5b13ec9d43a",
+  "result": {
+    "markdown": "---\ntitle: \"Machine learning\"\nauthor: \"Hafez Ahmad\"\ndate: \"2022-10-16\"\ncategories: [news, code, analysis]\nimage: \"image.jpg\"\n---\n\n\nThis is a post with executable code.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 2\n```\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

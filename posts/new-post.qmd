@@ -1,0 +1,14 @@
+---
+title: "New Post"
+date: 2025-04-26
+format: 
+  html:
+    css: styles.css
+    theme: 
+      light: flatly
+      dark: darkly
+---
+
+# New Post
+
+This is a placeholder for a new post. Add your content here!

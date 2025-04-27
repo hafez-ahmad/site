@@ -1,0 +1,34 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "language": "markdown"
+      },
+      "source": [
+        "# Whale Detection",
+        "This notebook demonstrates whale detection using machine learning techniques."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "language": "python"
+      },
+      "source": [
+        "# Import Required Libraries",
+        "import os, glob, cv2, numpy as np",
+        "from tensorflow.keras.models import load_model",
+        "# Load the pre-trained model",
+        "model = load_model('model.h5')",
+        "# Example prediction",
+        "image_path = 'path/to/image.jpg'",
+        "image = cv2.imread(image_path)",
+        "image = cv2.resize(image, (224, 224))",
+        "image = np.expand_dims(image, axis=0) / 255.0",
+        "prediction = model.predict(image)",
+        "print(prediction)"
+      ]
+    }
+  ]
+}

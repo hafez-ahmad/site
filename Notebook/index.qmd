@@ -1,0 +1,16 @@
+---
+title: "Notebook"
+---
+
+# Notebook
+
+Welcome to the Notebook section! This is where you can find various notes, tutorials, and resources related to my work and interests.
+
+## Available Notebooks
+
+- [Whale Detection](whale_dectection.html): Demonstrates whale detection using machine learning techniques.
+- [Water Analysis with Google Earth Engine](water_google_earth_engine.html): Resources and examples for using Google Earth Engine for water-related analysis.
+
+### Add New Notebooks
+
+To add a new notebook, include the file (either `.html` or `.ipynb`) in this directory and update the list above with a heading and a brief description.
