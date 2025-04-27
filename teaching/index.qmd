@@ -30,6 +30,30 @@ Welcome to the teaching section! Here, I share resources, tutorials, and guides 
 - **Description**: Explore advanced modeling techniques for ecological and environmental systems.
 - **Syllabus**: [Download Syllabus (PDF)](syllabus-ecological-modeling.pdf)
 
+### Course 4: Remote Sensing and GIS for Environmental Applications
+- **Description**: Explore the use of remote sensing and GIS technologies in environmental research and applications.
+- **Syllabus**: [Download Syllabus (PDF)](Remote%20Sensing%20and%20GIS%20for%20Environmental%20Applications.pdf)
+
+### Course 5: Oceanographic and Atmospheric Data Analysis
+- **Description**: Learn techniques for analyzing oceanographic and atmospheric datasets.
+- **Syllabus**: [Download Syllabus (PDF)](Oceanographic%20and%20Atmospheric%20Data%20Analysis.pdf)
+
+### Course 6: Hydrological and Coastal Modeling
+- **Description**: Study hydrological and coastal systems using advanced modeling techniques.
+- **Syllabus**: [Download Syllabus (PDF)](Hydrological%20and%20Coastal%20Modeling.pdf)
+
+### Course 7: Geospatial Big Data Analytics and Cloud Computing
+- **Description**: Dive into geospatial big data analytics and cloud computing platforms like Google Earth Engine.
+- **Syllabus**: [Download Syllabus (PDF)](Geospatial%20Big%20Data%20Analytics%20and%20Cloud%20Computing.pdf)
+
+### Course 8: Artificial Intelligence and Deep Learning in Earth Observation
+- **Description**: Apply AI and deep learning techniques to Earth observation data.
+- **Syllabus**: [Download Syllabus (PDF)](Artificial%20Intelligence%20and%20Deep%20Learning%20in%20Earth%20Observation.pdf)
+
+### Course 9: Applications of Remote Sensing in Marine and Coastal Systems
+- **Description**: Investigate the applications of remote sensing in marine and coastal environments.
+- **Syllabus**: [Download Syllabus (PDF)](Applications%20of%20Remote%20Sensing%20in%20Marine%20and%20Coastal%20Systems.pdf)
+
 ## Courses Taught
 
 1. **Introduction to Environmental Science**
