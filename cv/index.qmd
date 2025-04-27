@@ -1,5 +1,11 @@
 ---
-title: "Curriculum Vitae"
+title: "CV"
+format: 
+  html:
+    css: styles.css
+    theme: 
+      light: flatly
+      dark: darkly
 ---
 
 # Curriculum Vitae
