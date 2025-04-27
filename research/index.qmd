@@ -75,3 +75,11 @@ format:
 18. Hafez Ahmad and Felix Jose. Spatiotemporal variability of SST and primary productivity in the Bay of Bengal. *STEM Undergraduate Research and Internship Symposium, 2019, Florida Gulf Coast University, Florida, USA*.
 19. Kelly Chase, Hafez Ahmad and James Douglass. Are invertebrates in tape grass beds as diverse and productive as those in seagrass beds? *STEM Undergraduate Research and Internship Symposium, 2019, Florida Gulf Coast University, Florida, USA*.
 20. Hafez Ahmad, Shakila Islam Jhara, and Md. Wahidul Alam. Collaborative approach and role of the marine spatial planning to support integrated coastal zone management in Bangladesh. *8th International Conference on Water and Flood Management (ICWFM 2021), 29-31 March 2021, Dhaka, Bangladesh*.
+
+
+## Some Presentations photos
+![American Fisheries Society (AFS) Annual Meeting, 2023 ](images/thumbnail_IMG_6667.jpg)
+![IGARSS 2023 Poster Presentation](images/igars2023_poster.jpg)
+![Ocean Science Conference 2024, New Orleans, LA](images/ocean2.jpg)
+![Ocean Science Conference 2024, New Orleans, LA](images/ocean1.jpg)
+![NASA Collaboration: Accelerating Informatics for Earth Science, 2024](images/NASA.jpg)
