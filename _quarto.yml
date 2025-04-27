@@ -11,7 +11,7 @@ website:
         href: posts/index.qmd
       - text: About Me
         href: about.qmd
-      - text: Papers
+      - text: Research
         href: research/index.qmd
       - text: News
         href: news/index.qmd
@@ -35,9 +35,10 @@ website:
         href: https://scholar.google.com/citations?user=ToH-NhkAAAAJ&hl=en&oi=sra
 format:
   html:
-    theme: cosmo
     css: styles.css
-    additional-css: beautiful.css
+    theme: 
+      light: flatly
+      dark: darkly
 
 editor: visual
 
