@@ -151,14 +151,28 @@
     "href": "news/index.html",
     "title": "News",
     "section": "",
-    "text": "New Research Published: Our latest research on ecological modeling has been published in the Journal of Environmental Science.\nUpcoming Workshop: Join us for a workshop on “Dynamic Mapping with Python” on May 15, 2025.\n\n\n\n\n\nWebsite Update: The blog has been updated with new posts on PCA and Machine Learning in Oceanography."
+    "text": "New Project Launched: We are excited to announce the launch of a new project on “Integrated Coastal Water Monitoring and Modeling.”\nConference Presentation: Our team will present at the International Geoscience and Remote Sensing Symposium (IGARSS) 2025 on June 10, 2025.\n\n\n\n\n\nCollaboration Announcement: Partnering with XYZ University for research on “Marine Spatial Planning in Coastal Bangladesh.”\nNew Blog Post: Check out our latest blog post on “How to Make Dynamic Maps with Python.”\n\n\n\n\n\nNew Research Published: Our latest research on ecological modeling has been published in the Journal of Environmental Science.\nUpcoming Workshop: Join us for a workshop on “Dynamic Mapping with Python” on May 15, 2025.\nPhD Milestone: I am thrilled to announce that I have passed my PhD candidacy exam and am now officially a PhD candidate!\n\n\n\n\n\nWebsite Update: The blog has been updated with new posts on PCA and Machine Learning in Oceanography."
+  },
+  {
+    "objectID": "news/index.html#april-30-2025",
+    "href": "news/index.html#april-30-2025",
+    "title": "News",
+    "section": "",
+    "text": "New Project Launched: We are excited to announce the launch of a new project on “Integrated Coastal Water Monitoring and Modeling.”\nConference Presentation: Our team will present at the International Geoscience and Remote Sensing Symposium (IGARSS) 2025 on June 10, 2025."
+  },
+  {
+    "objectID": "news/index.html#april-25-2025",
+    "href": "news/index.html#april-25-2025",
+    "title": "News",
+    "section": "",
+    "text": "Collaboration Announcement: Partnering with XYZ University for research on “Marine Spatial Planning in Coastal Bangladesh.”\nNew Blog Post: Check out our latest blog post on “How to Make Dynamic Maps with Python.”"
   },
   {
     "objectID": "news/index.html#april-26-2025",
     "href": "news/index.html#april-26-2025",
     "title": "News",
     "section": "",
-    "text": "New Research Published: Our latest research on ecological modeling has been published in the Journal of Environmental Science.\nUpcoming Workshop: Join us for a workshop on “Dynamic Mapping with Python” on May 15, 2025."
+    "text": "New Research Published: Our latest research on ecological modeling has been published in the Journal of Environmental Science.\nUpcoming Workshop: Join us for a workshop on “Dynamic Mapping with Python” on May 15, 2025.\nPhD Milestone: I am thrilled to announce that I have passed my PhD candidacy exam and am now officially a PhD candidate!"
   },
   {
     "objectID": "news/index.html#april-20-2025",
@@ -298,7 +312,7 @@
     "href": "projects/index.html",
     "title": "Projects",
     "section": "",
-    "text": "Projects\nWelcome to the Projects section! Here, you can find detailed information about various projects I have worked on. Stay tuned for updates.\n\n\nCurrent Projects\n\nDetection and tracking of mesoscale eddies in the Bay of Bengal using Satellite altimetry data\nHydrologic and geospatial analyses to quantify surface-water connectivity of Lower Mississippi river and develop framework for evaluating tradeoffs between limiting invasion risks and maintaining hydrologic connectivity of oxbow lakes\nApplications of Machine learning in Computational Oceanographic Research\nIntegrating Machine Learning and Remote Sensing for Long-Term Monitoring of Chl-a in Chilika Lake, India\nSimulation of the land use/land cover and land surface temperature change in the Chittagong City Corporation using QGIS\nSimulation of the future land use/land cover change in the Starkville, Mississippi, USA\nMarine Spatial Planning to support Integrated Coastal Zone Management in Bangladesh\n\n\n\nCompleted Projects\n\nLand use assessment and forecasting in the Teknaf Upazila, Bangladesh\nFuture of the Irrawaddy Delta with decreasing fluvial sediment supply and SLR\nSpatio–temporal variability of SST, SSS, and Primary productivity in the Bay of Bengal\nA case study for the Biodiversity Assessment and land cover in the Sundarbans mangrove forest\nCollaborative Research: The tropicalization of Western Atlantic seagrass beds (Volunteered in Dr. James Douglass’s marine ecology lab)\nStatus and Future Trends of the Bangladesh Coastal Zone Management and coastal risks\nPresent status of impacts of climate change and adaptations in Bangladesh coastal areas\nVegetation and Land cover analysis in response to Precipitation and land surface temperature of Oktibbeha County of Mississippi, USA\nIntegrated Management of Coastal Resources of Saint Martin’s Island in Bangladesh"
+    "text": "Projects\nWelcome to the Projects section! Here, you can find detailed information about various projects I have worked on. Stay tuned for updates.\n\n\nCurrent Projects\n\nDetection and tracking of mesoscale eddies in the Bay of Bengal using Satellite altimetry data\nHydrologic and geospatial analyses to quantify surface-water connectivity of Lower Mississippi river and develop framework for evaluating tradeoffs between limiting invasion risks and maintaining hydrologic connectivity of oxbow lakes\nApplications of Machine learning in Computational Oceanographic Research\nIntegrating Machine Learning and Remote Sensing for Long-Term Monitoring of Chl-a in Chilika Lake, India\nSimulation of the land use/land cover and land surface temperature change in the Chittagong City Corporation using QGIS\nSimulation of the future land use/land cover change in the Starkville, Mississippi, USA\nMarine Spatial Planning to support Integrated Coastal Zone Management in Bangladesh\nDevelopment of a Decision Support System for Coastal Flood Risk Management\nAssessment of Coral Reef Health Using Remote Sensing Techniques\nAnalysis of Microplastic Pollution in Coastal Waters\nModeling the Impact of Sea Level Rise on Coastal Communities\nIntegrated Coastal Water Monitoring and Modeling\n\n\n\nCompleted Projects\n\nLand use assessment and forecasting in the Teknaf Upazila, Bangladesh\nFuture of the Irrawaddy Delta with decreasing fluvial sediment supply and SLR\nSpatio–temporal variability of SST, SSS, and Primary productivity in the Bay of Bengal\nA case study for the Biodiversity Assessment and land cover in the Sundarbans mangrove forest\nCollaborative Research: The tropicalization of Western Atlantic seagrass beds (Volunteered in Dr. James Douglass’s marine ecology lab)\nStatus and Future Trends of the Bangladesh Coastal Zone Management and coastal risks\nPresent status of impacts of climate change and adaptations in Bangladesh coastal areas\nVegetation and Land cover analysis in response to Precipitation and land surface temperature of Oktibbeha County of Mississippi, USA\nIntegrated Management of Coastal Resources of Saint Martin’s Island in Bangladesh"
   },
   {
     "objectID": "research/research.html",

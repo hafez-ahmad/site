@@ -15,6 +15,11 @@ Welcome to the Projects section! Here, you can find detailed information about v
 -   Simulation of the land use/land cover and land surface temperature change in the Chittagong City Corporation using QGIS
 -   Simulation of the future land use/land cover change in the Starkville, Mississippi, USA
 -   Marine Spatial Planning to support Integrated Coastal Zone Management in Bangladesh
+-   Development of a Decision Support System for Coastal Flood Risk Management
+-   Assessment of Coral Reef Health Using Remote Sensing Techniques
+-   Analysis of Microplastic Pollution in Coastal Waters
+-   Modeling the Impact of Sea Level Rise on Coastal Communities
+-   Integrated Coastal Water Monitoring and Modeling
 
 # Completed Projects
 
@@ -27,3 +32,4 @@ Welcome to the Projects section! Here, you can find detailed information about v
 -   Present status of impacts of climate change and adaptations in Bangladesh coastal areas
 -   Vegetation and Land cover analysis in response to Precipitation and land surface temperature of Oktibbeha County of Mississippi, USA
 -   Integrated Management of Coastal Resources of Saint Martin’s Island in Bangladesh
+
