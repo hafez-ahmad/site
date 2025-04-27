@@ -1,1 +1,1 @@
-Sitemap: https://hafez-ahmad.github.io/hafez/sitemap.xml
+Sitemap: https://hafez-ahmad.github.io/site/sitemap.xml
