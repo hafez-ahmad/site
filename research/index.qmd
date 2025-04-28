@@ -11,10 +11,10 @@ format:
 ## Publications
 
 1. Islam, M. S., Dash, P., Liles, J. P., **Ahmad, H.**, Nur, A. M., Panda, R. M., ... & Moorhead, R. J. (2025). Spatiotemporal dynamics of cyanobacterial blooms: Integrating machine learning and feature selection techniques with uncrewed aircraft systems and autonomous surface vessel data. *Journal of Environmental Management*, 381, 124878. https://doi.org/10.1016/j.jenvman.2025.124878
-2. Ahmad, H., F. Jose, Dash, P., D. J. Shoemaker, and Jhara, S. I. (2025). Machine Learning-Based Estimation of Chlorophyll-a in the Mississippi Sound using Landsat and Ocean Optics Data. *Environmental Earth Sciences*.
+2. Ahmad, H., F. Jose, Dash, P., D. J. Shoemaker, and Jhara, S. I. (2025). Machine Learning-Based Estimation of Chlorophyll-a in the Mississippi Sound using Landsat and Ocean Optics Data. *Environmental Earth Sciences*.https://link.springer.com/article/10.1007/s12665-025-12191-7
 3. Ahmad, H., Miranda, L. E., Corey G. Dunn, Colvin, M., and Dash, P. (2025). Confluence of time and space: An innovation for quantifying dynamics of hydrologic floodplain connectivity with remote sensing and GIS. *River Research and Applications*. doi.org/10.1002/RRA.4426.
 4. Frank Juma Ong'ondo, Shrinidhi Ambinakudige, Philista Adhiambo Malaki, Peter Njoroge, **Hafez Ahmad**. (2025). Using geographic information systems and remote sensing techniques to classify land cover types and predict grassland bird abundance and distribution in Nairobi National Park, Kenya. doi.org/10.1016/j.ijgeop.2025.02.003.
-5. Islam, M. S., Dash, P., Nur, A., Ahmad, H., Panda, R. M., Wolfe, J. S., Turnage, G., Hathcock, L., Chesser, G. D., and Moorhead, R. J. (2024). Estimation of Chlorophyll-a in Uncrewed Aircraft Systems Imagery using Autonomous Surface Vessel data by employing Machine Learning Algorithms and Innovative Feature Selection Techniques. *Ecological Informatics*, 85, 102954.
+5. Islam, M. S., Dash, P., Nur, A., **Ahmad, H.**, Panda, R. M., Wolfe, J. S., Turnage, G., Hathcock, L., Chesser, G. D., and Moorhead, R. J. (2024). Estimation of Chlorophyll-a in Uncrewed Aircraft Systems Imagery using Autonomous Surface Vessel data by employing Machine Learning Algorithms and Innovative Feature Selection Techniques. *Ecological Informatics*, 85, 102954.https://www.sciencedirect.com/science/article/pii/S1574954124004965
 6. Ahmad, H., Jhara, S. I. (2024). Mapping the Dynamics of Particulate Organic Carbon: Satellite Observations of Coastal to Shelf Variability in the Northeastern Gulf of Mexico. *Ocean Science Journal*. doi.org/10.1007/s12601-024-00203-9.
 7. Ahmad, H., Dash, P., Panda, R. M. (2024). Integrating machine learning and remote sensing for long-term monitoring of chlorophyll-a in Chilika Lagoon, India. *Environmental Monitoring and Assessment*. doi.org/10.1007/s10661-024-13463-8.
 8. Ahmad, H., Miranda, L. E., Dunn, C. G., Boudreau, M. R., Colvin, M. E. (2024). Connectivity patterns between floodplain lakes and neighboring streams in the historical floodplain of the Lower Mississippi River. *Ecological Indicators*. doi.org/10.1016/j.ecolind.2024.112808.
@@ -22,7 +22,7 @@ format:
 10. Ahmad, Hafez. "Hydrologic connectivity between oxbow lakes and rivers within the Lower Mississippi Alluvial Valley" (2024). *Theses and Dissertations*, 6068. https://scholarsjunction.msstate.edu/td/6068
 11.	Ahmad, H., Abdallah, M., Jose, F., Elzain, et al. (2023). Evaluation and mapping of predicted future land use changes using hybrid models in a coastal area. Ecological Informatics, 102324. doi.org/10.1016/j.ecoinf.2023.102324.
 12.	Ahmad Hafez, Jose Felix, Bhuyan Md. Simul, Islam Md. Nazrul, Dash Padmanava. (2024). Seasonal influence of freshwater discharge on spatio-temporal variations in primary productivity, sea surface temperature, and euphotic zone depth in the northern Bay of Bengal. Acta Oceanologica Sinica., doi: 10.1007/s13131-023-2254-y
-13.	Ahmad, H., Jose, F., Islam, M. S., & Jhara, S. I. (2023). Green Energy, Blue Economy: Integrating Renewable Energy and Sustainable Development for Bangladesh. Marine Technology Society Journal, 57(4), 52-69.
+13.	Ahmad, H., Jose, F., Islam, M. S., & Jhara, S. I. (2023). Green Energy, Blue Economy: Integrating Renewable Energy and Sustainable Development for Bangladesh. Marine Technology Society Journal, 57(4), 52-69.https://www.ingentaconnect.com/content/mts/mtsj/2023/00000057/00000004/art00007
 14.	Ahmad, H. (2019). Machine learning applications in oceanography. Aquatic Research, 2(3), 161-169. doi.org/10.3153/AR19014.
 15.	 Ahmad, H., Jhara, S.I. (2019). Present status of impacts of climate change and adaptations in Bangladesh coastal areas. In Social Change A journal for social development (Vol. 9, pp. 71–81). Young Power in Social Action.
 16.	Ahmad, H. (2019) 'Bangladesh Coastal Zone Management Status and Future Trends', Journal of Coastal Zone Management, 22(1), pp. 1–7. doi: 10.4172/2473-3350.1000466.
@@ -55,7 +55,7 @@ format:
 
 ## Abstracts/ Posters (* in prep/submitted)
 
-1. Devin M. Raburn, Hafez Ahmad, Patrick F. Allison Jr., Susan B. Adams, Zanethia C. Barnett4, Ryan C. Garrick, Kenneth A. Sterling5, Sara Cathey, Michael E. Colvin, and Corey G. Dun. Hidden in plain sight: high-resolution stream networks reveal habitats for petitioned burrowing crayfishes. *155th Annual Meeting of the American Fisheries Society, 2025. San Antonio, Texas*.
+1. Devin M. Raburn, **Hafez Ahmad**, Patrick F. Allison Jr., Susan B. Adams, Zanethia C. Barnett4, Ryan C. Garrick, Kenneth A. Sterling5, Sara Cathey, Michael E. Colvin, and Corey G. Dun. Hidden in plain sight: high-resolution stream networks reveal habitats for petitioned burrowing crayfishes. *155th Annual Meeting of the American Fisheries Society, 2025. San Antonio, Texas*.
 2. Ahmad, H., & Dash, P. Long-Term Water Quality Trends and Seasonal Drivers in the Western Mississippi Sound: A Remote Sensing and Machine Learning Approach. *14th International Symposium on Biogeochemistry of Wetland & Aquatic Systems June 1-5, 2025, at the Hilton Baton Rouge Capitol Center, Baton Rouge, LA*.
 3. Ahmad, H., & Dash, P. Remote Sensing and Machine Learning for Long-Term Water Quality Monitoring in the Western Mississippi Sound. *Spring 2025 Graduate Research Symposium, Feb 15, 2025, at the Old Mian Academic Center, Starkville, MS*.
 4. Ahmad, H., & Dash, P Remote Sensing of Water Quality Parameters over Western Mississippi Sound by Using Sentinel-3 OLCI and Machine Learning. *ASLO 2025 Aquatic Sciences Meeting 26-31 March 2025 in Charlotte, North Carolina, USA*.
@@ -66,16 +66,37 @@ format:
 9. Ahmad, H., Jose, F., Jhara, S. I & Dash, P. Mesoscale Eddies and their Impact on Primary Productivity in the Northern Bay of Bengal. *Ocean Sciences Meeting 2024 – AGU, New Orleans, Louisiana*.
 10. Ahmad, H., Jose, F., Jhara, S. I & Dash, P. Hypoxia in the Northern Gulf of Mexico: A Comparative Analysis of Machine Learning Algorithms for Evaluation and Prediction. *Ocean Sciences Meeting 2024 – AGU, New Orleans, Louisiana*.
 11. Ahmad, H., Jose, F., Jhara, S. I & Dash, P. Eddy-driven Chlorophyll Concentration Variability in the Andaman Sea. *Ocean Sciences Meeting 2024 – AGU, New Orleans, Louisiana*.
-12. Islam, M.S, Dash, P, Nur, A, Ahmad, H., Panda, R., Wolfe, J.S, Hathcock, Lee., Chesser, G. D., & Moorhead, R. Estimation of Chlorophyll-a in Uncrewed Aircraft Systems Imagery using Autonomous Surface Vessel data by employing Machine Learning Algorithms and Innovative Feature Selection Approaches. *Ocean Sciences Meeting 2024 – AGU, New Orleans, Louisiana*.
+12. Islam, M.S, Dash, P, Nur, A, **Ahmad, H.**, Panda, R., Wolfe, J.S, Hathcock, Lee., Chesser, G. D., & Moorhead, R. Estimation of Chlorophyll-a in Uncrewed Aircraft Systems Imagery using Autonomous Surface Vessel data by employing Machine Learning Algorithms and Innovative Feature Selection Approaches. *Ocean Sciences Meeting 2024 – AGU, New Orleans, Louisiana*.
 13. Ahmad, H., Jose, F., Islam, M. S., & Jhara, S. I. Sustainable Development through the Synergy of Green Energy and Blue Economy in Bangladesh. *1st International Conference on Oceanographic 2024 (ICO-2024), BORI, Cox’s Bazar, Bangladesh*.
 14. Hafez Ahmad, L. E. Miranda, Corey G. Dunn, Mike Colvin. Hydrological connectivity patterns in oxbow lakes of the Lower Mississippi Alluvial Valley. *153rd Annual Meeting of the American Fisheries Society, 2023*.
 15. Devin. M. Raburn, Hafez Ahmad, Patrick Allison Jr., Susan B. Adams, Zanethia C. Barnett, Ryan Garrick, Kenneth A. Sterling, Sara Cathey, Michael E. Colvin, and Corey G. Dunn. Uncharted waters: high-resolution stream networks reveal hidden habitats for petitioned headwater crayfishes. *Southern Division of the American Fisheries Society, 2023*.
 16. Hafez Ahmad, L. E. Miranda, Corey G. Dunn, Mike Colvin. A systematic review on hydrological connectivity relevant to oxbow lakes: Research concepts, progress, approaches, scales, and future directions. *49th Annual Meeting of the MSAFS, 2023*.
 17. Hafez Ahmad, L. E. Miranda, Corey G. Dunn, Mike Colvin. Assessing the Relationship between Hydrological Connectivity and Fish Assemblage in the Mississippi Alluvial Valley Floodplain. *MSU Graduate Research Symposium, 2023*.
 18. Hafez Ahmad and Felix Jose. Spatiotemporal variability of SST and primary productivity in the Bay of Bengal. *STEM Undergraduate Research and Internship Symposium, 2019, Florida Gulf Coast University, Florida, USA*.
-19. Kelly Chase, Hafez Ahmad and James Douglass. Are invertebrates in tape grass beds as diverse and productive as those in seagrass beds? *STEM Undergraduate Research and Internship Symposium, 2019, Florida Gulf Coast University, Florida, USA*.
+19. Kelly Chase, **Hafez Ahmad** and James Douglass. Are invertebrates in tape grass beds as diverse and productive as those in seagrass beds? *STEM Undergraduate Research and Internship Symposium, 2019, Florida Gulf Coast University, Florida, USA*.
 20. Hafez Ahmad, Shakila Islam Jhara, and Md. Wahidul Alam. Collaborative approach and role of the marine spatial planning to support integrated coastal zone management in Bangladesh. *8th International Conference on Water and Flood Management (ICWFM 2021), 29-31 March 2021, Dhaka, Bangladesh*.
 
+## Reviewers (N= Number of Article reviewed by me)
+
+1.	Remote Sensing Applications: Society and Environment (7)
+2.	Journal of Coastal Research (5)
+3.	Environmental Monitoring and Assessment (2)
+4.	Scientific Reports (1)
+5.	Remote Sensing of Environment (1)
+6.	Journal of Applied Life Sciences and Environment (1)
+7.	Environmental Research (1)
+8.	Journal of hydrology (1)
+9.	Estuarine, Coastal and Shelf Science (1)
+10.	Geoscience Frontiers (1)
+11.	Discover Environment (1)
+12.	Mitigation and Adaptation Strategies for Global Change (2)
+13.	Frontiers in Marine Science (1)
+14.	Journal of Applied Life Sciences and Environment (1)
+15.	Marine pollution bulletin (1)
+16.	Thalassas: An International Journal of Marine Sciences (1)
+17.	Frontiers In Freshwater Science (1)
+18.	B P International Book publisher (2)
+19.	Asian Research Journal of Arts & Social Sciences (1)
 
 
 ## Some Presentations photos
@@ -94,12 +115,63 @@ format:
 
 - **NASA Collaboration: Accelerating Informatics for Earth Science**: Collaboration with NASA on Earth Science Informatics in 2024.
   ![NASA Collaboration: Accelerating Informatics for Earth Science](images/NASA.jpg)
+
 - ** ASLO Conference, 2025 **
   ![ASLO](images/ASLO 2025.jpg)
 
-  - ** Leaky Deltas, 2025 **
+- ** Leaky Deltas, 2025 **
   ![Leaky Deltas](images/LeakyDelta2025.jpg)
 
 - ** Field Trip mostly across Mississippi Sound**
-![FieldTrips](images/FieldWork.jpg)
-![FieldTrips](images/FieldTripMississippiSound.jpg)
+  ![FieldTrips](images/FieldWork.jpg)
+
+- ** Field Trip mostly across Mississippi Sound**
+  ![FieldTrips](images/FieldTripMississippiSound.jpg)
+
+## CERTIFICATIONS, PROFESSIONAL TRAININGS, AND WORKSHOPS
+1.	Leaky deltas: sources or sinks in the global carbon cycle - 2025
+2.	Introduction to Plankton, Aerosol, Cloud, Ocean Ecosystem (PACE) Hyperspectral Observations for Water Quality Monitoring- 2024
+3.	Anaconda Python for Data Science Professional Certificate- 2024
+4.	NASA PACE satellite hackathon – 2024, August (selected for final participation)
+5.	Delft3D modeling, 2024 by institute for water education.
+6.	Large Scale Applications of Machine Learning using Remote Sensing for Building Agriculture Solutions by NASA Applied Remote Sensing Training Program- 2024
+7.	AGU Ocean Science Meeting-2024
+8.	Certification- Using Python for Automation-2024
+9.	NASA PACE Applications workshop-2023
+10.	Fundamentals of Machine Learning for Earth Science-2023
+11.	Google Data Analytics Certificate, Google,2023
+12.	PRIMER 7: Multivariate Analysis in Ecology & Other Sciences-2022
+13.	Geographic Information Systems (GIS) Specialization- 2022
+14.	Applied Data Science with Python Specialization, Coursera- 2022
+15.	Machine Learning A-Z™: Hands-On Python & R in Data Science, Udemy- 2020
+16.	Python for Data Science and Machine Learning Bootcamp, Udemy- 2020
+17.	Statistics for Data Science and Business Analysis, Udemy- 2020
+18.	TensorFlow Developer Certificate in 2022: Zero to Mastery, Udemy- 2020
+19.	Big Data Analytics with GIS, Udemy- 2020
+20.	ArcGIS Desktop for Spatial Analysis: Go from Basic to Pro, Udemy- 2020
+21.	Object-based Image Analysis & Classification in QGIS ArcGIS, Udemy- 2020
+22.	Complete Basic GIS Tasks - ArcGIS - Erdas - Remote Sensing, Udemy- 2020
+23.	Taming Big Data with Apache Spark and Python - Hands-On! Udemy- 2020
+24.	Pyspark & AWS: Master Big Data with Pyspark and AWS, Udemy- 2020
+25.	"SDGs for Youth: My Goal, My Responsibility" by EMK Center, Dhaka-2019
+26.	"Climate Change in Practice and becoming global citizens for a sustainable society" by the Asian pacific center of Education for international understanding and Ban Ki-moon center-2020.
+27.	Geospatial and Environmental Analysis by University of California, Davis -2020
+28.	Julia Scientific Programming by University of Cape Town -2020
+29.	Introduction to GIS: Manipulating and Mapping Geospatial Data in R -2020
+30.	Learned Advanced Python Concepts -2020
+31.	R programming hands-on specialization for Data Science -2020
+32.	Become an expert with ESRI's GIS software ArcGIS Desktop -2020
+33.	Machine Learning Bootcamp™: Hand-On Python in Data Science -2020
+34.	Ecology: Ecosystem Dynamics and Conservation -2020
+35.	Large Marine Ecosystems: Assessment and Management -2020
+36.	Data Analysis with Python -2020
+37.	R Programming -2020
+38.	ARSET - Species Distribution Modeling with Remote Sensing-2020
+39.	Preparing to Manage Human Resources -2020
+40.	Geospatial Applications for Disaster Risk Management" -2020
+41.	Fishery Oceanography for Future Professionals by ESSO-INCOIS, India-2020 
+42.	Participation in "Social Leadership Hackathon" -2019
+43.	Training on "First Aid" in American Corner, Chittagong, Bangladesh-2019 
+44.	Training on "Geospatial Regression and Hotspot analysis" at the University of Dhaka, Bangladesh-2018
+45.	Training on Volunteerism -2015, Chittagong, Bangladesh.
+46.	Workshops on the "Blue Economy"- 2015.

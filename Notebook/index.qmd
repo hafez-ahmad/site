@@ -10,6 +10,9 @@ Welcome to the Notebook section! This is where you can find various notes, tutor
 
 - [Whale Detection](whale_dectection.html): Demonstrates whale detection using machine learning techniques.
 - [Water Analysis with Google Earth Engine](water_google_earth_engine.html): Resources and examples for using Google Earth Engine for water-related analysis.
+- [Earth Access](EarthAccess.ipynb): A notebook exploring Earth data access and analysis.
+- [Primer v7 to R Code](Primerv7_to_R_code.html): A guide for converting Primer v7 outputs to R code for further analysis.
+- [Python Data Analysis and Visualization](Python_data_analysis_visualization.html): Examples and tutorials for data analysis and visualization using Python.
 
 ### Add New Notebooks
 

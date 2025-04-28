@@ -18,26 +18,20 @@ format:
 - **New Blog Post**: Check out our latest blog post on "How to Make Dynamic Maps with Python."
 
 ## April 26, 2025
-- **New Research Published**: Our latest research on ecological modeling has been published in the Journal of Environmental Science.
+- **New Research Published**: Our latest research on Ocean optics modeling has been published in the Journal of Environmental earth sciences.
 - **Upcoming Workshop**: Join us for a workshop on "Dynamic Mapping with Python" on May 15, 2025.
 - **PhD Milestone**: I am thrilled to announce that I have passed my PhD candidacy exam and am now officially a PhD candidate!
 
 ## April 20, 2025
 - **Website Update**: The blog has been updated with new posts on PCA and Machine Learning in Oceanography.
 
-## Some Presentations photos
+## April 20, 2024
+- **Conference Update**:  My Conference abstract has been accepted in ASLO conference, North Carolina, USA
 
-- **American Fisheries Society (AFS) Annual Meeting**: A snapshot from the 2023 AFS Annual Meeting held in Grand Rapids, Michigan.
-  ![American Fisheries Society (AFS) Annual Meeting](images/thumbnail_IMG_6667.jpg)
+## January 01, 2024
+- **Education Update**:  I have started my PhD at Mississippi State University
 
-- **IGARSS 2023 Poster Presentation**: Poster presentation at the IGARSS 2023 conference.
-  ![IGARSS 2023 Poster Presentation](images/igars2023_poster.jpg)
+## January 01, 2022
+- **Education Update**:  I have started my MS at Mississippi State University
 
-- **Ocean Science Conference 2024, New Orleans, LA**: A moment captured during the Ocean Science Conference 2024.
-  ![Ocean Science Conference 2024, New Orleans, LA](images/ocean2.jpg)
 
-- **Ocean Science Conference 2024, New Orleans, LA**: Another highlight from the Ocean Science Conference 2024.
-  ![Ocean Science Conference 2024, New Orleans, LA](images/ocean1.jpg)
-
-- **NASA Collaboration: Accelerating Informatics for Earth Science**: Collaboration with NASA on Earth Science Informatics in 2024.
-  ![NASA Collaboration: Accelerating Informatics for Earth Science](images/NASA.jpg)
