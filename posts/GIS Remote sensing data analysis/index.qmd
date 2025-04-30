@@ -1,0 +1,39 @@
+---
+title: "Ecological data analysis with R"
+author: "Hafez Ahmad"
+date: "2022-10-16"
+categories: [news, code, analysis]
+image: "image.jpg"
+---
+
+Data analysis with R.
+
+```{r}
+# Load necessary libraries
+library(ggplot2)
+library(dplyr)
+
+# Create a sample ecological dataset
+data <- data.frame(
+  Species = rep(c("Species A", "Species B", "Species C"), each = 10),
+  Abundance = c(rpois(10, 5), rpois(10, 10), rpois(10, 15)),
+  Location = rep(c("Site 1", "Site 2"), each = 15)
+)
+
+# Summarize data by species
+summary_data <- data %>%
+  group_by(Species) %>%
+  summarize(Mean_Abundance = mean(Abundance), .groups = 'drop')
+
+# Print summary
+print(summary_data)
+
+# Plot species abundance by location
+ggplot(data, aes(x = Species, y = Abundance, fill = Location)) +
+  geom_boxplot() +
+  labs(title = "Species Abundance by Location",
+       x = "Species",
+       y = "Abundance") +
+  theme_minimal()
+```
+

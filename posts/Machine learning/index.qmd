@@ -1,13 +1,82 @@
 ---
-title: "Machine learning"
+title: "Machine learning with Environmental data"
 author: "Hafez Ahmad"
 date: "2022-10-16"
-categories: [code, analysis]
+categories: [Machine learning, code, analysis]
 image: "image.jpg"
 ---
 
 This is a post with executable code.
 
+### Table: Classification of Machine Learning
+
+| Type                  | Description                                                                 |
+|-----------------------|-----------------------------------------------------------------------------|
+| **Supervised Learning** | Learning from labeled data to predict outcomes. Examples: Regression, Classification. |
+| **Unsupervised Learning** | Learning patterns from unlabeled data. Examples: Clustering, Dimensionality Reduction. |
+| **Reinforcement Learning** | Learning through interaction with an environment to maximize rewards. Examples: Q-Learning, Deep Q-Networks. |
+
+### Supervised Learning
+Supervised learning involves training a model on a dataset where the input-output pairs are known. This enables the model to make predictions on new, unseen data. Common applications include regression for predicting continuous values and classification for categorizing data into predefined groups.
+
+### Unsupervised Learning
+Unsupervised learning focuses on discovering hidden structures or patterns in data without predefined labels or outcomes. It is often used for clustering similar data points or reducing the dimensionality of datasets to simplify analysis.
+
+### Reinforcement Learning
+Reinforcement learning involves an agent learning to make decisions by performing actions and receiving feedback in the form of rewards or penalties. This type of learning is commonly applied in robotics, game playing, and real-time decision-making systems.
+
 ```{r}
 1 + 1
+```
+
+```{r}
+# Load necessary libraries
+library(tidymodels)
+
+# Create a sample dataset
+data <- data.frame(
+  Feature1 = rnorm(100),
+  Feature2 = rnorm(100),
+  Class = factor(sample(c("A", "B"), 100, replace = TRUE))
+)
+
+# Split the data into training and testing sets
+set.seed(123)
+data_split <- initial_split(data, prop = 0.8, strata = Class)
+train_data <- training(data_split)
+test_data <- testing(data_split)
+
+# Define a recipe for preprocessing
+recipe <- recipe(Class ~ ., data = train_data) %>%
+  step_normalize(all_numeric_predictors())
+
+# Specify a logistic regression model
+logistic_model <- logistic_reg() %>%
+  set_engine("glm")
+
+# Create a workflow
+workflow <- workflow() %>%
+  add_model(logistic_model) %>%
+  add_recipe(recipe)
+
+# Fit the model
+fit <- workflow %>%
+  fit(data = train_data)
+
+# Make predictions on the test set
+predictions <- predict(fit, new_data = test_data) %>%
+  bind_cols(test_data)
+
+# Evaluate the model
+metrics <- predictions %>%
+  metrics(truth = Class, estimate = .pred_class)
+print(metrics)
+
+# Visualize the data
+ggplot(data, aes(x = Feature1, y = Feature2, color = Class)) +
+  geom_point() +
+  labs(title = "Feature Distribution by Class",
+       x = "Feature 1",
+       y = "Feature 2") +
+  theme_minimal()
 ```

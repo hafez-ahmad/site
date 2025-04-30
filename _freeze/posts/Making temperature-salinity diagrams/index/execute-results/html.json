@@ -1,8 +1,11 @@
 {
-  "hash": "23fb3df918e3a07b2d7a836c894bd967",
+  "hash": "b5701e389f176a7350aad2ba5ab689be",
   "result": {
-    "markdown": "---\ntitle: \"Making temperature-salinity diagrams\"\nauthor: \"Hafez Ahmad\"\ndate: \"2022-10-16\"\ncategories: [news, code, analysis]\nimage: \"image.jpg\"\n---\n\n\nYou will find basic R codes\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1+2\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 3\n```\n:::\n:::\n",
-    "supporting": [],
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Making temperature-salinity diagrams\"\nauthor: \"Hafez Ahmad\"\ndate: \"2022-10-16\"\ncategories: [news, code, analysis]\nimage: \"image.jpg\"\n---\n\nYou will find basic R codes\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# Load necessary library\nlibrary(oce)\n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\nWarning: package 'oce' was built under R version 4.3.3\n```\n\n\n:::\n\n::: {.cell-output .cell-output-stderr}\n\n```\nLoading required package: gsw\n```\n\n\n:::\n\n::: {.cell-output .cell-output-stderr}\n\n```\nWarning: package 'gsw' was built under R version 4.3.3\n```\n\n\n:::\n\n```{.r .cell-code}\n# Create a sample dataset for temperature, salinity, and pressure\ndata <- data.frame(\n  salinity = c(30, 32, 34, 36, 38),\n  temperature = c(10, 15, 20, 25, 30),\n  pressure = c(0, 5, 10, 15, 20)\n)\n\n# Convert the dataset to a ctd object\nctd_data <- as.ctd(salinity = data$salinity, \n                   temperature = data$temperature, \n                   pressure = data$pressure)\n\n# Create a temperature-salinity diagram\nplotTS(ctd_data, \n       xlab = \"Salinity (PSU)\", \n       ylab = \"Temperature (°C)\", \n       main = \"Temperature-Salinity Diagram\")\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n\n",
+    "supporting": [
+      "index_files"
+    ],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

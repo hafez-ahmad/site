@@ -1,8 +1,11 @@
 {
-  "hash": "69931ecf3198ce54ee3c418a6f18b184",
+  "hash": "1155898f8562d0347840f6a8dbac13ab",
   "result": {
-    "markdown": "---\ntitle: \"PCA\"\nauthor: \"Hafez Ahmad\"\ndate: \"2022-10-16\"\ncategories: [news, code, analysis]\nimage: \"image.jpg\"\n---\n\n\nThis is a post with executable code.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 2\n```\n:::\n:::\n",
-    "supporting": [],
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"PCA\"\nauthor: \"Hafez Ahmad\"\ndate: \"2022-10-16\"\ncategories: [news, code, analysis]\nimage: \"image.jpg\"\n---\n\nThis is a post with executable code.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# Load necessary library\nlibrary(ggplot2)\n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\nWarning: package 'ggplot2' was built under R version 4.3.3\n```\n\n\n:::\n\n```{.r .cell-code}\n# Create a sample dataset\ndata <- data.frame(\n  Variable1 = c(2.5, 0.5, 2.2, 1.9, 3.1, 2.3, 2, 1, 1.5, 1.1),\n  Variable2 = c(2.4, 0.7, 2.9, 2.2, 3.0, 2.7, 1.6, 1.1, 1.6, 0.9)\n)\n\n# Perform PCA\npca_result <- prcomp(data, scale. = TRUE)\n\n# Print PCA summary\nsummary(pca_result)\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\nImportance of components:\n                         PC1     PC2\nStandard deviation     1.388 0.27216\nProportion of Variance 0.963 0.03704\nCumulative Proportion  0.963 1.00000\n```\n\n\n:::\n\n```{.r .cell-code}\n# Plot PCA\nbiplot(pca_result, main = \"PCA Biplot\")\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n\n\nPrincipal Component Analysis (PCA) is a multivariate statistical technique that uses an orthogonal transformation to convert a set of correlated variables into a set of orthogonal, uncorrelated axes called principal components. The primary motivation behind PCA is to reduce a large number of variables into a smaller number of derived variables that may be readily visualized in 2 or 3-dimensional space. For example, PCA might be used to reduce strongly correlated data groups, evaluating aquatic habitat suitability, analysis of fish abundance, seasonal and spatial variation, and ecosystem organization change, analysis of intra and interspecific variability, niche differentiation, and partitioning.......\n",
+    "supporting": [
+      "index_files"
+    ],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

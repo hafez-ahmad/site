@@ -3,17 +3,19 @@
     "listing": "/index.html",
     "items": [
       "/posts/index.html",
-      "/posts/new-post.html",
+      "/posts/Geoscience Analysis/index.html",
       "/posts/Analysis of Argo Float Data in the Bay of Bengal/index.html",
       "/posts/Basic R/index.html",
       "/posts/Ecological modeling/index.html",
+      "/posts/GIS Remote sensing data analysis/index.html",
       "/posts/How to Make Dynamic Maps with python/index.html",
       "/posts/Machine learning/index.html",
       "/posts/Making temperature-salinity diagrams/index.html",
-      "/posts/PCA/index.html",
+      "/posts/Multidimentional data analysis/index.html",
       "/posts/Popular R packages used in Oceanography, Fisheries and environmental science/index.html",
-      "/posts/post-with-code/index.html",
+      "/posts/Post in Medium and RPubs/index.html",
       "/posts/Practical Ecological data analysis with R/index.html",
+      "/posts/Remote sensing/index.html",
       "/posts/Species Distribution modeling/index.html",
       "/posts/World bioclimatic Data downloading, analysis and visualization/index.html"
     ]

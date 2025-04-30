@@ -1,13 +1,61 @@
 ---
-title: "Basic R"
+title: "Popular R packages used in Oceanography, Fisheries and environmental science"
 author: "Hafez Ahmad"
 date: "2022-10-16"
 categories: [news, code, analysis]
 image: "image.jpg"
 ---
 
-You will find basic R codes
+R is an open-source software environment for statistical computing and graphics. It is widely used in various scientific fields, including oceanography, fisheries, and environmental science. Below is a list of popular R packages and their uses in these domains:
 
-```{r}
-1+2
-```
+### Packages and Their Uses
+
+1. **Oce**: Calculate seawater properties, analyze ADCP measurements, Argo float data, CTD measurements, and more.
+2. **Ncdf4**: Read and write NetCDF files for handling multidimensional data.
+3. **Oceanmap**: Plot 2D oceanographic data and support NetCDF formats.
+4. **LIM**: Solve linear inverse problems, such as food web analysis.
+5. **AquaEnv**: Model aquatic chemical systems and perform sensitivity analysis.
+6. **Marelac**: Provide datasets, constants, and utilities for marine science.
+7. **OceanView**: Visualize 2D and 3D oceanographic data.
+8. **Robis**: Access ocean biogeographic information system data.
+9. **DiveMove**: Analyze time-depth recorder (TDR) data for diving behavior.
+10. **Raster**: Manipulate geographic raster data for spatial analysis.
+11. **Caret/mlr/e1071**: Train and visualize classification and regression models.
+12. **Ggplot2**: Create high-quality data visualizations.
+13. **Angstroms**: Tools for regional ocean modeling systems.
+14. **GISTools/sp/t_map**: Create maps and manipulate spatial data.
+15. **Simba**: Perform similarity analysis for vegetation data.
+16. **Dplyr**: Simplify data manipulation with a consistent grammar.
+17. **Vegan/BiodiversityR**: Analyze ecological diversity and ordination methods.
+18. **DeSolve**: Solve differential equations for dynamic models.
+19. **PBSmapping**: Create 2D plots similar to GIS systems.
+20. **Mizer**: Model multispecies and community size spectra in marine environments.
+
+### Python Packages and Their Uses
+
+1. **xarray**: For working with labeled multi-dimensional arrays, commonly used for analyzing NetCDF files in oceanography.
+2. **netCDF4**: Read and write NetCDF files, a standard format for oceanographic and atmospheric data.
+3. **cartopy**: Create maps and visualize geospatial data, often used in environmental science.
+4. **matplotlib**: A versatile library for creating static, animated, and interactive visualizations.
+5. **seaborn**: Simplifies statistical data visualization, built on top of matplotlib.
+6. **pandas**: Handle and analyze structured data, such as time-series data in fisheries.
+7. **numpy**: Perform numerical computations, including array manipulations and mathematical operations.
+8. **scipy**: Provides scientific computing tools, including optimization, integration, and signal processing.
+9. **pyproj**: Perform cartographic projections and coordinate transformations.
+10. **shapely**: Analyze and manipulate geometric objects, useful for spatial data.
+11. **rasterio**: Read and write geospatial raster data, often used in remote sensing.
+12. **geopandas**: Extend pandas to handle geospatial data, including shapefiles and GeoJSON.
+13. **pyresample**: Resample geospatial data, commonly used in satellite data processing.
+14. **pyroms**: Tools for working with the Regional Ocean Modeling System (ROMS).
+15. **pygslib**: Geostatistical library for environmental and geological data analysis.
+16. **pyseidon**: Analyze and visualize oceanographic data, including ADCP and CTD measurements.
+17. **obspy**: Process and analyze seismological data, sometimes used in marine geophysics.
+18. **tensorflow/keras**: Build and train machine learning models for environmental data analysis.
+19. **scikit-learn**: Perform machine learning tasks, such as classification and regression, on environmental datasets.
+20. **dask**: Handle large datasets and parallelize computations, useful for big data in oceanography.
+
+These Python packages complement the R packages listed above and are widely used in oceanography, fisheries, and environmental science.
+
+This list is not exhaustive and will be updated regularly. For a complete list of R packages, visit [CRAN](https://cran.r-project.org/web/packages/available_packages_by_name.html).
+
+

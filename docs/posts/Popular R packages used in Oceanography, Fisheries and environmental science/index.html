@@ -9,7 +9,7 @@
 <meta name="author" content="Hafez Ahmad">
 <meta name="dcterms.date" content="2022-10-16">
 
-<title>Basic R – blog</title>
+<title>Popular R packages used in Oceanography, Fisheries and environmental science – blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,41 +21,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -354,7 +319,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Basic R</h1>
+      <h1 class="title">Popular R packages used in Oceanography, Fisheries and environmental science</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">news</div>
                 <div class="quarto-category">code</div>
@@ -396,15 +361,61 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p>You will find basic R codes</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">+</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 3</code></pre>
-</div>
-</div>
+<p>R is an open-source software environment for statistical computing and graphics. It is widely used in various scientific fields, including oceanography, fisheries, and environmental science. Below is a list of popular R packages and their uses in these domains:</p>
+<section id="packages-and-their-uses" class="level3">
+<h3 class="anchored" data-anchor-id="packages-and-their-uses">Packages and Their Uses</h3>
+<ol type="1">
+<li><strong>Oce</strong>: Calculate seawater properties, analyze ADCP measurements, Argo float data, CTD measurements, and more.</li>
+<li><strong>Ncdf4</strong>: Read and write NetCDF files for handling multidimensional data.</li>
+<li><strong>Oceanmap</strong>: Plot 2D oceanographic data and support NetCDF formats.</li>
+<li><strong>LIM</strong>: Solve linear inverse problems, such as food web analysis.</li>
+<li><strong>AquaEnv</strong>: Model aquatic chemical systems and perform sensitivity analysis.</li>
+<li><strong>Marelac</strong>: Provide datasets, constants, and utilities for marine science.</li>
+<li><strong>OceanView</strong>: Visualize 2D and 3D oceanographic data.</li>
+<li><strong>Robis</strong>: Access ocean biogeographic information system data.</li>
+<li><strong>DiveMove</strong>: Analyze time-depth recorder (TDR) data for diving behavior.</li>
+<li><strong>Raster</strong>: Manipulate geographic raster data for spatial analysis.</li>
+<li><strong>Caret/mlr/e1071</strong>: Train and visualize classification and regression models.</li>
+<li><strong>Ggplot2</strong>: Create high-quality data visualizations.</li>
+<li><strong>Angstroms</strong>: Tools for regional ocean modeling systems.</li>
+<li><strong>GISTools/sp/t_map</strong>: Create maps and manipulate spatial data.</li>
+<li><strong>Simba</strong>: Perform similarity analysis for vegetation data.</li>
+<li><strong>Dplyr</strong>: Simplify data manipulation with a consistent grammar.</li>
+<li><strong>Vegan/BiodiversityR</strong>: Analyze ecological diversity and ordination methods.</li>
+<li><strong>DeSolve</strong>: Solve differential equations for dynamic models.</li>
+<li><strong>PBSmapping</strong>: Create 2D plots similar to GIS systems.</li>
+<li><strong>Mizer</strong>: Model multispecies and community size spectra in marine environments.</li>
+</ol>
+</section>
+<section id="python-packages-and-their-uses" class="level3">
+<h3 class="anchored" data-anchor-id="python-packages-and-their-uses">Python Packages and Their Uses</h3>
+<ol type="1">
+<li><strong>xarray</strong>: For working with labeled multi-dimensional arrays, commonly used for analyzing NetCDF files in oceanography.</li>
+<li><strong>netCDF4</strong>: Read and write NetCDF files, a standard format for oceanographic and atmospheric data.</li>
+<li><strong>cartopy</strong>: Create maps and visualize geospatial data, often used in environmental science.</li>
+<li><strong>matplotlib</strong>: A versatile library for creating static, animated, and interactive visualizations.</li>
+<li><strong>seaborn</strong>: Simplifies statistical data visualization, built on top of matplotlib.</li>
+<li><strong>pandas</strong>: Handle and analyze structured data, such as time-series data in fisheries.</li>
+<li><strong>numpy</strong>: Perform numerical computations, including array manipulations and mathematical operations.</li>
+<li><strong>scipy</strong>: Provides scientific computing tools, including optimization, integration, and signal processing.</li>
+<li><strong>pyproj</strong>: Perform cartographic projections and coordinate transformations.</li>
+<li><strong>shapely</strong>: Analyze and manipulate geometric objects, useful for spatial data.</li>
+<li><strong>rasterio</strong>: Read and write geospatial raster data, often used in remote sensing.</li>
+<li><strong>geopandas</strong>: Extend pandas to handle geospatial data, including shapefiles and GeoJSON.</li>
+<li><strong>pyresample</strong>: Resample geospatial data, commonly used in satellite data processing.</li>
+<li><strong>pyroms</strong>: Tools for working with the Regional Ocean Modeling System (ROMS).</li>
+<li><strong>pygslib</strong>: Geostatistical library for environmental and geological data analysis.</li>
+<li><strong>pyseidon</strong>: Analyze and visualize oceanographic data, including ADCP and CTD measurements.</li>
+<li><strong>obspy</strong>: Process and analyze seismological data, sometimes used in marine geophysics.</li>
+<li><strong>tensorflow/keras</strong>: Build and train machine learning models for environmental data analysis.</li>
+<li><strong>scikit-learn</strong>: Perform machine learning tasks, such as classification and regression, on environmental datasets.</li>
+<li><strong>dask</strong>: Handle large datasets and parallelize computations, useful for big data in oceanography.</li>
+</ol>
+<p>These Python packages complement the R packages listed above and are widely used in oceanography, fisheries, and environmental science.</p>
+<p>This list is not exhaustive and will be updated regularly. For a complete list of R packages, visit <a href="https://cran.r-project.org/web/packages/available_packages_by_name.html">CRAN</a>.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

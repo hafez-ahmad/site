@@ -1,0 +1,17 @@
+{
+  "hash": "82e3f0902dd2ff092a03bfe22f02b1ec",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Geoscience Analysis with R\"\nauthor: \"Hafez Ahmad\"\ndate: \"2025-04-29\"\ncategories: [geoscience, analysis, R]\nimage: \"image.jpg\"\n---\n\nThis post demonstrates geoscience data analysis using R.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# Load necessary libraries\nlibrary(ggplot2)\nlibrary(sf)\n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\nLinking to GEOS 3.11.2, GDAL 3.7.2, PROJ 9.3.0; sf_use_s2() is TRUE\n```\n\n\n:::\n\n```{.r .cell-code}\nlibrary(raster)\n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\nWarning: package 'raster' was built under R version 4.3.3\n```\n\n\n:::\n\n::: {.cell-output .cell-output-stderr}\n\n```\nLoading required package: sp\n```\n\n\n:::\n\n::: {.cell-output .cell-output-stderr}\n\n```\nWarning: package 'sp' was built under R version 4.3.3\n```\n\n\n:::\n\n```{.r .cell-code}\n# Load a sample shapefile (replace with your own geospatial data)\nshapefile_path <- system.file(\"shape/nc.shp\", package = \"sf\")\ngeo_data <- st_read(shapefile_path)\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\nReading layer `nc' from data source \n  `C:\\Users\\hafez\\AppData\\Local\\R\\win-library\\4.3\\sf\\shape\\nc.shp' \n  using driver `ESRI Shapefile'\nSimple feature collection with 100 features and 14 fields\nGeometry type: MULTIPOLYGON\nDimension:     XY\nBounding box:  xmin: -84.32385 ymin: 33.88199 xmax: -75.45698 ymax: 36.58965\nGeodetic CRS:  NAD27\n```\n\n\n:::\n\n```{.r .cell-code}\n# Plot the geospatial data\nplot(geo_data[\"AREA\"], main = \"Geospatial Data Visualization\")\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n\n```{.r .cell-code}\n# Load a sample raster dataset (replace with your own raster data)\nraster_data <- raster(system.file(\"external/test.grd\", package = \"raster\"))\n\n# Plot the raster data\nplot(raster_data, main = \"Raster Data Visualization\")\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-1-2.png){width=672}\n:::\n\n```{.r .cell-code}\n# Perform a simple spatial operation: calculate the centroid of polygons\ncentroids <- st_centroid(geo_data)\n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\nWarning: st_centroid assumes attributes are constant over geometries\n```\n\n\n:::\n\n```{.r .cell-code}\n# Add centroids to the plot\nplot(geo_data[\"AREA\"], main = \"Geospatial Data with Centroids\")\nplot(centroids, add = TRUE, col = \"red\", pch = 16)\n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\nWarning in plot.sf(centroids, add = TRUE, col = \"red\", pch = 16): ignoring all\nbut the first attribute\n```\n\n\n:::\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-1-3.png){width=672}\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

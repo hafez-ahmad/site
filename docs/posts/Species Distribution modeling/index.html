@@ -109,35 +109,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -499,62 +470,6 @@ window.Quarto = {
 </div>
 <p>#6. write a function for growth rate called “rate” —-</p>
 <p>where, nt is the vector abunace at t,ntplus the vector of abunance at year t+1 and t for vector of years and return plot for growth rate … load data from laptop</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>abundance <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"E:/1 Master's/MSU/course classes/Fall 2022/WFA 8134 RMethod/code/abundance.csv"</span>,<span class="at">header =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(abundance)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  year abundance nextabundance
-1    1        10           215
-2    2       215           105
-3    3       105           277
-4    4       277            44
-5    5        44            34
-6    6        34            44</code></pre>
-</div>
-</div>
-<p>#… write that functions</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>rate<span class="ot">&lt;-</span> <span class="cf">function</span>(dataframe){</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    nt<span class="ot">&lt;-</span> dataframe<span class="sc">$</span>abundance <span class="co"># abundance at t</span></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    ntplus<span class="ot">&lt;-</span> dataframe<span class="sc">$</span>nextabundance <span class="co"># abundance at t+1</span></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    t<span class="ot">&lt;-</span> dataframe<span class="sc">$</span>year <span class="co"># vector of years</span></span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    growthrate<span class="ot">&lt;-</span> <span class="fu">log</span>(ntplus<span class="sc">/</span>nt) <span class="co"># growth rate</span></span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">plot</span>(t,growthrate,<span class="at">type=</span><span class="st">"l"</span>,<span class="at">xlab=</span><span class="st">"Year"</span>,<span class="at">ylab=</span><span class="st">"Growth rate"</span>,<span class="at">main=</span><span class="st">"Growth rate of abundance"</span>)</span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(growthrate)</span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>#… apply it over the dataframe</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rate</span>(abundance)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1]  3.068052935 -0.716677678  0.970057156 -1.839827872 -0.257829109
- [6]  0.257829109  2.087928156  0.514761530 -1.068759326 -0.807260487
-[11]  0.836248024  0.762140052 -0.179658439  0.644091024 -0.073893126
-[16] -0.055655784 -0.024136329 -0.048383081  0.196466064  0.061285342
-[21] -0.114650563  0.110679677  0.027470661  0.053999307  0.082109406
-[26]  0.239229689 -0.429692403  0.038749003 -0.059396674  0.336869535
-[31]  0.179503953 -0.049329729 -0.224888752 -0.071256817 -0.135375329
-[36] -0.106106506 -0.007490672  0.151784833  0.033039854  0.103233255
-[41]  0.130850237  0.085278918 -0.016483890 -0.231721325  0.105942418
-[46]  0.010416761  0.114438358  0.050461155 -0.005286356 -0.084765267</code></pre>
-</div>
-<div class="cell-output-display">
-<div id="fig-growth_rate_plot" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-growth_rate_plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="index_files/figure-html/fig-growth_rate_plot-1.png" class="img-fluid figure-img" width="672">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-growth_rate_plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Calculated Growth rate of abundance dataframe using following formula<span class="math inline">\(r=ln(Nt+1)/Nt\)</span>.
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<pre class="{1+2}"><code></code></pre>
-<p>git commit -m “comments”</p>
-<p>git add .</p>
-<p>git push -f origin master</p>
 
 
 </section>

@@ -10,7 +10,7 @@ format:
 
 # Teaching
 
-Welcome to the teaching section! Here, I share resources, tutorials, and guides to help you learn and grow in various fields, including Oceanography, Data Analysis, and Programming. Stay tuned for updates!
+Welcome to the teaching section! Here, I share resources, tutorials, and guides to help you learn and grow in various fields, including Remote Sensing,Oceanography, Data Analysis, Modeling and Programming. Stay tuned for updates!
 
 ---
 

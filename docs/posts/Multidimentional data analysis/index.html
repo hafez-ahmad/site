@@ -1,0 +1,2217 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.29">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Hafez Ahmad">
+<meta name="dcterms.date" content="2022-10-16">
+
+<title>Multivariate Statistics – blog</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-748b535e376f14d4692bf2b2e5fd6380.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-cc63fce9873912f1bbbccf05079cc9ea.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-08799928d293638fe9563d5c5a2794e5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-cc63fce9873912f1bbbccf05079cc9ea.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">blog</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../posts/index.html"> 
+<span class="menu-text">Posts</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About Me</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../research/index.html"> 
+<span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../news/index.html"> 
+<span class="menu-text">News</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../teaching/index.html"> 
+<span class="menu-text">Teaching</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../Notebook/index.html"> 
+<span class="menu-text">Notebook</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../projects/index.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../cv/index.html"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com"> <i class="bi bi-twitter" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://www.linkedin.com/in/hafez-ahmad-37a49b102/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text">LinkedIn</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/hafez-ahmad?tab=repositories"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text">Github</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=ToH-NhkAAAAJ&amp;hl=en&amp;oi=sra"> 
+<span class="menu-text">Google Scholar</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Multivariate Statistics</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Multivariate</div>
+                <div class="quarto-category">code</div>
+                <div class="quarto-category">analysis</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Hafez Ahmad </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 16, 2022</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+
+<p>This post provides a comprehensive overview of multivariate statistical methods frequently used in ecology and marine science. Each method is accompanied by the corresponding R packages for implementation.</p>
+<section id="principal-component-analysis-pca" class="level3">
+<h3 class="anchored" data-anchor-id="principal-component-analysis-pca">1. Principal Component Analysis (PCA)</h3>
+<p><strong>Purpose</strong>: Reduces data dimensionality and identifies patterns.</p>
+<p><strong>R Packages</strong>: - <code>vegan</code>: <code>rda()</code> - <code>stats</code>: <code>prcomp()</code>, <code>princomp()</code> - <code>FactoMineR</code>, <code>factoextra</code>: For enhanced visualization ### Example: Principal Component Analysis (PCA) Principal Component Analysis (PCA) is a multivariate statistical technique that uses an orthogonal transformation to convert a set of correlated variables into a set of orthogonal, uncorrelated axes called principal components. The primary motivation behind PCA is to reduce a large number of variables into a smaller number of derived variables that can be visualized in 2 or 3-dimensional space.</p>
+<p>Applications of PCA include: - Reducing strongly correlated data groups - Evaluating aquatic habitat suitability - Analyzing fish abundance, seasonal and spatial variation - Studying ecosystem organization changes - Investigating intra- and interspecific variability, niche differentiation, and partitioning</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load necessary library</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a sample dataset</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">Variable1 =</span> <span class="fu">c</span>(<span class="fl">2.5</span>, <span class="fl">0.5</span>, <span class="fl">2.2</span>, <span class="fl">1.9</span>, <span class="fl">3.1</span>, <span class="fl">2.3</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="fl">1.1</span>),</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">Variable2 =</span> <span class="fu">c</span>(<span class="fl">2.4</span>, <span class="fl">0.7</span>, <span class="fl">2.9</span>, <span class="fl">2.2</span>, <span class="fl">3.0</span>, <span class="fl">2.7</span>, <span class="fl">1.6</span>, <span class="fl">1.1</span>, <span class="fl">1.6</span>, <span class="fl">0.9</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform PCA</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>pca_result <span class="ot">&lt;-</span> <span class="fu">prcomp</span>(data, <span class="at">scale. =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Print PCA summary</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(pca_result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Importance of components:
+                         PC1     PC2
+Standard deviation     1.388 0.27216
+Proportion of Variance 0.963 0.03704
+Cumulative Proportion  0.963 1.00000</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot PCA</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">biplot</span>(pca_result, <span class="at">main =</span> <span class="st">"PCA Biplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="non-metric-multidimensional-scaling-nmds" class="level3">
+<h3 class="anchored" data-anchor-id="non-metric-multidimensional-scaling-nmds">2. Non-metric Multidimensional Scaling (NMDS)</h3>
+<p><strong>Purpose</strong>: Ordination based on ranks (non-parametric).</p>
+<p><strong>R Package</strong>: - <code>vegan</code>: <code>metaMDS()</code></p>
+</section>
+<section id="applications-of-non-metric-multidimensional-scaling-nmds" class="level3">
+<h3 class="anchored" data-anchor-id="applications-of-non-metric-multidimensional-scaling-nmds">Applications of Non-metric Multidimensional Scaling (NMDS)</h3>
+<p>NMDS is widely used in ecological and environmental studies to visualize the similarity or dissimilarity of data points in a low-dimensional space. Applications include: - Analyzing community composition and structure - Studying species-environment relationships - Visualizing temporal changes in ecological data - Comparing biodiversity across sites</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vegan)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'vegan' was built under R version 4.3.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: permute</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'permute' was built under R version 4.3.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: lattice</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(dune)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>nmds <span class="ot">&lt;-</span> <span class="fu">metaMDS</span>(dune)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Run 0 stress 0.1192678 
+Run 1 stress 0.1192679 
+... Procrustes: rmse 0.0001218127  max resid 0.0003736083 
+... Similar to previous best
+Run 2 stress 0.1192678 
+... New best solution
+... Procrustes: rmse 7.269566e-06  max resid 2.137083e-05 
+... Similar to previous best
+Run 3 stress 0.1192678 
+... Procrustes: rmse 4.629212e-05  max resid 0.0001436214 
+... Similar to previous best
+Run 4 stress 0.2035424 
+Run 5 stress 0.1192679 
+... Procrustes: rmse 9.770457e-05  max resid 0.0002999795 
+... Similar to previous best
+Run 6 stress 0.1192679 
+... Procrustes: rmse 0.0001655233  max resid 0.0005082011 
+... Similar to previous best
+Run 7 stress 0.1192679 
+... Procrustes: rmse 0.000153753  max resid 0.0004721524 
+... Similar to previous best
+Run 8 stress 0.1192678 
+... Procrustes: rmse 4.858184e-05  max resid 0.0001484307 
+... Similar to previous best
+Run 9 stress 0.1192678 
+... Procrustes: rmse 6.195451e-05  max resid 0.0001903387 
+... Similar to previous best
+Run 10 stress 0.1809581 
+Run 11 stress 0.1808911 
+Run 12 stress 0.1192678 
+... Procrustes: rmse 1.237881e-05  max resid 3.616359e-05 
+... Similar to previous best
+Run 13 stress 0.1192678 
+... Procrustes: rmse 6.937557e-06  max resid 1.78123e-05 
+... Similar to previous best
+Run 14 stress 0.1183186 
+... New best solution
+... Procrustes: rmse 0.02027193  max resid 0.06497369 
+Run 15 stress 0.1808911 
+Run 16 stress 0.1192679 
+Run 17 stress 0.1183186 
+... New best solution
+... Procrustes: rmse 1.364961e-05  max resid 4.380806e-05 
+... Similar to previous best
+Run 18 stress 0.1192679 
+Run 19 stress 0.1183186 
+... Procrustes: rmse 5.076165e-06  max resid 1.40165e-05 
+... Similar to previous best
+Run 20 stress 0.1886532 
+*** Best solution repeated 2 times</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(nmds)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="canonical-correspondence-analysis-cca" class="level3">
+<h3 class="anchored" data-anchor-id="canonical-correspondence-analysis-cca">3. Canonical Correspondence Analysis (CCA)</h3>
+<p><strong>Purpose</strong>: Ordination constrained by environmental variables.</p>
+</section>
+<section id="applications-of-canonical-correspondence-analysis-cca" class="level3">
+<h3 class="anchored" data-anchor-id="applications-of-canonical-correspondence-analysis-cca">Applications of Canonical Correspondence Analysis (CCA)</h3>
+<p>CCA is commonly applied in ecological research to explore relationships between species and environmental variables. Applications include: - Identifying key environmental drivers of species distribution - Analyzing community-environment interactions - Studying habitat preferences of species</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(dune.env)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>cca_model <span class="ot">&lt;-</span> <span class="fu">cca</span>(dune <span class="sc">~</span> ., <span class="at">data =</span> dune.env)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Some constraints or conditions were aliased because they were redundant. This
+can happen if terms are linearly dependent (collinear): 'Manure^4'</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(cca_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="redundancy-analysis-rda" class="level3">
+<h3 class="anchored" data-anchor-id="redundancy-analysis-rda">4. Redundancy Analysis (RDA)</h3>
+<p><strong>Purpose</strong>: Linear constrained ordination.</p>
+</section>
+<section id="applications-of-redundancy-analysis-rda" class="level3">
+<h3 class="anchored" data-anchor-id="applications-of-redundancy-analysis-rda">Applications of Redundancy Analysis (RDA)</h3>
+<p>RDA is used to summarize and visualize the variation in response variables explained by explanatory variables. Applications include: - Investigating the influence of environmental factors on species abundance - Analyzing multivariate ecological datasets - Studying the effects of land use on biodiversity</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>rda_model <span class="ot">&lt;-</span> <span class="fu">rda</span>(dune <span class="sc">~</span> ., <span class="at">data =</span> dune.env)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Some constraints or conditions were aliased because they were redundant. This
+can happen if terms are linearly dependent (collinear): 'Manure^4'</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(rda_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="cluster-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="cluster-analysis">5. Cluster Analysis</h3>
+<p><strong>Purpose</strong>: Groups similar observations.</p>
+<p><strong>R Packages</strong>: - <code>stats</code>: <code>hclust()</code>, <code>kmeans()</code> - <code>cluster</code>: <code>agnes()</code>, <code>diana()</code></p>
+</section>
+<section id="applications-of-cluster-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="applications-of-cluster-analysis">Applications of Cluster Analysis</h3>
+<p>Cluster analysis is a versatile tool for grouping similar observations. Applications include: - Classifying vegetation types - Grouping sampling sites based on species composition - Identifying patterns in genetic or molecular data</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>dist_matrix <span class="ot">&lt;-</span> <span class="fu">dist</span>(<span class="fu">scale</span>(dune))</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>hc <span class="ot">&lt;-</span> <span class="fu">hclust</span>(dist_matrix)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(hc)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="discriminant-analysis-ldaqda" class="level3">
+<h3 class="anchored" data-anchor-id="discriminant-analysis-ldaqda">6. Discriminant Analysis (LDA/QDA)</h3>
+<p><strong>Purpose</strong>: Classify observations into predefined groups.</p>
+<p><strong>R Package</strong>: - <code>MASS</code></p>
+</section>
+<section id="applications-of-discriminant-analysis-ldaqda" class="level3">
+<h3 class="anchored" data-anchor-id="applications-of-discriminant-analysis-ldaqda">Applications of Discriminant Analysis (LDA/QDA)</h3>
+<p>Discriminant analysis is used for classification and prediction. Applications include: - Classifying species based on morphological traits - Predicting habitat types from environmental variables - Identifying key variables that differentiate groups</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(MASS)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Example assumes 'Species' is a factor in iris</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>lda_model <span class="ot">&lt;-</span> <span class="fu">lda</span>(Species <span class="sc">~</span> ., <span class="at">data =</span> iris)</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(lda_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="permanova" class="level3">
+<h3 class="anchored" data-anchor-id="permanova">7. PERMANOVA</h3>
+<p><strong>Purpose</strong>: Permutation-based multivariate ANOVA.</p>
+<p><strong>R Package</strong>: - <code>vegan</code>: <code>adonis()</code>, <code>adonis2()</code></p>
+</section>
+<section id="applications-of-permanova" class="level3">
+<h3 class="anchored" data-anchor-id="applications-of-permanova">Applications of PERMANOVA</h3>
+<p>PERMANOVA is a robust method for testing differences in multivariate data. Applications include: - Comparing community composition across treatments - Testing the effects of environmental gradients on species assemblages - Analyzing experimental data with complex designs</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>adonis_model <span class="ot">&lt;-</span> <span class="fu">adonis</span>(dune <span class="sc">~</span> Management, <span class="at">data =</span> dune.env)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: 'adonis' is deprecated.
+Use 'adonis2' instead.
+See help("Deprecated") and help("vegan-deprecated").</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>adonis_model</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$aov.tab
+Permutation: free
+Number of permutations: 999
+
+Terms added sequentially (first to last)
+
+           Df SumsOfSqs MeanSqs F.Model      R2 Pr(&gt;F)   
+Management  3    1.4686 0.48953  2.7672 0.34161  0.004 **
+Residuals  16    2.8304 0.17690         0.65839          
+Total      19    4.2990                 1.00000          
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+$call
+adonis(formula = dune ~ Management, data = dune.env)
+
+$coefficients
+              Achimill   Agrostol   Airaprae   Alopgeni  Anthodor   Bellpere
+(Intercept)  1.0083333  2.0583333  0.2083333  1.6500000 1.1166667  0.7666667
+Management1  1.3250000 -2.0583333 -0.2083333 -0.9833333 0.2166667  0.9000000
+Management2  0.1916667 -0.6583333 -0.2083333 -0.0500000 0.6833333 -0.3666667
+Management3 -0.6750000  0.1083333  0.6250000 -1.6500000 0.2166667 -0.4333333
+              Bromhord    Chenalbu    Cirsarve   Comapalu  Eleopalu
+(Intercept)  0.9916667  0.04166667  0.08333333  0.1666667  1.075000
+Management1  1.6750000 -0.04166667 -0.08333333 -0.1666667 -1.075000
+Management2 -0.1916667 -0.04166667 -0.08333333 -0.1666667 -0.275000
+Management3 -0.9916667 -0.04166667 -0.08333333  0.5000000  1.091667
+                 Elymrepe    Empenigr   Hyporadi   Juncarti   Juncbufo
+(Intercept)  1.333333e+00  0.08333333  0.4583333  0.8166667  0.5916667
+Management1 -5.315636e-16 -0.08333333  0.2083333 -0.8166667 -0.5916667
+Management2  6.666667e-01 -0.08333333 -0.4583333  0.7833333  0.6083333
+Management3 -1.333333e+00  0.25000000  0.7083333  0.3500000 -0.5916667
+              Lolipere   Planlanc    Poaprat    Poatriv   Ranuflam   Rumeacet
+(Intercept)  3.3333333  1.4583333  2.6416667  3.2833333  0.6000000  0.8833333
+Management1  2.6666667  0.5416667  1.3583333  0.3833333 -0.6000000 -0.8833333
+Management2  0.6666667  1.5416667  0.7583333  1.5166667 -0.2000000  2.3166667
+Management3 -3.0000000 -0.6250000 -1.9750000 -3.2833333  0.7333333 -0.8833333
+              Sagiproc   Salirepe   Scorautu Trifprat   Trifrepe   Vicilath
+(Intercept)  0.9500000  0.4583333  2.9083333     0.45  2.6583333  0.2916667
+Management1 -0.2833333 -0.4583333  1.4250000    -0.45  2.0083333  0.7083333
+Management2 -0.1500000 -0.4583333 -0.1083333     1.35  0.1416667 -0.2916667
+Management3 -0.4500000  1.3750000  0.2583333    -0.45 -0.8250000 -0.1250000
+              Bracruta   Callcusp
+(Intercept)  2.4083333  0.4166667
+Management1 -0.4083333 -0.4166667
+Management2  0.3916667 -0.4166667
+Management3  0.4250000  0.7500000
+
+$coef.sites
+                      1           2           3           4           5
+(Intercept)  0.67574520  0.53161494  0.50736459  0.53767659  0.54776275
+Management1 -0.14226615 -0.25339555 -0.05173176 -0.06500654 -0.08533989
+Management2 -0.05922431 -0.05667973 -0.07145964 -0.05140339 -0.21375164
+Management3  0.26701574  0.27967840  0.25476356  0.23760571  0.20010780
+                     6          7           8           9          10
+(Intercept)  0.5439066  0.5146877  0.50369055  0.53529312  0.50417436
+Management1 -0.1173092 -0.1278286  0.03182005  0.02163523 -0.26835736
+Management2 -0.2009296 -0.2208891 -0.08938326 -0.15314104 -0.08681523
+Management3  0.1817377  0.2478188  0.12351081  0.21045063  0.21427188
+                     11          12          13          14          15
+(Intercept)  0.54326809  0.61282294  0.62050552  0.71853509  0.68579075
+Management1 -0.22531013  0.08846914  0.07639056  0.07163204  0.14808648
+Management2 -0.01457139 -0.06318735 -0.04763974  0.05771058  0.03074555
+Management3  0.11608592  0.11575703  0.13515185 -0.14997406 -0.17737191
+                     16          17           18          19          20
+(Intercept)  0.71914202  0.76273816  0.597040253  0.71241400  0.71952832
+Management1  0.16918907 -0.04694525 -0.129723226 -0.02358819  0.16267874
+Management2  0.02385609 -0.01041765 -0.014764304  0.02718627  0.04425268
+Management3 -0.04953049 -0.09068176 -0.002636699 -0.13054729 -0.20361567
+
+$f.perms
+             [,1]
+   [1,] 1.4770127
+   [2,] 1.6741268
+   [3,] 0.5841741
+   [4,] 1.0793058
+   [5,] 1.3939571
+   [6,] 0.5312787
+   [7,] 1.2214243
+   [8,] 0.6273901
+   [9,] 0.8102732
+  [10,] 1.4203213
+  [11,] 0.7830450
+  [12,] 0.4712738
+  [13,] 0.7274186
+  [14,] 0.9329011
+  [15,] 0.9334849
+  [16,] 0.4632469
+  [17,] 0.4831136
+  [18,] 1.3909926
+  [19,] 0.6054234
+  [20,] 1.1386544
+  [21,] 0.8940494
+  [22,] 1.2806116
+  [23,] 1.9641093
+  [24,] 0.9741948
+  [25,] 0.6531695
+  [26,] 1.3248005
+  [27,] 1.4124523
+  [28,] 1.3773216
+  [29,] 1.0519740
+  [30,] 1.1525879
+  [31,] 0.8695853
+  [32,] 1.2351863
+  [33,] 0.8724930
+  [34,] 0.6903864
+  [35,] 1.3501681
+  [36,] 1.1824076
+  [37,] 0.7419446
+  [38,] 1.4360489
+  [39,] 1.0690261
+  [40,] 0.9301971
+  [41,] 0.7623953
+  [42,] 1.0511879
+  [43,] 1.1721067
+  [44,] 0.6674446
+  [45,] 1.1962906
+  [46,] 0.7492973
+  [47,] 0.8001220
+  [48,] 1.2280829
+  [49,] 0.2880842
+  [50,] 0.4022638
+  [51,] 0.6737903
+  [52,] 1.1783578
+  [53,] 0.6936991
+  [54,] 1.1631255
+  [55,] 0.6775807
+  [56,] 0.2893694
+  [57,] 0.6653908
+  [58,] 1.4210496
+  [59,] 1.5012472
+  [60,] 0.6638606
+  [61,] 1.3021709
+  [62,] 0.5785438
+  [63,] 1.1420707
+  [64,] 0.7380980
+  [65,] 0.4966893
+  [66,] 0.5924792
+  [67,] 0.9808446
+  [68,] 0.4963282
+  [69,] 0.7565734
+  [70,] 0.9940520
+  [71,] 0.7483531
+  [72,] 1.0850450
+  [73,] 0.9988767
+  [74,] 0.5043698
+  [75,] 0.8972336
+  [76,] 0.7039330
+  [77,] 0.9657978
+  [78,] 1.0284344
+  [79,] 0.7344814
+  [80,] 1.0063138
+  [81,] 1.6712571
+  [82,] 1.0358732
+  [83,] 1.1810227
+  [84,] 2.4980652
+  [85,] 0.9193928
+  [86,] 1.0921393
+  [87,] 1.3260082
+  [88,] 1.2823243
+  [89,] 2.1462794
+  [90,] 0.8752580
+  [91,] 0.7103119
+  [92,] 1.3050155
+  [93,] 0.7557751
+  [94,] 0.5923924
+  [95,] 0.8419388
+  [96,] 2.0546380
+  [97,] 1.4433198
+  [98,] 0.9948003
+  [99,] 1.1990555
+ [100,] 0.7197558
+ [101,] 0.6681426
+ [102,] 1.1277194
+ [103,] 0.9402664
+ [104,] 0.8360112
+ [105,] 1.2427407
+ [106,] 0.7076889
+ [107,] 0.7154894
+ [108,] 1.5948556
+ [109,] 1.3095611
+ [110,] 0.9337607
+ [111,] 0.8970954
+ [112,] 0.9544802
+ [113,] 1.9199597
+ [114,] 0.8123536
+ [115,] 0.7468794
+ [116,] 0.9622113
+ [117,] 0.2663180
+ [118,] 0.8779799
+ [119,] 0.5472752
+ [120,] 1.9629848
+ [121,] 1.4655385
+ [122,] 0.4355588
+ [123,] 1.1348573
+ [124,] 1.2765454
+ [125,] 1.0064938
+ [126,] 0.9185663
+ [127,] 1.1743829
+ [128,] 0.8495841
+ [129,] 1.4028903
+ [130,] 1.8667872
+ [131,] 1.0533410
+ [132,] 0.4666848
+ [133,] 0.9977309
+ [134,] 0.6676392
+ [135,] 0.7978343
+ [136,] 0.8246253
+ [137,] 1.5295156
+ [138,] 1.3533550
+ [139,] 0.7923841
+ [140,] 2.0718269
+ [141,] 1.5044331
+ [142,] 0.6403341
+ [143,] 0.8390345
+ [144,] 0.3248323
+ [145,] 0.4747476
+ [146,] 2.4191610
+ [147,] 0.9908124
+ [148,] 0.6973857
+ [149,] 1.1067674
+ [150,] 1.7477629
+ [151,] 0.8553347
+ [152,] 0.8154237
+ [153,] 1.0061334
+ [154,] 1.2086589
+ [155,] 1.3321821
+ [156,] 0.9336491
+ [157,] 0.3682444
+ [158,] 0.6032235
+ [159,] 1.0119507
+ [160,] 0.4058727
+ [161,] 0.6800951
+ [162,] 1.0304500
+ [163,] 0.7032275
+ [164,] 0.8425849
+ [165,] 0.7981298
+ [166,] 0.8403245
+ [167,] 0.5825641
+ [168,] 0.8772570
+ [169,] 0.6738811
+ [170,] 1.5591647
+ [171,] 0.4762378
+ [172,] 0.9215314
+ [173,] 0.8388783
+ [174,] 0.6199798
+ [175,] 0.6565736
+ [176,] 2.1060625
+ [177,] 1.3489550
+ [178,] 1.0062732
+ [179,] 1.1919056
+ [180,] 0.4609944
+ [181,] 0.7502184
+ [182,] 1.4279961
+ [183,] 1.4781943
+ [184,] 1.0519368
+ [185,] 1.6619095
+ [186,] 0.4739645
+ [187,] 0.6738266
+ [188,] 1.0003629
+ [189,] 1.0771126
+ [190,] 1.7081498
+ [191,] 0.9302083
+ [192,] 1.2599451
+ [193,] 0.6606229
+ [194,] 1.3758623
+ [195,] 0.6238083
+ [196,] 0.4068884
+ [197,] 0.7085488
+ [198,] 0.5056951
+ [199,] 0.9601244
+ [200,] 1.1108904
+ [201,] 1.1790648
+ [202,] 0.9693691
+ [203,] 0.8400174
+ [204,] 1.8135628
+ [205,] 0.8523361
+ [206,] 0.9223765
+ [207,] 0.8702576
+ [208,] 1.0758547
+ [209,] 1.0101402
+ [210,] 1.1017830
+ [211,] 0.7452655
+ [212,] 0.9013168
+ [213,] 1.3029965
+ [214,] 0.8205975
+ [215,] 0.9645074
+ [216,] 0.9345365
+ [217,] 1.1337161
+ [218,] 0.7369172
+ [219,] 1.2837005
+ [220,] 0.7697555
+ [221,] 0.7783000
+ [222,] 0.8023562
+ [223,] 1.3639488
+ [224,] 1.2673809
+ [225,] 0.8001389
+ [226,] 1.2582407
+ [227,] 1.5006700
+ [228,] 0.7652815
+ [229,] 0.6640557
+ [230,] 0.9377710
+ [231,] 0.6535452
+ [232,] 1.0500841
+ [233,] 1.0768823
+ [234,] 2.6332037
+ [235,] 0.5858923
+ [236,] 0.5960403
+ [237,] 0.8137275
+ [238,] 0.7397481
+ [239,] 1.4897358
+ [240,] 1.4026573
+ [241,] 1.4366856
+ [242,] 0.8597631
+ [243,] 0.8066541
+ [244,] 0.8044416
+ [245,] 1.2362615
+ [246,] 1.0821938
+ [247,] 1.2111738
+ [248,] 0.5439102
+ [249,] 0.9361084
+ [250,] 1.5508510
+ [251,] 0.7175440
+ [252,] 1.8257393
+ [253,] 1.6070306
+ [254,] 0.7039476
+ [255,] 0.9591631
+ [256,] 0.9814181
+ [257,] 1.0474431
+ [258,] 1.4948642
+ [259,] 1.1846257
+ [260,] 0.7772480
+ [261,] 0.8201491
+ [262,] 0.7828198
+ [263,] 1.0798898
+ [264,] 0.8728824
+ [265,] 0.5473524
+ [266,] 0.7452955
+ [267,] 2.3839572
+ [268,] 1.0123776
+ [269,] 0.9346628
+ [270,] 1.4210620
+ [271,] 0.7026874
+ [272,] 0.9224575
+ [273,] 1.1474375
+ [274,] 1.1292296
+ [275,] 0.6998635
+ [276,] 0.7763794
+ [277,] 2.6533640
+ [278,] 0.8259252
+ [279,] 1.2755326
+ [280,] 1.5899695
+ [281,] 0.5814523
+ [282,] 1.2370601
+ [283,] 1.4848072
+ [284,] 1.0604471
+ [285,] 0.9492693
+ [286,] 2.0029945
+ [287,] 1.3647031
+ [288,] 0.3773867
+ [289,] 1.0488958
+ [290,] 1.0414270
+ [291,] 0.4160364
+ [292,] 0.7416273
+ [293,] 0.6785256
+ [294,] 1.2160278
+ [295,] 0.8776552
+ [296,] 1.2948961
+ [297,] 0.8161454
+ [298,] 0.7670753
+ [299,] 0.7581265
+ [300,] 0.9536657
+ [301,] 0.6757823
+ [302,] 0.7529551
+ [303,] 0.6625711
+ [304,] 0.8492308
+ [305,] 1.0948772
+ [306,] 1.0211374
+ [307,] 1.1225175
+ [308,] 0.7004408
+ [309,] 0.6943875
+ [310,] 0.5761640
+ [311,] 0.3944804
+ [312,] 0.6041955
+ [313,] 0.5616060
+ [314,] 0.4347134
+ [315,] 1.7510698
+ [316,] 0.8216853
+ [317,] 1.1183855
+ [318,] 1.3944784
+ [319,] 1.3092314
+ [320,] 1.2653304
+ [321,] 0.5144483
+ [322,] 0.3861568
+ [323,] 0.6571438
+ [324,] 0.4778806
+ [325,] 1.8443280
+ [326,] 0.7905290
+ [327,] 1.3643009
+ [328,] 0.4526702
+ [329,] 0.9294289
+ [330,] 0.4619874
+ [331,] 0.7534640
+ [332,] 1.4867032
+ [333,] 0.4736031
+ [334,] 0.9352602
+ [335,] 1.4226953
+ [336,] 1.7456812
+ [337,] 0.9558558
+ [338,] 1.1741469
+ [339,] 1.0515656
+ [340,] 1.8289292
+ [341,] 1.4863810
+ [342,] 0.4136271
+ [343,] 1.3661146
+ [344,] 1.1698071
+ [345,] 0.8921639
+ [346,] 0.9789351
+ [347,] 0.9428690
+ [348,] 1.0009387
+ [349,] 1.1333190
+ [350,] 1.1280314
+ [351,] 0.7879399
+ [352,] 0.7143198
+ [353,] 0.6974031
+ [354,] 0.6677926
+ [355,] 0.9368312
+ [356,] 0.7752936
+ [357,] 0.6613949
+ [358,] 0.7096997
+ [359,] 0.5278780
+ [360,] 1.5979675
+ [361,] 1.0102512
+ [362,] 0.9657582
+ [363,] 0.6788591
+ [364,] 1.2513459
+ [365,] 0.8923123
+ [366,] 0.5935933
+ [367,] 1.4005758
+ [368,] 0.9663236
+ [369,] 0.7198910
+ [370,] 1.4308977
+ [371,] 0.7303822
+ [372,] 0.9000348
+ [373,] 0.8130237
+ [374,] 1.1551960
+ [375,] 0.6321509
+ [376,] 1.2640836
+ [377,] 0.6367746
+ [378,] 0.9342290
+ [379,] 0.7619839
+ [380,] 0.6642945
+ [381,] 0.9393655
+ [382,] 0.4842257
+ [383,] 1.0335787
+ [384,] 0.2640405
+ [385,] 1.9530058
+ [386,] 0.7716831
+ [387,] 1.8781195
+ [388,] 0.7438069
+ [389,] 2.2227582
+ [390,] 1.1514433
+ [391,] 0.9942989
+ [392,] 1.0074796
+ [393,] 0.6961640
+ [394,] 0.7870044
+ [395,] 1.3591964
+ [396,] 0.8059156
+ [397,] 0.8355524
+ [398,] 0.6160495
+ [399,] 1.0430180
+ [400,] 0.8523824
+ [401,] 1.5934819
+ [402,] 0.6773612
+ [403,] 0.8013232
+ [404,] 1.1993369
+ [405,] 1.0512708
+ [406,] 1.8519746
+ [407,] 0.8757457
+ [408,] 1.0569673
+ [409,] 1.0775598
+ [410,] 1.1199711
+ [411,] 1.1922530
+ [412,] 0.7866440
+ [413,] 0.9744095
+ [414,] 1.3679371
+ [415,] 1.6040984
+ [416,] 0.5837127
+ [417,] 1.3503217
+ [418,] 1.6066318
+ [419,] 0.6603888
+ [420,] 0.6193697
+ [421,] 0.8862458
+ [422,] 1.1215359
+ [423,] 1.8969206
+ [424,] 0.9385519
+ [425,] 1.2601149
+ [426,] 0.8316728
+ [427,] 1.1814472
+ [428,] 2.8395517
+ [429,] 0.7996109
+ [430,] 0.9794073
+ [431,] 0.5975595
+ [432,] 0.7908001
+ [433,] 1.6127786
+ [434,] 0.8268354
+ [435,] 0.9649756
+ [436,] 1.7133208
+ [437,] 1.2635960
+ [438,] 1.2866071
+ [439,] 1.0576726
+ [440,] 0.5306406
+ [441,] 0.8742260
+ [442,] 1.1792678
+ [443,] 0.9612873
+ [444,] 1.0988587
+ [445,] 1.5794592
+ [446,] 1.0438684
+ [447,] 0.6670132
+ [448,] 1.9153712
+ [449,] 1.9637715
+ [450,] 0.7159528
+ [451,] 0.8119893
+ [452,] 1.1489600
+ [453,] 0.9023244
+ [454,] 0.9857213
+ [455,] 0.6793446
+ [456,] 1.0284229
+ [457,] 0.9268201
+ [458,] 1.1315809
+ [459,] 0.8589509
+ [460,] 0.8169525
+ [461,] 1.4750788
+ [462,] 0.7496458
+ [463,] 0.5848952
+ [464,] 0.7189014
+ [465,] 0.6204754
+ [466,] 0.7702430
+ [467,] 3.0760004
+ [468,] 1.7608209
+ [469,] 0.5577154
+ [470,] 1.4365379
+ [471,] 1.4839914
+ [472,] 0.9486829
+ [473,] 0.7956295
+ [474,] 1.0041222
+ [475,] 1.0792992
+ [476,] 0.8408217
+ [477,] 1.6118840
+ [478,] 1.2312092
+ [479,] 1.3609367
+ [480,] 1.2067170
+ [481,] 1.6461551
+ [482,] 1.1098814
+ [483,] 0.5815324
+ [484,] 1.2958019
+ [485,] 0.5281246
+ [486,] 0.8585710
+ [487,] 0.9438420
+ [488,] 1.0361399
+ [489,] 0.8841896
+ [490,] 1.6976918
+ [491,] 1.1097510
+ [492,] 0.6784978
+ [493,] 1.0010389
+ [494,] 1.7725987
+ [495,] 0.5220205
+ [496,] 1.0089502
+ [497,] 1.4860288
+ [498,] 1.8923380
+ [499,] 1.2821390
+ [500,] 0.8784554
+ [501,] 0.8777686
+ [502,] 1.6479702
+ [503,] 0.3985830
+ [504,] 0.3962295
+ [505,] 0.9262719
+ [506,] 0.9455292
+ [507,] 0.9251755
+ [508,] 2.0208831
+ [509,] 1.4155221
+ [510,] 0.7336200
+ [511,] 0.7850498
+ [512,] 1.5910079
+ [513,] 1.0185668
+ [514,] 1.0460104
+ [515,] 1.1437914
+ [516,] 0.9050149
+ [517,] 0.8035864
+ [518,] 1.0520923
+ [519,] 1.6509403
+ [520,] 0.9485036
+ [521,] 0.7115430
+ [522,] 1.3963897
+ [523,] 0.7604124
+ [524,] 0.7997896
+ [525,] 0.8465368
+ [526,] 0.9852758
+ [527,] 0.6827786
+ [528,] 1.1769061
+ [529,] 0.6879249
+ [530,] 0.7899654
+ [531,] 0.5698013
+ [532,] 0.8842289
+ [533,] 2.6513424
+ [534,] 1.0939446
+ [535,] 0.7898021
+ [536,] 0.8147453
+ [537,] 1.2140595
+ [538,] 0.6591184
+ [539,] 0.8393913
+ [540,] 1.0233121
+ [541,] 1.2381719
+ [542,] 0.5110001
+ [543,] 0.7646791
+ [544,] 0.7475627
+ [545,] 1.1081737
+ [546,] 1.3478255
+ [547,] 1.1151663
+ [548,] 0.8014322
+ [549,] 1.0767288
+ [550,] 1.2122135
+ [551,] 0.9519276
+ [552,] 1.6617904
+ [553,] 0.7743693
+ [554,] 1.3326022
+ [555,] 0.4702571
+ [556,] 0.7436965
+ [557,] 1.6217353
+ [558,] 1.4318648
+ [559,] 1.0274740
+ [560,] 0.6377227
+ [561,] 1.3193315
+ [562,] 0.5786926
+ [563,] 0.7231989
+ [564,] 0.2851996
+ [565,] 0.3650425
+ [566,] 1.0522937
+ [567,] 0.5703126
+ [568,] 0.8050937
+ [569,] 0.4503331
+ [570,] 0.7122370
+ [571,] 0.8819020
+ [572,] 0.7714385
+ [573,] 0.7233526
+ [574,] 1.6450777
+ [575,] 1.4985357
+ [576,] 1.4503597
+ [577,] 0.7815944
+ [578,] 1.1468518
+ [579,] 1.8714636
+ [580,] 0.7827182
+ [581,] 1.2273104
+ [582,] 0.4884806
+ [583,] 0.8828140
+ [584,] 0.6788610
+ [585,] 1.0419636
+ [586,] 1.0158278
+ [587,] 0.5389564
+ [588,] 0.7930568
+ [589,] 1.3048304
+ [590,] 1.0945713
+ [591,] 0.6550372
+ [592,] 1.6274987
+ [593,] 1.2229634
+ [594,] 0.8408857
+ [595,] 0.9556498
+ [596,] 0.6906298
+ [597,] 2.0029042
+ [598,] 0.7516475
+ [599,] 0.9414026
+ [600,] 1.0010650
+ [601,] 0.9780873
+ [602,] 1.2716579
+ [603,] 1.1449026
+ [604,] 1.0553143
+ [605,] 1.1130427
+ [606,] 0.7841182
+ [607,] 1.1578110
+ [608,] 1.6123949
+ [609,] 0.9265977
+ [610,] 1.0198548
+ [611,] 0.6647458
+ [612,] 1.3470644
+ [613,] 0.9191686
+ [614,] 1.0483869
+ [615,] 0.9601701
+ [616,] 0.7284904
+ [617,] 0.8887999
+ [618,] 0.9655551
+ [619,] 1.0021245
+ [620,] 1.6736188
+ [621,] 1.1036328
+ [622,] 0.6383364
+ [623,] 0.7497011
+ [624,] 0.3991816
+ [625,] 1.1098361
+ [626,] 1.5052506
+ [627,] 1.4220487
+ [628,] 0.7768215
+ [629,] 0.9654913
+ [630,] 1.6320503
+ [631,] 0.8470110
+ [632,] 0.6143199
+ [633,] 0.4797388
+ [634,] 1.2245252
+ [635,] 0.4933556
+ [636,] 0.5159171
+ [637,] 1.5322786
+ [638,] 0.9297709
+ [639,] 1.2096926
+ [640,] 0.6647641
+ [641,] 0.7603668
+ [642,] 1.0126839
+ [643,] 0.6917319
+ [644,] 0.9987544
+ [645,] 0.8710559
+ [646,] 0.7159691
+ [647,] 1.7395091
+ [648,] 1.5052827
+ [649,] 1.1549154
+ [650,] 0.8475777
+ [651,] 0.5540226
+ [652,] 0.6446049
+ [653,] 0.8764935
+ [654,] 2.2613992
+ [655,] 1.0756627
+ [656,] 0.7827463
+ [657,] 1.7351834
+ [658,] 1.3879341
+ [659,] 1.0248647
+ [660,] 1.2710529
+ [661,] 1.9995982
+ [662,] 0.9530648
+ [663,] 1.0264613
+ [664,] 1.3211122
+ [665,] 1.4020787
+ [666,] 1.4861293
+ [667,] 1.0650711
+ [668,] 0.3969514
+ [669,] 1.1036307
+ [670,] 0.9497661
+ [671,] 1.1720965
+ [672,] 1.2555416
+ [673,] 0.5254982
+ [674,] 0.6059300
+ [675,] 0.7542074
+ [676,] 1.1376381
+ [677,] 0.7507373
+ [678,] 0.5777125
+ [679,] 1.0049130
+ [680,] 0.8775843
+ [681,] 1.5811939
+ [682,] 1.3096946
+ [683,] 1.0128141
+ [684,] 0.9821165
+ [685,] 0.8278430
+ [686,] 0.4447845
+ [687,] 1.1821780
+ [688,] 0.7649361
+ [689,] 0.9999616
+ [690,] 0.9191673
+ [691,] 0.6168196
+ [692,] 2.0148695
+ [693,] 0.9906245
+ [694,] 0.6074741
+ [695,] 0.5113902
+ [696,] 0.9757688
+ [697,] 1.1030728
+ [698,] 0.6872698
+ [699,] 1.2680956
+ [700,] 0.8835791
+ [701,] 1.5787880
+ [702,] 0.6347134
+ [703,] 0.7344958
+ [704,] 0.5509849
+ [705,] 1.1617276
+ [706,] 1.0678092
+ [707,] 1.4692061
+ [708,] 1.0881524
+ [709,] 0.6695910
+ [710,] 0.7753518
+ [711,] 1.4115232
+ [712,] 0.3822089
+ [713,] 0.9080424
+ [714,] 0.8734658
+ [715,] 1.5312500
+ [716,] 0.8855532
+ [717,] 0.8922694
+ [718,] 0.8540800
+ [719,] 0.5648934
+ [720,] 0.8925795
+ [721,] 1.6835659
+ [722,] 1.2699480
+ [723,] 0.9480144
+ [724,] 0.4873501
+ [725,] 1.4660703
+ [726,] 1.3403206
+ [727,] 0.4708188
+ [728,] 0.6231866
+ [729,] 2.6275301
+ [730,] 0.5811493
+ [731,] 0.4350171
+ [732,] 1.0436309
+ [733,] 1.2708625
+ [734,] 0.9385576
+ [735,] 0.9926020
+ [736,] 0.5727729
+ [737,] 0.2981709
+ [738,] 0.6905867
+ [739,] 0.9933417
+ [740,] 1.4648702
+ [741,] 1.0903207
+ [742,] 1.0901867
+ [743,] 1.1373228
+ [744,] 1.1236182
+ [745,] 0.7860639
+ [746,] 0.9151859
+ [747,] 1.1365619
+ [748,] 1.0043211
+ [749,] 1.1384638
+ [750,] 0.9089713
+ [751,] 1.2716192
+ [752,] 0.9856708
+ [753,] 1.9829178
+ [754,] 0.8601711
+ [755,] 0.3547898
+ [756,] 1.2491089
+ [757,] 0.6064096
+ [758,] 1.3701582
+ [759,] 0.7666979
+ [760,] 1.1465875
+ [761,] 1.6485164
+ [762,] 0.5601745
+ [763,] 0.7640381
+ [764,] 0.7462475
+ [765,] 0.9058168
+ [766,] 1.4594132
+ [767,] 0.7058350
+ [768,] 0.4929972
+ [769,] 0.9717025
+ [770,] 0.5865832
+ [771,] 0.5135598
+ [772,] 0.7528624
+ [773,] 0.7647569
+ [774,] 1.5494439
+ [775,] 1.5321672
+ [776,] 1.2723336
+ [777,] 1.3750043
+ [778,] 0.6450450
+ [779,] 1.4593406
+ [780,] 0.4568231
+ [781,] 1.0768763
+ [782,] 0.7946096
+ [783,] 1.0275471
+ [784,] 1.2840721
+ [785,] 0.8653640
+ [786,] 1.4459419
+ [787,] 1.1485698
+ [788,] 1.2635760
+ [789,] 1.7116361
+ [790,] 0.4255087
+ [791,] 1.4096811
+ [792,] 0.5967885
+ [793,] 0.9246016
+ [794,] 0.7766885
+ [795,] 0.4195362
+ [796,] 0.6385803
+ [797,] 0.7249236
+ [798,] 0.7517525
+ [799,] 1.0521368
+ [800,] 1.0759493
+ [801,] 1.5092213
+ [802,] 0.8963566
+ [803,] 0.7120206
+ [804,] 0.6711344
+ [805,] 1.4962775
+ [806,] 0.6045987
+ [807,] 0.6317447
+ [808,] 1.2567686
+ [809,] 1.5991375
+ [810,] 1.3640191
+ [811,] 0.9880754
+ [812,] 0.9671767
+ [813,] 1.4740601
+ [814,] 1.3092224
+ [815,] 0.3311038
+ [816,] 0.7378053
+ [817,] 0.8897675
+ [818,] 0.9491255
+ [819,] 0.7235911
+ [820,] 0.8625198
+ [821,] 1.0424529
+ [822,] 0.9827649
+ [823,] 1.1378564
+ [824,] 0.7709857
+ [825,] 0.8860889
+ [826,] 1.4839919
+ [827,] 0.8049073
+ [828,] 1.1658418
+ [829,] 0.6535602
+ [830,] 1.6945666
+ [831,] 0.7122305
+ [832,] 0.8354899
+ [833,] 0.7410459
+ [834,] 1.0333930
+ [835,] 0.8956504
+ [836,] 3.3265944
+ [837,] 0.4607808
+ [838,] 2.0016576
+ [839,] 0.9664852
+ [840,] 0.8591136
+ [841,] 0.4436233
+ [842,] 1.2676282
+ [843,] 1.8280519
+ [844,] 1.5233518
+ [845,] 1.5538160
+ [846,] 1.1909282
+ [847,] 0.6403338
+ [848,] 1.1079572
+ [849,] 0.9946946
+ [850,] 1.6265167
+ [851,] 2.2160460
+ [852,] 0.7047208
+ [853,] 0.9520784
+ [854,] 0.6697161
+ [855,] 1.3412183
+ [856,] 1.1564769
+ [857,] 1.4735548
+ [858,] 1.1963289
+ [859,] 0.8908181
+ [860,] 1.1058037
+ [861,] 1.0176669
+ [862,] 0.6967462
+ [863,] 1.1055883
+ [864,] 1.2232689
+ [865,] 1.5669295
+ [866,] 0.9927264
+ [867,] 0.7922969
+ [868,] 0.8924227
+ [869,] 2.2273688
+ [870,] 1.9035866
+ [871,] 1.0281940
+ [872,] 0.6114104
+ [873,] 1.1185919
+ [874,] 1.2752002
+ [875,] 1.3628293
+ [876,] 1.6860143
+ [877,] 0.9036242
+ [878,] 1.5502328
+ [879,] 2.1304006
+ [880,] 0.7798978
+ [881,] 0.8582456
+ [882,] 0.7763562
+ [883,] 1.1338050
+ [884,] 0.9490513
+ [885,] 1.8062837
+ [886,] 0.6245626
+ [887,] 0.9137725
+ [888,] 0.3311868
+ [889,] 1.2194877
+ [890,] 1.0160828
+ [891,] 1.0822496
+ [892,] 0.8741492
+ [893,] 1.0376285
+ [894,] 0.5971172
+ [895,] 0.9930797
+ [896,] 1.1978342
+ [897,] 0.9820470
+ [898,] 0.8871070
+ [899,] 2.0435166
+ [900,] 0.8820640
+ [901,] 0.6704312
+ [902,] 0.5520564
+ [903,] 0.7753335
+ [904,] 0.8594861
+ [905,] 0.8798928
+ [906,] 0.5390696
+ [907,] 0.5915295
+ [908,] 1.2222008
+ [909,] 1.0178717
+ [910,] 0.9276021
+ [911,] 2.5061406
+ [912,] 0.9791406
+ [913,] 0.9181410
+ [914,] 1.8180531
+ [915,] 0.9761132
+ [916,] 0.7540974
+ [917,] 1.0614900
+ [918,] 0.6780670
+ [919,] 0.8102315
+ [920,] 1.1964871
+ [921,] 0.5333357
+ [922,] 0.7619583
+ [923,] 0.7831024
+ [924,] 1.1944872
+ [925,] 0.8343710
+ [926,] 1.2736611
+ [927,] 1.0380704
+ [928,] 0.6784847
+ [929,] 0.9797288
+ [930,] 0.8117795
+ [931,] 0.5183487
+ [932,] 0.7292961
+ [933,] 0.8450584
+ [934,] 0.6513820
+ [935,] 0.7342797
+ [936,] 0.8651456
+ [937,] 0.7114826
+ [938,] 0.7565788
+ [939,] 1.1157545
+ [940,] 0.9362141
+ [941,] 1.4258037
+ [942,] 1.6709660
+ [943,] 0.8322643
+ [944,] 1.0377285
+ [945,] 1.2729434
+ [946,] 0.9317816
+ [947,] 0.7424998
+ [948,] 0.5997798
+ [949,] 1.7143862
+ [950,] 0.8865491
+ [951,] 1.1110944
+ [952,] 0.4839150
+ [953,] 1.1751674
+ [954,] 1.4343744
+ [955,] 0.8499582
+ [956,] 0.7519829
+ [957,] 1.1345566
+ [958,] 1.1807313
+ [959,] 0.8559385
+ [960,] 0.7042612
+ [961,] 1.0249730
+ [962,] 0.5327833
+ [963,] 1.9667756
+ [964,] 1.4416414
+ [965,] 1.3192209
+ [966,] 1.2340020
+ [967,] 0.7627219
+ [968,] 0.8285015
+ [969,] 0.6307524
+ [970,] 0.5265525
+ [971,] 1.2354141
+ [972,] 2.2840114
+ [973,] 0.8072222
+ [974,] 0.7202883
+ [975,] 0.5839934
+ [976,] 0.9968098
+ [977,] 1.0683461
+ [978,] 0.4833957
+ [979,] 1.2610925
+ [980,] 1.6876075
+ [981,] 0.6734502
+ [982,] 0.9832715
+ [983,] 0.9257128
+ [984,] 0.6049874
+ [985,] 0.9722589
+ [986,] 0.7110103
+ [987,] 1.2555990
+ [988,] 0.5739538
+ [989,] 0.5208723
+ [990,] 0.7150321
+ [991,] 0.5798138
+ [992,] 1.5866842
+ [993,] 1.1645795
+ [994,] 0.7675501
+ [995,] 1.0302099
+ [996,] 0.6968812
+ [997,] 1.3375302
+ [998,] 0.6388878
+ [999,] 0.9733554
+
+$model.matrix
+   (Intercept) Management1 Management2 Management3
+1            1          -1          -1          -1
+2            1           1           0           0
+3            1          -1          -1          -1
+4            1          -1          -1          -1
+5            1           0           1           0
+6            1           0           1           0
+7            1           0           1           0
+8            1           0           1           0
+9            1           0           1           0
+10           1           1           0           0
+11           1           1           0           0
+12           1          -1          -1          -1
+13           1          -1          -1          -1
+14           1           0           0           1
+15           1           0           0           1
+16           1          -1          -1          -1
+17           1           0           0           1
+18           1           0           0           1
+19           1           0           0           1
+20           1           0           0           1
+
+$terms
+dune ~ Management
+attr(,"variables")
+list(dune, Management)
+attr(,"factors")
+           Management
+dune                0
+Management          1
+attr(,"term.labels")
+[1] "Management"
+attr(,"order")
+[1] 1
+attr(,"intercept")
+[1] 1
+attr(,"response")
+[1] 1
+attr(,".Environment")
+&lt;environment: R_GlobalEnv&gt;
+
+attr(,"class")
+[1] "adonis"</code></pre>
+</div>
+</div>
+</section>
+<section id="multivariate-glms" class="level3">
+<h3 class="anchored" data-anchor-id="multivariate-glms">8. Multivariate GLMs</h3>
+<p><strong>Purpose</strong>: Model multivariate responses.</p>
+<p><strong>R Package</strong>: - <code>mvabund</code></p>
+</section>
+<section id="applications-of-multivariate-glms" class="level3">
+<h3 class="anchored" data-anchor-id="applications-of-multivariate-glms">Applications of Multivariate GLMs</h3>
+<p>Multivariate GLMs are used to model multiple response variables simultaneously. Applications include: - Analyzing species abundance data - Modeling the effects of environmental variables on community structure - Studying interactions between multiple ecological factors</p>
+</section>
+<section id="distance-based-rda-db-rda" class="level3">
+<h3 class="anchored" data-anchor-id="distance-based-rda-db-rda">9. Distance-based RDA (db-RDA)</h3>
+<p><strong>Purpose</strong>: Constrained ordination using distance matrices.</p>
+<p><strong>R Package</strong>: - <code>vegan</code>: <code>capscale()</code></p>
+</section>
+<section id="applications-of-distance-based-rda-db-rda" class="level3">
+<h3 class="anchored" data-anchor-id="applications-of-distance-based-rda-db-rda">Applications of Distance-based RDA (db-RDA)</h3>
+<p>db-RDA is a flexible method for constrained ordination. Applications include: - Analyzing genetic or molecular data - Studying the effects of environmental gradients on community composition - Visualizing relationships between response and explanatory variables</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>db_rda <span class="ot">&lt;-</span> <span class="fu">capscale</span>(dune <span class="sc">~</span> ., <span class="at">data =</span> dune.env, <span class="at">distance =</span> <span class="st">"bray"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Some constraints or conditions were aliased because they were redundant. This
+can happen if terms are linearly dependent (collinear): 'Manure^4'</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(db_rda)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="indicator-species-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="indicator-species-analysis">10. Indicator Species Analysis</h3>
+<p><strong>Purpose</strong>: Identifies species associated with site groups.</p>
+<p><strong>R Packages</strong>: - <code>labdsv</code>: <code>indval()</code> - <code>vegan</code>: <code>multipatt()</code></p>
+</section>
+<section id="applications-of-indicator-species-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="applications-of-indicator-species-analysis">Applications of Indicator Species Analysis</h3>
+<p>Indicator species analysis identifies species that are characteristic of specific groups or conditions. Applications include: - Identifying species associated with particular habitats - Studying the effects of environmental changes on species distribution - Monitoring biodiversity and conservation status</p>
+<p>This post aims to provide a clear and concise guide to multivariate statistical methods, making it easier for researchers and students to apply these techniques in their work.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/hafez-ahmad\.github\.io\/site");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,0 +1,17 @@
+{
+  "hash": "5b597462619b8cb06980af4a217a79f3",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Ecological data analysis with R\"\nauthor: \"Hafez Ahmad\"\ndate: \"2022-10-16\"\ncategories: [news, code, analysis]\nimage: \"image.jpg\"\n---\n\nData analysis with R.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# Load necessary libraries\nlibrary(ggplot2)\nlibrary(dplyr)\n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\n\nAttaching package: 'dplyr'\n```\n\n\n:::\n\n::: {.cell-output .cell-output-stderr}\n\n```\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n```\n\n\n:::\n\n::: {.cell-output .cell-output-stderr}\n\n```\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n```\n\n\n:::\n\n```{.r .cell-code}\n# Create a sample ecological dataset\ndata <- data.frame(\n  Species = rep(c(\"Species A\", \"Species B\", \"Species C\"), each = 10),\n  Abundance = c(rpois(10, 5), rpois(10, 10), rpois(10, 15)),\n  Location = rep(c(\"Site 1\", \"Site 2\"), each = 15)\n)\n\n# Summarize data by species\nsummary_data <- data %>%\n  group_by(Species) %>%\n  summarize(Mean_Abundance = mean(Abundance), .groups = 'drop')\n\n# Print summary\nprint(summary_data)\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n# A tibble: 3 × 2\n  Species   Mean_Abundance\n  <chr>              <dbl>\n1 Species A            5.1\n2 Species B           10.3\n3 Species C           15.2\n```\n\n\n:::\n\n```{.r .cell-code}\n# Plot species abundance by location\nggplot(data, aes(x = Species, y = Abundance, fill = Location)) +\n  geom_boxplot() +\n  labs(title = \"Species Abundance by Location\",\n       x = \"Species\",\n       y = \"Abundance\") +\n  theme_minimal()\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

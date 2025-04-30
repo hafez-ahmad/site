@@ -1,5 +1,5 @@
 ---
-title: "Analysis of Argo Float Data in the Bay of Bengal"
+title: "Analysis of Argo Float Data"
 author: "Hafez Ahmad"
 date: "2022-10-16"
 categories: [code, analysis]
@@ -11,4 +11,22 @@ You will find basic R codes
 
 ```{r}
 1+2
+```
+
+```{r}
+# Load necessary libraries
+library(ggplot2)
+library(dplyr)
+
+# Example: Create a simple data frame
+data <- data.frame(
+  Depth = c(0, 10, 20, 30, 40),
+  Temperature = c(28, 27, 26, 25, 24)
+)
+
+# Plot temperature vs depth
+ggplot(data, aes(x = Depth, y = Temperature)) +
+  geom_line() +
+  geom_point() +
+  labs(title = "Temperature Profile", x = "Depth (m)", y = "Temperature (°C)")
 ```

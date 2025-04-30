@@ -44,3 +44,6 @@ editor: visual
 
 path: C:\Program Files\Quarto\bin
 
+bibliography: posts/Remote sensing/references.bib
+csl: apa-6th-edition.csl
+

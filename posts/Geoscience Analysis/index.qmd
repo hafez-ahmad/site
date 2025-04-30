@@ -1,0 +1,36 @@
+---
+title: "Geoscience Analysis with R"
+author: "Hafez Ahmad"
+date: "2025-04-29"
+categories: [geoscience, analysis, R]
+image: "image.jpg"
+---
+
+This post demonstrates geoscience data analysis using R.
+
+```{r}
+# Load necessary libraries
+library(ggplot2)
+library(sf)
+library(raster)
+
+# Load a sample shapefile (replace with your own geospatial data)
+shapefile_path <- system.file("shape/nc.shp", package = "sf")
+geo_data <- st_read(shapefile_path)
+
+# Plot the geospatial data
+plot(geo_data["AREA"], main = "Geospatial Data Visualization")
+
+# Load a sample raster dataset (replace with your own raster data)
+raster_data <- raster(system.file("external/test.grd", package = "raster"))
+
+# Plot the raster data
+plot(raster_data, main = "Raster Data Visualization")
+
+# Perform a simple spatial operation: calculate the centroid of polygons
+centroids <- st_centroid(geo_data)
+
+# Add centroids to the plot
+plot(geo_data["AREA"], main = "Geospatial Data with Centroids")
+plot(centroids, add = TRUE, col = "red", pch = 16)
+```

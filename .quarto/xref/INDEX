@@ -82,5 +82,20 @@
   },
   "projects/index.qmd": {
     "index.html": "0d714fef"
+  },
+  "posts/Remote sensing/index.qmd": {
+    "index.html": "a08e2eb9"
+  },
+  "posts/Post in Medium and RPubs/index.qmd": {
+    "index.html": "31ff0e29"
+  },
+  "posts/Geoscience Analysis/index.qmd": {
+    "index.html": "46f10d08"
+  },
+  "posts/GIS Remote sensing data analysis/index.qmd": {
+    "index.html": "05212be2"
+  },
+  "posts/Multidimentional data analysis/index.qmd": {
+    "index.html": "7ee117b1"
   }
 }

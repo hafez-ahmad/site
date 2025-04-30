@@ -9,5 +9,24 @@ image: "image.jpg"
 You will find basic R codes
 
 ```{r}
-1+2
+# Load necessary library
+library(oce)
+
+# Create a sample dataset for temperature, salinity, and pressure
+data <- data.frame(
+  salinity = c(30, 32, 34, 36, 38),
+  temperature = c(10, 15, 20, 25, 30),
+  pressure = c(0, 5, 10, 15, 20)
+)
+
+# Convert the dataset to a ctd object
+ctd_data <- as.ctd(salinity = data$salinity, 
+                   temperature = data$temperature, 
+                   pressure = data$pressure)
+
+# Create a temperature-salinity diagram
+plotTS(ctd_data, 
+       xlab = "Salinity (PSU)", 
+       ylab = "Temperature (°C)", 
+       main = "Temperature-Salinity Diagram")
 ```

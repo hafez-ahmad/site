@@ -1,0 +1,40 @@
+---
+title: "Posts in Medium and Other Platforms"
+author: "Hafez Ahmad"
+date: "2022-10-16"
+categories: [news, code, analysis]
+image: "image.jpg"
+---
+Here are some of my posts related to teaching and educational topics:
+
+
+1: [My experimental COVID-19 dashboard](https://lnkd.in/gczFJ96)
+
+2: [How to make simple animation for the COVID-19?](https://lnkd.in/gmqqP5c)
+
+3: [How to make a dynamic map of COVID-19?](https://lnkd.in/g4a4CAX)
+
+4: [COVID-19 notification system for Bangladesh](https://lnkd.in/gVsxg2C)
+
+5: [ArcGIS COVID-19 dashboard for Bangladesh](https://lnkd.in/gVEjWUq)
+
+6: [A COVID-19 prediction model for Bangladesh](https://lnkd.in/ggyrw-W)
+
+7: [Impacts of the coronavirus pandemic on nature conservation](https://medium.com/@hafezahmad/impacts-of-the-coronavirus-pandemic-on-nature-conservation-56c220f67942)
+
+8: [Ocean Acidification and its major impacts in Bay of Bengal](https://medium.com/@hafezahmad/ocean-acidification-and-its-major-impacts-in-bay-of-bengal-bangladesh-b017b392db2d)
+
+9: [Ocean circulation modeling in the 21st century (part-1)](https://medium.com/@hafezahmad/ocean-circulation-modeling-in-the-21st-century-a85b7c9799bb)
+
+10: [Analysis of seawater property with Julia](https://medium.com/@hafezahmad/analysis-of-seawater-property-with-julia-part1-83e416b5a987)
+
+11: [Practical Ecological data analysis with R](https://medium.com/@hafezahmad/practical-ecological-data-analysis-with-r-part-1-eb1020a95297)
+
+12: [Analysis of Argo Float Data in the Bay of Bengal with R](https://medium.com/@hafezahmad/analysis-of-argo-float-data-in-the-bay-of-bengal-51d323dff7f)
+
+13: [Data analysis and visualization of digital elevation of Bangladesh](https://medium.com/@hafezahmad/data-analysis-and-visualization-of-digital-elevation-of-bangladesh-816d9a644822)
+
+14: [Principal Component Analysis (PCA) with R](https://medium.com/@hafezahmad/principal-component-analysis-pca-with-r-6ba954a54b34)
+
+15: [Scientific Research Paper Writing with R markdown](https://github.com/hafez-ahmad/R-markdown-article-class/tree/master)
+

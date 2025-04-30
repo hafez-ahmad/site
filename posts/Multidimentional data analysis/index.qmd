@@ -1,0 +1,174 @@
+---
+title: "Multivariate Statistics"
+author: "Hafez Ahmad"
+date: "2022-10-16"
+categories: [Multivariate, code, analysis]
+image: "image.jpg"
+---
+
+This post provides a comprehensive overview of multivariate statistical methods frequently used in ecology and marine science. Each method is accompanied by the corresponding R packages for implementation.
+
+### 1. Principal Component Analysis (PCA)
+
+**Purpose**: Reduces data dimensionality and identifies patterns.
+
+**R Packages**: - `vegan`: `rda()` - `stats`: `prcomp()`, `princomp()` - `FactoMineR`, `factoextra`: For enhanced visualization \### Example: Principal Component Analysis (PCA) Principal Component Analysis (PCA) is a multivariate statistical technique that uses an orthogonal transformation to convert a set of correlated variables into a set of orthogonal, uncorrelated axes called principal components. The primary motivation behind PCA is to reduce a large number of variables into a smaller number of derived variables that can be visualized in 2 or 3-dimensional space.
+
+Applications of PCA include: - Reducing strongly correlated data groups - Evaluating aquatic habitat suitability - Analyzing fish abundance, seasonal and spatial variation - Studying ecosystem organization changes - Investigating intra- and interspecific variability, niche differentiation, and partitioning
+
+```{r}
+# Load necessary library
+library(ggplot2)
+
+# Create a sample dataset
+data <- data.frame(
+  Variable1 = c(2.5, 0.5, 2.2, 1.9, 3.1, 2.3, 2, 1, 1.5, 1.1),
+  Variable2 = c(2.4, 0.7, 2.9, 2.2, 3.0, 2.7, 1.6, 1.1, 1.6, 0.9)
+)
+
+# Perform PCA
+pca_result <- prcomp(data, scale. = TRUE)
+
+# Print PCA summary
+summary(pca_result)
+
+# Plot PCA
+biplot(pca_result, main = "PCA Biplot")
+```
+
+### 2. Non-metric Multidimensional Scaling (NMDS)
+
+**Purpose**: Ordination based on ranks (non-parametric).
+
+**R Package**: - `vegan`: `metaMDS()`
+
+### Applications of Non-metric Multidimensional Scaling (NMDS)
+
+NMDS is widely used in ecological and environmental studies to visualize the similarity or dissimilarity of data points in a low-dimensional space. Applications include: - Analyzing community composition and structure - Studying species-environment relationships - Visualizing temporal changes in ecological data - Comparing biodiversity across sites
+
+```{r}
+library(vegan)
+data(dune)
+nmds <- metaMDS(dune)
+plot(nmds)
+```
+
+### 3. Canonical Correspondence Analysis (CCA)
+
+**Purpose**: Ordination constrained by environmental variables.
+
+### Applications of Canonical Correspondence Analysis (CCA)
+
+CCA is commonly applied in ecological research to explore relationships between species and environmental variables. Applications include: - Identifying key environmental drivers of species distribution - Analyzing community-environment interactions - Studying habitat preferences of species
+
+```{r}
+data(dune.env)
+cca_model <- cca(dune ~ ., data = dune.env)
+plot(cca_model)
+```
+
+### 4. Redundancy Analysis (RDA)
+
+**Purpose**: Linear constrained ordination.
+
+### Applications of Redundancy Analysis (RDA)
+
+RDA is used to summarize and visualize the variation in response variables explained by explanatory variables. Applications include: - Investigating the influence of environmental factors on species abundance - Analyzing multivariate ecological datasets - Studying the effects of land use on biodiversity
+
+```{r}
+rda_model <- rda(dune ~ ., data = dune.env)
+plot(rda_model)
+```
+
+### 5. Cluster Analysis
+
+**Purpose**: Groups similar observations.
+
+**R Packages**: - `stats`: `hclust()`, `kmeans()` - `cluster`: `agnes()`, `diana()`
+
+### Applications of Cluster Analysis
+
+Cluster analysis is a versatile tool for grouping similar observations. Applications include: - Classifying vegetation types - Grouping sampling sites based on species composition - Identifying patterns in genetic or molecular data
+
+```{r}
+dist_matrix <- dist(scale(dune))
+hc <- hclust(dist_matrix)
+plot(hc)
+```
+
+### 6. Discriminant Analysis (LDA/QDA)
+
+**Purpose**: Classify observations into predefined groups.
+
+**R Package**: - `MASS`
+
+### Applications of Discriminant Analysis (LDA/QDA)
+
+Discriminant analysis is used for classification and prediction. Applications include: - Classifying species based on morphological traits - Predicting habitat types from environmental variables - Identifying key variables that differentiate groups
+
+```{r}
+library(MASS)
+# Example assumes 'Species' is a factor in iris
+lda_model <- lda(Species ~ ., data = iris)
+plot(lda_model)
+```
+
+### 7. PERMANOVA
+
+**Purpose**: Permutation-based multivariate ANOVA.
+
+**R Package**: - `vegan`: `adonis()`, `adonis2()`
+
+### Applications of PERMANOVA
+
+PERMANOVA is a robust method for testing differences in multivariate data. Applications include: - Comparing community composition across treatments - Testing the effects of environmental gradients on species assemblages - Analyzing experimental data with complex designs
+
+```{r}
+adonis_model <- adonis(dune ~ Management, data = dune.env)
+adonis_model
+```
+
+### 8. Multivariate GLMs
+
+**Purpose**: Model multivariate responses.
+
+**R Package**: - `mvabund`
+
+### Applications of Multivariate GLMs
+
+Multivariate GLMs are used to model multiple response variables simultaneously. Applications include: - Analyzing species abundance data - Modeling the effects of environmental variables on community structure - Studying interactions between multiple ecological factors
+
+```{r}
+
+```
+
+### 9. Distance-based RDA (db-RDA)
+
+**Purpose**: Constrained ordination using distance matrices.
+
+**R Package**: - `vegan`: `capscale()`
+
+### Applications of Distance-based RDA (db-RDA)
+
+db-RDA is a flexible method for constrained ordination. Applications include: - Analyzing genetic or molecular data - Studying the effects of environmental gradients on community composition - Visualizing relationships between response and explanatory variables
+
+```{r}
+db_rda <- capscale(dune ~ ., data = dune.env, distance = "bray")
+plot(db_rda)
+```
+
+### 10. Indicator Species Analysis
+
+**Purpose**: Identifies species associated with site groups.
+
+**R Packages**: - `labdsv`: `indval()` - `vegan`: `multipatt()`
+
+### Applications of Indicator Species Analysis
+
+Indicator species analysis identifies species that are characteristic of specific groups or conditions. Applications include: - Identifying species associated with particular habitats - Studying the effects of environmental changes on species distribution - Monitoring biodiversity and conservation status
+
+```{r}
+
+```
+
+This post aims to provide a clear and concise guide to multivariate statistical methods, making it easier for researchers and students to apply these techniques in their work.
