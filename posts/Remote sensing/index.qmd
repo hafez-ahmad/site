@@ -2,7 +2,7 @@
 title: "Importance of Remote Sensing in Protecting Local Economies and Environments"
 author: "Hafez Ahmad"
 date: "2022-10-16"
-categories: [news, code, analysis]
+categories: [Remote sensing, Environment, AI]
 image: "image.jpg"
 ---
 

@@ -2,12 +2,117 @@
 title: "Species distribution modeling"
 author: "Hafez Ahmad"
 date: "2022-10-16"
-categories: [code, analysis]
+categories: [Species distribution, code, analysis]
 image: "image.jpg"
 format: html
 ---
 
-You will find basic R codes
+Here's a detailed and practical **outline for "Species Distribution Modeling (SDM)"**, ideal for a course, workshop, or tutorial series:
+
+---
+
+## 📘 **Outline: Species Distribution Modeling (SDM)**
+
+### **1. Introduction to SDM**
+- What is species distribution modeling?
+- Ecological vs. statistical vs. mechanistic models  
+- Applications: conservation, invasive species, climate change, biodiversity forecasting  
+
+---
+
+### **2. Understanding the Data**
+- **Occurrence data**  
+  - Presence-only, presence-absence, abundance data  
+  - Sources: GBIF, OBIS, iNaturalist, museum records  
+- **Environmental predictors**  
+  - Climatic, topographic, land cover, oceanographic variables  
+  - Spatial resolution, scale, multicollinearity  
+
+- Tools: `rgbif`, `spocc`, `raster`, `terra`, `sdmpredictors`
+
+---
+
+### **3. Data Preparation and Cleaning**
+- Coordinate validation, spatial thinning (`spThin`, `CoordinateCleaner`)  
+- Background and pseudo-absence generation  
+- Data extraction and visualization  
+- Tools: `sp`, `sf`, `terra`, `rnaturalearth`, `ggplot2`
+
+---
+
+### **4. Exploratory Analysis**
+- Correlation matrix and VIF  
+- PCA of environmental variables  
+- Species–environment relationships  
+- Tools: `usdm`, `car`, `GGally`, `vegan`
+
+---
+
+### **5. Modeling Techniques**
+- **Presence-only Models**  
+  - MaxEnt, BIOCLIM, ENFA  
+- **Presence–absence Models**  
+  - GLM, GAM, Random Forest, BRT, SVM  
+- **Ensemble Modeling**  
+  - Combining multiple algorithms  
+- Tools: `dismo`, `biomod2`, `maxnet`, `randomForest`, `gbm`, `mgcv`
+
+---
+
+### **6. Model Tuning and Evaluation**
+- Cross-validation and bootstrapping  
+- Evaluation metrics: AUC, TSS, Kappa, sensitivity, specificity  
+- Model calibration and thresholds  
+- Tools: `ROCR`, `PresenceAbsence`, `ENMeval`
+
+---
+
+### **7. Mapping Predictions**
+- Predicting current distribution  
+- Projecting future/past climate scenarios  
+- Visualization in R (`rasterVis`, `tmap`, `ggplot2`)  
+- Exporting to GIS-friendly formats  
+
+---
+
+### **8. Climate Change and Scenario Modeling**
+- Incorporating GCM data  
+- RCPs/SSPs and time horizons  
+- Tools: `rCMIP5`, `climateR`, `worldclim`, `CHELSA`
+
+---
+
+### **9. Uncertainty, Bias, and Limitations**
+- Sampling bias, spatial autocorrelation  
+- Niche vs. realized distribution  
+- Overfitting and model transferability  
+- Tools: `blockCV`, `spatialEco`, `ecospat`
+
+---
+
+### **10. Case Studies**
+- Endangered species habitat modeling  
+- Invasive species risk mapping  
+- Climate refugia identification  
+
+---
+
+### **11. Reproducible Workflows**
+- R Markdown and Quarto  
+- Organizing projects with `here`, `targets`, and `renv`  
+- Sharing data and models (Zenodo, GitHub, GBIF publishing)
+
+---
+
+### **12. SDM Extensions**
+- Joint SDM (e.g., `Hmsc`)  
+- Occupancy modeling (`unmarked`)  
+- Mechanistic models (e.g., NicheMapR)  
+- Citizen science data handling  
+
+---
+
+
 
 ```{r}
 wildtype<- c(103,1125,504,608,794,698,920,535,842,765,945,1005,724,498,727)

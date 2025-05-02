@@ -2,11 +2,19 @@
 title: "Making temperature-salinity diagrams"
 author: "Hafez Ahmad"
 date: "2022-10-16"
-categories: [news, code, analysis]
+categories: [TS diagram, code, analysis]
 image: "image.jpg"
 ---
 
-You will find basic R codes
+A temperature-salinity (T-S) diagram is a graphical tool used in oceanography to examine the relationship between the temperature and salinity of seawater at different depths or locations in the ocean. It is fundamental in understanding water masses and their mixing processes.
+
+Why It's Important:
+
+1. Water Mass Identification: Different water masses have unique T-S signatures.
+
+2. Mixing Analysis: If two water masses mix, the result plots along a straight line between them.
+
+3. Stability Assessment: Water density (a function of T and S) indicates stratification and vertical mixing potential
 
 ```{r}
 # Load necessary library
@@ -29,4 +37,5 @@ plotTS(ctd_data,
        xlab = "Salinity (PSU)", 
        ylab = "Temperature (°C)", 
        main = "Temperature-Salinity Diagram")
+#Curved lines of constant density (isopycnals) are often superimposed to help interpret water mass stability.
 ```
